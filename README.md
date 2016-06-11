@@ -34,9 +34,7 @@ Social-chan es una red social anime y manga actualmente en desarrollo.
 ## Grupos
 
 - [ ] Personalización de grupos.
-- 
 
 ## Otros
 
 - [ ] Emojis usados frecuentemente por el usuario.
-- 
