@@ -1,4 +1,4 @@
-![Tadaima](http://devs.social-chan.com/tadaima/tadaima_logo.png)
+![Tadaima logo](http://devs.social-chan.com/tadaima/tadaima_logo.png)
 
 # Documentación
 
