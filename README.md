@@ -1,4 +1,4 @@
-![8-framework](http://d8vjork.es/8-framework_thumb.jpg)
+![Tadaima](http://devs.social-chan.com/tadaima/tadaima-logo_black.png)
 
 # Documentación
 
