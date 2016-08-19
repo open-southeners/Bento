@@ -1,0 +1,548 @@
+@import "compass/reset";
+
+@import 'variables';
+@import 'mixins';
+
+@import 'reset';
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../fonts/OpenSans-Regular-webfont.eot');
+    src: url('../fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/OpenSans-Regular-webfont.woff') format('woff'),
+         url('../fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+	font: $font_size $site_fonts;
+	color: $body_text;
+	width: $site_width;
+	margin: 0;
+	line-height: 1.4285em;
+	font-smoothing: antialiased;
+		-webkit-font-smoothing: antialiased;
+}
+
+/** Basic overrides */
+a,
+a:active,
+a:hover,
+a:focus {
+	text-decoration: none;
+}
+
+a {
+	color: $primary_color;
+}
+
+/** HTML elements formatting */
+b, strong {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
+em:hover,
+em:focus {}
+
+ul {
+	list-style: disc;
+	margin-left: 20px;
+}
+
+abbr[title] {
+	cursor: help;
+  border-bottom: 2px dashed $yellow_color;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: $font_size $site_fonts;
+  line-height: 1.2857em;
+  margin: calc(2rem -  0.14285em) 0em 1rem;
+  font-weight: bold;
+  padding: 0em;
+}
+
+h1 {
+  min-height: 1rem;
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.714rem;
+}
+
+h3 {
+  font-size: 1.28rem;
+}
+
+h4 {
+  font-size: 1.071rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child {
+  margin-top: 0em;
+}
+
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child {
+  margin-bottom: 0em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+pre {
+  overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/** Highlighting */
+::-webkit-selection {
+  background-color: $primary_color;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+::-moz-selection {
+  background-color: $primary_color;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+::selection {
+  background-color: $primary_color;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+/** General UI elements */
+.container {
+	margin-right: $container_margins;
+	margin-left: $container_margins;
+}
+
+.container.centered {
+	margin: 0 auto;
+}
+
+/** Buttons */
+.button {
+	cursor: pointer;
+	display: inline-block;
+	background: none;
+	background-image: none;
+	outline: none;
+  border: none;
+	padding: 10px 20px;
+	margin: 2px;
+	text-align: center;
+	line-height: 1em;
+	vertical-align: baseline;
+	color: $default_text;
+	@include user-select(none);
+}
+
+.rounded.button {
+	@extend .button;
+	@include border-radius(2px); 
+}
+
+.alt.button {
+	@extend .button;
+	padding: 8px 16px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: none;
+}
+
+// Colours & states
+.button.primary {
+	background-color: $primary_color;
+}
+
+.button.alt.primary {
+	background-color: transparent;
+	border-color: $primary_color;
+	color: $primary_color;
+}
+
+.button.alt.primary:hover,
+.button.alt.primary:focus {
+	background-color: $primary_color;
+	color: $default_text;
+}
+
+.button.secondary {
+	background-color: $secondary_color;
+}
+
+.button.alt.secondary {
+	background-color: transparent;
+	border-color: $secondary_color;
+	color: $secondary_color;
+}
+
+.button.alt.secondary:hover,
+.button.alt.secondary:focus {
+	background-color: $secondary_color;
+	color: $default_text;
+}
+
+.button.red {
+	background-color: $red_color;
+}
+
+.button.alt.red {
+	background-color: transparent;
+	border-color: $red_color;
+	color: $red_color;
+}
+
+.button.alt.red:hover,
+.button.alt.red:focus {
+	background-color: $red_color;
+	color: $default_text;
+}
+
+.button.black {
+	background-color: $black_color;
+}
+
+.button.alt.black {
+	background-color: transparent;
+	border-color: $black_color;
+	color: $black_color;
+}
+
+.button.alt.black:hover,
+.button.alt.black:focus {
+	background-color: $black_color;
+	color: $default_text;
+}
+
+.button.green {
+	background-color: $green_color;
+}
+
+.button.alt.green {
+	background-color: transparent;
+	border-color: $green_color;
+	color: $green_color;
+}
+
+.button.alt.green:hover,
+.button.alt.green:focus {
+	background-color: $green_color;
+	color: $default_text;
+}
+
+.button.brown {
+	background-color: $brown_color;
+}
+
+.button.alt.brown {
+	background-color: transparent;
+	border-color: $brown_color;
+	color: $brown_color;
+}
+
+.button.alt.brown:hover,
+.button.alt.brown:focus {
+	background-color: $brown_color;
+	color: $default_text;
+}
+
+.button.orange {
+	background-color: $orange_color;
+}
+
+.button.alt.orange {
+	background-color: transparent;
+	border-color: $orange_color;
+	color: $orange_color;
+}
+
+.button.alt.orange:hover,
+.button.alt.orange:focus {
+	background-color: $orange_color;
+	color: $default_text;
+}
+
+.button.purple {
+	background-color: $purple_color;
+}
+
+.button.alt.purple {
+	background-color: transparent;
+	border-color: $purple_color;
+	color: $purple_color;
+}
+
+.button.alt.purple:hover,
+.button.alt.purple:focus {
+	background-color: $purple_color;
+	color: $default_text;
+}
+
+.button.yellow {
+	background-color: $yellow_color;
+}
+
+.button.alt.yellow {
+	background-color: transparent;
+	border-color: $yellow_color;
+	color: $yellow_color;
+}
+
+.button.alt.yellow:hover,
+.button.alt.yellow:focus {
+	background-color: $yellow_color;
+	color: $default_text;
+}
+
+.button.pink {
+	background-color: $pink_color;
+}
+
+.button.alt.pink {
+	background-color: transparent;
+	border-color: $pink_color;
+	color: $pink_color;
+}
+
+.button.alt.pink:hover,
+.button.alt.pink:focus {
+	background-color: $pink_color;
+	color: $default_text;
+}
+
+.button.darkgreen {
+	background-color: $darkgreen_color;
+}
+
+.button.alt.darkgreen {
+	background-color: transparent;
+	border-color: $darkgreen_color;
+	color: $darkgreen_color;
+}
+
+.button.alt.darkgreen:hover,
+.button.alt.darkgreen:focus {
+	background-color: $darkgreen_color;
+	color: $default_text;
+}
+
+.button.cyan {
+	background-color: $cyan_color;
+}
+
+.button.alt.cyan {
+	background-color: transparent;
+	border-color: $cyan_color;
+	color: $cyan_color;
+}
+
+.button.alt.cyan:hover,
+.button.alt.cyan:focus {
+	background-color: $cyan_color;
+	color: $default_text;
+}
+
+// General states
+.button:active {
+	cursor: pointer;
+}
+
+/** Navbar */
+.menu {
+	display: block;
+	width: 100%;
+	background-color: $bkg_real_black;
+	max-height: 54px;
+	border: none;
+	color: $default_text;
+}
+
+.fixed.menu {
+	position: fixed;
+}
+
+.menu .item {
+	display: inline-block;
+	cursor: pointer;
+	vertical-align: -webkit-baseline-middle;
+	background-image: none;
+	background-color: $primary_color;
+	color: $default_text;
+	list-style-type: none;
+	list-style-position: outside;
+	padding: 10px 20px;
+	margin-right: 2px;
+}
+
+.menu .active.item {
+	padding: 8px 18px;
+	border: 2px solid $primary_color;
+	background-color: transparent;
+}
+
+.menu .active.item:active {
+	border-color: $real_white;
+}
+
+.menu .header {
+	display: inline-block;
+	vertical-align: -webkit-baseline-middle;
+	margin-right: 26px;
+}
+
+/** Panels */
+.panel {
+	display: block;
+	width: 100%;
+	border: 3px dashed;
+	border-color: none;
+	padding: 10px 15px;
+	margin: 12px 0px;
+}
+
+// small fix
+.panel h5 {
+	margin-bottom: 6px;
+}
+
+.panel.primary {
+	border-color: $primary_color;
+	color: $primary_color;
+	background-color: $primary_bkg;
+}
+
+.panel.secondary {
+	border-color: $secondary_color;
+	color: $secondary_color;
+	background-color: $secondary_bkg;
+}
+
+.panel.red {
+	border-color: $red_color;
+	color: $red_color;
+	background-color: $red_bkg;
+}
+
+.panel.black {
+	border-color: $black_color;
+	color: $black_color;
+	background-color: $black_bkg;
+}
+
+.panel.green {
+	border-color: $green_color;
+	color: $green_color;
+	background-color: $green_bkg;
+}
+
+.panel.brown {
+	border-color: $brown_color;
+	color: $brown_color;
+	background-color: $brown_bkg;
+}
+
+.panel.orange {
+	border-color: $orange_color;
+	color: $orange_color;
+	background-color: $orange_bkg;
+}
+
+.panel.purple {
+	border-color: $purple_color;
+	color: $purple_color;
+	background-color: $purple_bkg;
+}
+
+.panel.yellow {
+	border-color: $yellow_color;
+	color: $yellow_color;
+	background-color: $yellow_bkg;
+}
+
+.panel.pink {
+	border-color: $pink_color;
+	color: $pink_color;
+	background-color: $pink_bkg;
+}
+
+.panel.darkgreen {
+	border-color: $darkgreen_color;
+	color: $darkgreen_color;
+	background-color: $darkgreen_bkg;
+}
+
+.panel.cyan {
+	border-color: $cyan_color;
+	color: $cyan_color;
+	background-color: $cyan_bkg;
+}
+
+/** Okaeri */
+.okaeri {
+	display: block;
+	width: 100%;
+	padding: 48px $container_margins;
+	background: $okaeri_bkg;
+	margin-bottom: 24px;
+}
+
+.okaeri h2 {
+	margin-bottom: 12px;
+}
+
+.okaeri .action {
+	margin-top: 24px;
+	text-align: center;
+}
+
+.okaeri .action .button {
+	padding: 12px 32px;
+}
+
+.okaeri .action .alt.button {
+	padding: 10px 30px;
+}
