@@ -1,0 +1,25 @@
+{
+  "name": "Tadaima",
+  "description": "Tadaima, a pure simple-minimalist responsive web-based UI framework",
+  "author": "D8vjörk",
+  "version": "0.1.0",
+  "main": "./dist/css/styles.css",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d8vjork/tadaima.git"
+  },
+  "keywords": [
+    "css",
+    "framework",
+    "interface",
+    "minimalist",
+    "simple",
+		"pure"
+  ],
+  "license": "GPLv4",
+  "bugs": {
+    "url": "https://github.com/d8vjork/tadaima/issues"
+  },
+  "homepage": "https://devs.social-chan.com/tadaima",
+  "devDependencies": {}
+}
