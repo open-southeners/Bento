@@ -11,3 +11,11 @@
 html {
 	box-sizing: border-box;
 }
+
+button {
+	text-rendering: optimizeLegibility;
+	letter-spacing: inherit;
+	word-spacing: inherit;
+	text-indent: inherit;
+	font: inherit;
+}

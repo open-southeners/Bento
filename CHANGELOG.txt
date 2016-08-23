@@ -1,7 +1,0 @@
-==================== Version 0.1.0 Pre-release: ====================
-- Added buttons with diferent styles and colors (alt, rounded)
-- Added panels with diferent colors
-- Added okaeri component with action block
-- Added menu component with items, active items and header image
-- Added some CSS statement for various elements
-- And some formatting HTML elements (strong, headings, abbr, etc)
