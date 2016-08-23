@@ -1,3 +1,9 @@
+==================== Version 0.2.0 Pre-release: ====================
+- Added mixes for components (omusubi and colors)
+- Reform project directory structure
+- Better responsive: Thanks to Flexboxgrid library ()
+- Added gemfile for Ruby Gems required in framework development (compass, cssmin and jsmin)
+- And too much more purity
 ==================== Version 0.1.0 Pre-release: ====================
 - Added buttons with diferent styles and colors (alt, rounded)
 - Added panels with diferent colors

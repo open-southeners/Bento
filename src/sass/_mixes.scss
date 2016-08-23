@@ -1,0 +1,192 @@
+/** Mixes for components */
+.omusubi {
+	@include border-radius(2px);
+	&.panel {
+		@include border-radius(50%);
+		width: 20vw;
+    vertical-align: middle;
+    text-align: center;
+    height: 20vw;
+    padding-top: 40%;
+	}
+}
+
+.fixed {
+	position: fixed;
+	&.top {
+		bottom: auto;
+    top: 0;
+	}
+	&.bottom {
+		top: auto;
+		bottom: 0;
+	}
+}
+
+.primary {
+	background-color: $primary_color;
+	&.alt {
+		background-color: transparent;
+		border-color: $primary_color;
+		color: $primary_color;
+		&.alt:hover,
+		&.alt:focus {
+			background-color: $primary_color;
+			color: $default_text;
+		}
+	}
+}
+
+.secondary {
+	background-color: $secondary_color;
+	&.alt {
+		background-color: transparent;
+		border-color: $secondary_color;
+		color: $secondary_color;
+		&:hover,
+		&:focus {
+			background-color: $secondary_color;
+			color: $default_text;
+		}
+	}
+}
+
+.red {
+	background-color: $red_color;
+	&.alt {
+		background-color: transparent;
+		border-color: $red_color;
+		color: $red_color;
+		&:hover,
+		&:focus {
+			background-color: $red_color;
+			color: $default_text;
+		}
+	}
+}
+
+.black {
+	background-color: $black_color;
+	&.alt {
+		background-color: transparent;
+		border-color: $black_color;
+		color: $black_color;
+		&:hover,
+		&:focus {
+			background-color: $black_color;
+			color: $default_text;
+		}
+	}
+}
+
+.green {
+	background-color: $green_color;
+	&.alt {
+		background-color: transparent;
+		border-color: $green_color;
+		color: $green_color;
+		&:hover,
+		&:focus {
+			background-color: $green_color;
+			color: $default_text;
+		}
+	}
+}
+
+.brown {
+	background-color: $brown_color;
+	&.alt {
+		background-color: transparent;
+		border-color: $brown_color;
+		color: $brown_color;
+		&:hover,
+		&:focus {
+			background-color: $brown_color;
+			color: $default_text;
+		}
+	}
+}
+
+.orange {
+	background-color: $orange_color;
+	&.alt {
+		background-color: transparent;
+		border-color: $orange_color;
+		color: $orange_color;
+		&:hover,
+		&:focus {
+			background-color: $orange_color;
+			color: $default_text;
+		}
+	}
+}
+
+.purple {
+	background-color: $purple_color;
+	&.alt {
+		background-color: transparent;
+		border-color: $purple_color;
+		color: $purple_color;
+		&:hover,
+		&:focus {
+			background-color: $purple_color;
+			color: $default_text;
+		}
+	}
+}
+
+.yellow {
+	background-color: $yellow_color;
+	&.alt {
+		background-color: transparent;
+		border-color: $yellow_color;
+		color: $yellow_color;
+		&:hover,
+		&:focus {
+			background-color: $yellow_color;
+			color: $default_text;
+		}
+	}
+}
+
+.pink {
+	background-color: $pink_color;
+	&.alt {
+		background-color: transparent;
+		border-color: $pink_color;
+		color: $pink_color;
+		&:hover,
+		&:focus {
+			background-color: $pink_color;
+			color: $default_text;
+		}
+	}
+}
+
+.darkgreen {
+	background-color: $darkgreen_color;
+	&.alt {
+		background-color: transparent;
+		border-color: $darkgreen_color;
+		color: $darkgreen_color;
+		&:hover,
+		&:focus {
+			background-color: $darkgreen_color;
+			color: $default_text;
+		}
+	}
+}
+
+.cyan {
+	background-color: $cyan_color;
+	&.alt {
+		background-color: transparent;
+		border-color: $cyan_color;
+		color: $cyan_color;
+		&:hover,
+		&:focus {
+			background-color: $cyan_color;
+			color: $default_text;
+		}
+	}
+}

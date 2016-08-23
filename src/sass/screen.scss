@@ -5,16 +5,8 @@
 
 @import 'reset';
 
-@font-face {
-    font-family: 'open_sansregular';
-    src: url('../fonts/OpenSans-Regular-webfont.eot');
-    src: url('../fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/OpenSans-Regular-webfont.woff') format('woff'),
-         url('../fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
-         url('../fonts/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+@import 'mixes';
+@import url('../../libs/flexboxgrid/dist/flexboxgrid.css');
 
 html, body {
 	font: $font_size $site_fonts;
@@ -46,9 +38,6 @@ b, strong {
 em {
 	font-style: italic;
 }
-
-em:hover,
-em:focus {}
 
 ul {
 	list-style: disc;
@@ -153,20 +142,11 @@ samp {
   color: rgba(0, 0, 0, 0.87);
 }
 
-/** General UI elements */
-.container {
-	margin-right: $container_margins;
-	margin-left: $container_margins;
-}
-
-.container.centered {
-	margin: 0 auto;
-}
-
 /** Buttons */
-.button {
+button {
 	cursor: pointer;
 	display: inline-block;
+	font-size: 16px;
 	background: none;
 	background-image: none;
 	outline: none;
@@ -178,234 +158,35 @@ samp {
 	vertical-align: baseline;
 	color: $default_text;
 	@include user-select(none);
+	&.alt {
+		padding: 8px 16px;
+		border-width: 2px;
+		border-style: solid;
+		border-color: none;
+	}
 }
 
-.rounded.button {
-	@extend .button;
-	@include border-radius(2px); 
-}
-
-.alt.button {
-	@extend .button;
-	padding: 8px 16px;
-	border-width: 2px;
-	border-style: solid;
-	border-color: none;
-}
-
-// Colours & states
-.button.primary {
-	background-color: $primary_color;
-}
-
-.button.alt.primary {
-	background-color: transparent;
-	border-color: $primary_color;
-	color: $primary_color;
-}
-
-.button.alt.primary:hover,
-.button.alt.primary:focus {
-	background-color: $primary_color;
-	color: $default_text;
-}
-
-.button.secondary {
-	background-color: $secondary_color;
-}
-
-.button.alt.secondary {
-	background-color: transparent;
-	border-color: $secondary_color;
-	color: $secondary_color;
-}
-
-.button.alt.secondary:hover,
-.button.alt.secondary:focus {
-	background-color: $secondary_color;
-	color: $default_text;
-}
-
-.button.red {
-	background-color: $red_color;
-}
-
-.button.alt.red {
-	background-color: transparent;
-	border-color: $red_color;
-	color: $red_color;
-}
-
-.button.alt.red:hover,
-.button.alt.red:focus {
-	background-color: $red_color;
-	color: $default_text;
-}
-
-.button.black {
-	background-color: $black_color;
-}
-
-.button.alt.black {
-	background-color: transparent;
-	border-color: $black_color;
-	color: $black_color;
-}
-
-.button.alt.black:hover,
-.button.alt.black:focus {
-	background-color: $black_color;
-	color: $default_text;
-}
-
-.button.green {
-	background-color: $green_color;
-}
-
-.button.alt.green {
-	background-color: transparent;
-	border-color: $green_color;
-	color: $green_color;
-}
-
-.button.alt.green:hover,
-.button.alt.green:focus {
-	background-color: $green_color;
-	color: $default_text;
-}
-
-.button.brown {
-	background-color: $brown_color;
-}
-
-.button.alt.brown {
-	background-color: transparent;
-	border-color: $brown_color;
-	color: $brown_color;
-}
-
-.button.alt.brown:hover,
-.button.alt.brown:focus {
-	background-color: $brown_color;
-	color: $default_text;
-}
-
-.button.orange {
-	background-color: $orange_color;
-}
-
-.button.alt.orange {
-	background-color: transparent;
-	border-color: $orange_color;
-	color: $orange_color;
-}
-
-.button.alt.orange:hover,
-.button.alt.orange:focus {
-	background-color: $orange_color;
-	color: $default_text;
-}
-
-.button.purple {
-	background-color: $purple_color;
-}
-
-.button.alt.purple {
-	background-color: transparent;
-	border-color: $purple_color;
-	color: $purple_color;
-}
-
-.button.alt.purple:hover,
-.button.alt.purple:focus {
-	background-color: $purple_color;
-	color: $default_text;
-}
-
-.button.yellow {
-	background-color: $yellow_color;
-}
-
-.button.alt.yellow {
-	background-color: transparent;
-	border-color: $yellow_color;
-	color: $yellow_color;
-}
-
-.button.alt.yellow:hover,
-.button.alt.yellow:focus {
-	background-color: $yellow_color;
-	color: $default_text;
-}
-
-.button.pink {
-	background-color: $pink_color;
-}
-
-.button.alt.pink {
-	background-color: transparent;
-	border-color: $pink_color;
-	color: $pink_color;
-}
-
-.button.alt.pink:hover,
-.button.alt.pink:focus {
-	background-color: $pink_color;
-	color: $default_text;
-}
-
-.button.darkgreen {
-	background-color: $darkgreen_color;
-}
-
-.button.alt.darkgreen {
-	background-color: transparent;
-	border-color: $darkgreen_color;
-	color: $darkgreen_color;
-}
-
-.button.alt.darkgreen:hover,
-.button.alt.darkgreen:focus {
-	background-color: $darkgreen_color;
-	color: $default_text;
-}
-
-.button.cyan {
-	background-color: $cyan_color;
-}
-
-.button.alt.cyan {
-	background-color: transparent;
-	border-color: $cyan_color;
-	color: $cyan_color;
-}
-
-.button.alt.cyan:hover,
-.button.alt.cyan:focus {
-	background-color: $cyan_color;
-	color: $default_text;
+// Links with buttons styles
+a[role="button"] {
+	@extend button;
 }
 
 // General states
-.button:active {
+button:active {
 	cursor: pointer;
 }
 
-/** Navbar */
-.menu {
+/** Navigation menu */
+nav.primary {
 	display: block;
 	width: 100%;
 	background-color: $bkg_real_black;
-	max-height: 54px;
+	height: 54px;
 	border: none;
 	color: $default_text;
 }
 
-.fixed.menu {
-	position: fixed;
-}
-
-.menu .item {
+nav .item {
 	display: inline-block;
 	cursor: pointer;
 	vertical-align: -webkit-baseline-middle;
@@ -418,17 +199,17 @@ samp {
 	margin-right: 2px;
 }
 
-.menu .active.item {
+nav .active.item {
 	padding: 8px 18px;
 	border: 2px solid $primary_color;
 	background-color: transparent;
 }
 
-.menu .active.item:active {
+nav .active.item:active {
 	border-color: $real_white;
 }
 
-.menu .header {
+nav .header {
 	display: inline-block;
 	vertical-align: -webkit-baseline-middle;
 	margin-right: 26px;
@@ -525,24 +306,20 @@ samp {
 .okaeri {
 	display: block;
 	width: 100%;
-	padding: 48px $container_margins;
+	padding: 48px 0px;
 	background: $okaeri_bkg;
 	margin-bottom: 24px;
-}
-
-.okaeri h2 {
-	margin-bottom: 12px;
-}
-
-.okaeri .action {
-	margin-top: 24px;
-	text-align: center;
-}
-
-.okaeri .action .button {
-	padding: 12px 32px;
-}
-
-.okaeri .action .alt.button {
-	padding: 10px 30px;
+	& h2 {
+		margin-bottom: 12px;
+	}
+	& .action {
+		margin-top: 24px;
+		text-align: center;
+		& button {
+			padding: 12px 32px;
+			&.alt {
+				padding: 10px 30px;
+			}
+		}
+	}
 }
