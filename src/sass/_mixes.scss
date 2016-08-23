@@ -35,6 +35,11 @@
 			color: $default_text;
 		}
 	}
+	&.panel {
+		border-color: $primary_color;
+		color: $primary_color;
+		background-color: $primary_bkg;
+	}
 }
 
 .secondary {
@@ -49,6 +54,11 @@
 			color: $default_text;
 		}
 	}
+	&.panel {
+		border-color: $secondary_color;
+		color: $secondary_color;
+		background-color: $secondary_bkg;
+	}
 }
 
 .red {
@@ -62,6 +72,11 @@
 			background-color: $red_color;
 			color: $default_text;
 		}
+	}
+	&.panel {
+		border-color: $red_color;
+		color: $red_color;
+		background-color: $red_bkg;
 	}
 }
 
@@ -90,6 +105,11 @@
 			background-color: $green_color;
 			color: $default_text;
 		}
+	}
+	&.panel {
+		border-color: $green_color;
+		color: $green_color;
+		background-color: $green_bkg;
 	}
 }
 
@@ -146,6 +166,11 @@
 			background-color: $yellow_color;
 			color: $default_text;
 		}
+	}
+	&.panel {
+		border-color: $yellow_color;
+		color: $yellow_color;
+		background-color: $yellow_bkg;
 	}
 }
 

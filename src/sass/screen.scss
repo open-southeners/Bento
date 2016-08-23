@@ -126,6 +126,21 @@ samp {
   font-size: 1em;
 }
 
+/** Future elements */
+.wrapper {
+	margin-bottom: 24px;
+}
+
+// Highlighted text on span
+span.hl {
+	display: -webkit-inline-box;
+	color: #FFFFFF;
+	padding: 2px 8px;
+	margin: 1px;
+	background-color: none;
+	background-image: none;
+}
+
 /** Highlighting */
 ::-webkit-selection {
   background-color: $primary_color;
@@ -178,40 +193,39 @@ button:active {
 
 /** Navigation menu */
 nav.primary {
-	display: block;
-	width: 100%;
 	background-color: $bkg_real_black;
-	height: 54px;
+	max-height: 54px;
 	border: none;
 	color: $default_text;
+	text-align: center;
+	& ul {
+		display: inline-flex;
+		height: 54px;
+		list-style: none;
+		align-items: center;
+		-ms-box-orient: horizontal;
+	}
+	& li .item {
+		display: inline-flex;
+		cursor: pointer;
+		background-image: none;
+		background-color: $primary_color;
+		color: $default_text;
+		padding: 10px 20px;
+		margin-right: 8px;
+		&.active {
+			padding: 8px 18px;
+			border: 2px solid $primary_color;
+			background-color: transparent;
+			&:active {
+				border-color: $real_white;
+			}
+		}
+	}
 }
 
-nav .item {
-	display: inline-block;
-	cursor: pointer;
-	vertical-align: -webkit-baseline-middle;
-	background-image: none;
-	background-color: $primary_color;
-	color: $default_text;
-	list-style-type: none;
-	list-style-position: outside;
-	padding: 10px 20px;
-	margin-right: 2px;
-}
-
-nav .active.item {
-	padding: 8px 18px;
-	border: 2px solid $primary_color;
-	background-color: transparent;
-}
-
-nav .active.item:active {
-	border-color: $real_white;
-}
-
-nav .header {
-	display: inline-block;
-	vertical-align: -webkit-baseline-middle;
+nav li.header {
+	display: inline-flex;
 	margin-right: 26px;
 }
 
@@ -223,83 +237,9 @@ nav .header {
 	border-color: none;
 	padding: 10px 15px;
 	margin: 12px 0px;
-}
-
-// small fix
-.panel h5 {
-	margin-bottom: 6px;
-}
-
-.panel.primary {
-	border-color: $primary_color;
-	color: $primary_color;
-	background-color: $primary_bkg;
-}
-
-.panel.secondary {
-	border-color: $secondary_color;
-	color: $secondary_color;
-	background-color: $secondary_bkg;
-}
-
-.panel.red {
-	border-color: $red_color;
-	color: $red_color;
-	background-color: $red_bkg;
-}
-
-.panel.black {
-	border-color: $black_color;
-	color: $black_color;
-	background-color: $black_bkg;
-}
-
-.panel.green {
-	border-color: $green_color;
-	color: $green_color;
-	background-color: $green_bkg;
-}
-
-.panel.brown {
-	border-color: $brown_color;
-	color: $brown_color;
-	background-color: $brown_bkg;
-}
-
-.panel.orange {
-	border-color: $orange_color;
-	color: $orange_color;
-	background-color: $orange_bkg;
-}
-
-.panel.purple {
-	border-color: $purple_color;
-	color: $purple_color;
-	background-color: $purple_bkg;
-}
-
-.panel.yellow {
-	border-color: $yellow_color;
-	color: $yellow_color;
-	background-color: $yellow_bkg;
-}
-
-.panel.pink {
-	border-color: $pink_color;
-	color: $pink_color;
-	background-color: $pink_bkg;
-}
-
-.panel.darkgreen {
-	border-color: $darkgreen_color;
-	color: $darkgreen_color;
-	background-color: $darkgreen_bkg;
-}
-
-.panel.cyan {
-	border-color: $cyan_color;
-	color: $cyan_color;
-	background-color: $cyan_bkg;
+	& h5 {
+		margin-bottom: 6px;
+	}
 }
 
 /** Okaeri */

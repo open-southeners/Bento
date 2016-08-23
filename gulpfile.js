@@ -6,6 +6,7 @@ var
 	uglify					= require('gulp-uglify'),
 	imagemin				= require('gulp-imagemin'),
 	cleanCSS				= require('gulp-clean-css'),
+	bless 					= require('gulp-bless'),
 	autoprefixer		= require('gulp-autoprefixer'),
 	sourcemaps			= require('gulp-sourcemaps'),
 	del							= require('del'),
@@ -24,21 +25,28 @@ gulp.task('bower', function() {
 	return bower();
 });
 
-gulp.task('build', ['delete', 'clean', 'optimize']);
+gulp.task('build', ['delete', 'autoprefix', 'adapt', 'clean', 'optimize']);
 
 gulp.task('delete', function () {
   return del([URI.dist_styles, URI.dist_scripts, URI.dist_images]);
 });
 
-gulp.task('autoprefix', function () {
-  return gulp.src(URI.dist_styles)
+gulp.task('autoprefix', ['delete'], function () {
+  return gulp.src(URI.src_styles)
 		.pipe(sourcemaps.init())
 		.pipe(autoprefixer())
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest('dist/css'));
+		.pipe(gulp.dest('src/css'));
 });
 
-gulp.task('clean', ['delete'], function () {
+gulp.task('adapt', ['autoprefix'], function () {
+  return gulp.src('src/css/screen.css')
+		.pipe(bless())
+		.pipe(rename({basename: 'ie'}))
+		.pipe(gulp.dest('src/css'));
+});
+
+gulp.task('clean', ['adapt'], function () {
   return gulp.src(URI.src_styles)
 		.pipe(sourcemaps.init())
 		.pipe(cleanCSS({

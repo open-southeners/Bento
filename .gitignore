@@ -1,5 +1,6 @@
 .sass-cache
 site
 libs
+docs
 vendor
 node_modules
