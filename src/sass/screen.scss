@@ -162,8 +162,6 @@ button {
 	cursor: pointer;
 	display: inline-block;
 	font-size: 16px;
-	background: none;
-	background-image: none;
 	outline: none;
   border: none;
 	padding: 10px 20px;
@@ -255,7 +253,7 @@ nav li.header {
 	& .action {
 		margin-top: 24px;
 		text-align: center;
-		& button {
+		& button, a[role="button"] {
 			padding: 12px 32px;
 			&.alt {
 				padding: 10px 30px;
