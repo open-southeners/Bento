@@ -26,7 +26,7 @@
 </html>
 ```
 
-For all components see demo.html, for more details see http://dev.social-chan.com/tadaima/docs.html
+For all components see demo.html, for more details see http://dev.social-chan.com/tadaima/docs.html and for learn how to contribute with the project see https://github.com/Social-chan/Tadaima/blob/master/CONTRIBUTING.md
 
 # To-Do list
 
