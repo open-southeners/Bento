@@ -31,11 +31,11 @@ For all components see demo.html, for more details see http://dev.social-chan.co
 # To-Do list
 
 ## Coming soon
-- [] Documentation page.
-- [] Examples page.
-- [] Better responsive for smaller-screen devices.
-- [] CSS for UI animations.
-- [] Adapt font sizes and font family.
+- [ ] Documentation page.
+- [ ] Examples page.
+- [ ] Better responsive for smaller-screen devices.
+- [ ] CSS for UI animations.
+- [ ] Adapt font sizes and font family.
 
 ## Doing
 - [x] Integrate to mixes.
