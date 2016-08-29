@@ -1,5 +1,3 @@
-![Tadaima logo](http://devs.social-chan.com/tadaima/tadaima_logo.png)
-
 # Contribute guide
 Before all, you need download and install the latests versions of:
 
