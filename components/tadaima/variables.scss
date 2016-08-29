@@ -1,14 +1,24 @@
+/**
+ * Font sizes and families
+ */
 $font_size: 16px !default;
 $site_fonts: 'Open Sans', sans-serif !default;
 
+/**
+ * Component sizes and metrics
+ */
 $site_width: 100% !default;
 $container_margins: 156px !default;
 
+/**
+ * Colors
+ */
 $body_text: #000000 !default;
 $default_text: #FFFFFF !default;
 $primary_color: #0082E0 !default;
 $secondary_color: #808080 !default;
 
+// UI added colors
 $red_color: #D82F2F !default;
 $black_color: #282828 !default;
 $green_color: #00B715 !default;
@@ -20,10 +30,12 @@ $pink_color: #FF56E8 !default;
 $darkgreen_color: #007009 !default;
 $cyan_color: #00C6E5 !default;
 
+// Specific component colors
 $real_white: #FFFFFF !default;
 $bkg_real_black: #000000 !default;
 $okaeri_bkg: #cecece !default;
 
+// Background colors
 $primary_bkg: rgba(0, 130, 224, 0.4) !default;
 $secondary_bkg: rgba(128, 128, 128, 0.4) !default;
 $red_bkg: rgba(216, 47, 47, 0.4) !default;
@@ -36,3 +48,17 @@ $yellow_bkg: rgba(224, 179, 0, 0.4) !default;
 $pink_bkg: rgba(255, 86, 232, 0.4) !default;
 $darkgreen_bkg: rgba(0, 112, 9, 0.4) !default;
 $cyan_bkg: rgba(0, 198, 229, 0.4) !default;
+
+// IE8 RGBa fixes
+$fix_primary_bkg: rgb(153, 205, 243) !default;
+$fix_secondary_bkg: rgb(204, 204, 204) !default;
+$fix_red_bkg: rgb(239, 172, 172) !default;
+$fix_black_bkg: rgb(169, 169, 169) !default;
+$fix_green_bkg: rgb(153, 226, 161) !default;
+$fix_brown_bkg: rgb(205, 174, 153) !default;
+$fix_orange_bkg: rgb(243, 189, 153) !default;
+$fix_purple_bkg: rgb(215, 171, 235) !default;
+$fix_yellow_bkg: rgb(243, 225, 153) !default;
+$fix_pink_bkg: rgb(255, 187, 246) !default;
+$fix_darkgreen_bkg: rgb(153, 198, 157) !default;
+$fix_cyan_bkg: rgb(153, 232, 245) !default;

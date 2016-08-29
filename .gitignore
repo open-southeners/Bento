@@ -1,4 +1,5 @@
 .sass-cache
+.vscode
 site
 libs
 docs

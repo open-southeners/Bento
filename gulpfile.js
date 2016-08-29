@@ -1,15 +1,16 @@
 var 
-	gulp						= require('gulp'),
-	rename					= require('gulp-rename'),
-	bower						= require('gulp-bower'),
-	coffee					= require('gulp-coffee'),
-	uglify					= require('gulp-uglify'),
-	imagemin				= require('gulp-imagemin'),
-	cleanCSS				= require('gulp-clean-css'),
-	bless 					= require('gulp-bless'),
-	autoprefixer		= require('gulp-autoprefixer'),
-	sourcemaps			= require('gulp-sourcemaps'),
-	del							= require('del'),
+	gulp			= require('gulp'),
+	rename			= require('gulp-rename'),
+	bower			= require('gulp-bower'),
+	coffee			= require('gulp-coffee'),
+	uglify			= require('gulp-uglify'),
+	imagemin		= require('gulp-imagemin'),
+	sass			= require('gulp-sass'),
+	cleanCSS		= require('gulp-clean-css'),
+	bless 			= require('gulp-bless'),
+	autoprefixer	= require('gulp-autoprefixer'),
+	sourcemaps		= require('gulp-sourcemaps'),
+	del				= require('del'),
 
 	URI = {
 		src_styles:			'src/css/*.css',
@@ -21,8 +22,18 @@ var
 		libs:						'libs/'
 	};
 
-gulp.task('bower', function() {
+gulp.task('bower', function () {
 	return bower();
+});
+
+gulp.task('sass', function () {
+	return gulp.src('./components/*.scss')
+		.pipe(sass().on('error', sass.logError))
+		.pipe(gulp.dest('./src/css'));
+});
+
+gulp.task('watch', function () {
+	gulp.watch('./components/**/*.scss', ['sass']);
 });
 
 gulp.task('build', ['delete', 'autoprefix', 'adapt', 'clean', 'optimize']);

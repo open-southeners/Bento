@@ -1,13 +1,15 @@
-/** Mixes for components */
+/**
+ * Element mixes
+ */
 .omusubi {
 	@include border-radius(2px);
 	&.panel {
 		@include border-radius(50%);
 		width: 20vw;
-    vertical-align: middle;
-    text-align: center;
-    height: 20vw;
-    padding-top: 40%;
+    	vertical-align: middle;
+    	text-align: center;
+    	height: 20vw;
+    	padding-top: 40%;
 	}
 }
 
@@ -23,6 +25,34 @@
 	}
 }
 
+.dotted {
+	border-style: dotted;
+	&.text {
+		border-bottom-width: 1px;
+	}
+}
+
+.dashed {
+	border-style: dashed;
+	&.text {
+		border-bottom-width: 1px;
+	}
+}
+
+/**
+ * Element positioning mixes
+ */
+.right {
+	margin-left: auto;
+}
+
+.left {
+	margin-right: auto;
+}
+
+/**
+ * Color mixes
+ */
 .primary {
 	background-color: $primary_color;
 	&.alt {
@@ -38,6 +68,7 @@
 	&.panel {
 		border-color: $primary_color;
 		color: $primary_color;
+		background-color: $fix_primary_bkg;
 		background-color: $primary_bkg;
 		& a {
 			font-weight: bold;
@@ -49,6 +80,9 @@
 				color: $primary_color;
 			}
 		}
+	}
+	&.text {
+		color: $primary_color;
 	}
 }
 
@@ -67,6 +101,7 @@
 	&.panel {
 		border-color: $secondary_color;
 		color: $secondary_color;
+		background-color: $fix_secondary_bkg;
 		background-color: $secondary_bkg;
 		& a {
 			font-weight: bold;
@@ -78,6 +113,9 @@
 				color: $secondary_color;
 			}
 		}
+	}
+	&.text {
+		color: $secondary_color;
 	}
 }
 
@@ -96,6 +134,7 @@
 	&.panel {
 		border-color: $red_color;
 		color: $red_color;
+		background-color: $fix_red_bkg;
 		background-color: $red_bkg;
 		& a {
 			font-weight: bold;
@@ -107,6 +146,9 @@
 				color: $red_color;
 			}
 		}
+	}
+	&.text {
+		color: $red_color;
 	}
 }
 
@@ -139,6 +181,7 @@
 	&.panel {
 		border-color: $green_color;
 		color: $green_color;
+		background-color: $fix_green_bkg;
 		background-color: $green_bkg;
 		& a {
 			font-weight: bold;
@@ -150,6 +193,9 @@
 				color: $green_color;
 			}
 		}
+	}
+	&.text {
+		color: $green_color;
 	}
 }
 
@@ -165,6 +211,9 @@
 			color: $default_text;
 		}
 	}
+	&.text {
+		color: $brown_color;
+	}
 }
 
 .orange {
@@ -179,6 +228,9 @@
 			color: $default_text;
 		}
 	}
+	&.text {
+		color: $orange_color;
+	}
 }
 
 .purple {
@@ -192,6 +244,9 @@
 			background-color: $purple_color;
 			color: $default_text;
 		}
+	}
+	&.text {
+		color: $purple_color;
 	}
 }
 
@@ -210,6 +265,7 @@
 	&.panel {
 		border-color: $yellow_color;
 		color: $yellow_color;
+		background-color: $fix_yellow_bkg;
 		background-color: $yellow_bkg;
 		& a {
 			font-weight: bold;
@@ -221,6 +277,9 @@
 				color: $yellow_color;
 			}
 		}
+	}
+	&.text {
+		color: $yellow_color;
 	}
 }
 
@@ -236,6 +295,9 @@
 			color: $default_text;
 		}
 	}
+	&.text {
+		color: $pink_color;
+	}
 }
 
 .darkgreen {
@@ -250,6 +312,9 @@
 			color: $default_text;
 		}
 	}
+	&.text {
+		color: $darkgreen_color;
+	}
 }
 
 .cyan {
@@ -263,5 +328,8 @@
 			background-color: $cyan_color;
 			color: $default_text;
 		}
+	}
+	&.text {
+		color: $cyan_color;
 	}
 }
