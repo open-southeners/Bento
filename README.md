@@ -3,7 +3,7 @@
 # Main feature
 Pure, elegant, user-friendly web design framework which tries to bring a philosophy:
 
-"Key features focused on standard HTML tags (like h1, section, article, button...), and all of these with optional add-ons (mixes)"
+ > Key features focused on standard HTML tags (like h1, section, article, button...), and all of these with optional add-ons (mixes).
 
 ## To-Do list
 - Main features
