@@ -1,53 +1,32 @@
 {
   "name": "tadaima",
-  "description": "Tadaima, a pure simple-minimalist responsive web-based UI framework",
-  "author": "D8vjörk",
-  "version": "0.2.0",
-  "main": "./dist/css/styles.css",
+  "version": "0.1.0",
+  "description": "Pure, elegant, user-friendly web design framework",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/d8vjork/tadaima.git"
+    "url": "git+https://github.com/Social-chan/Tadaima.git"
   },
   "keywords": [
-    "css",
     "framework",
-    "interface",
-    "minimalist",
-    "simple",
-    "pure"
+    "design",
+    "CSS",
+    "HTML",
+    "pure",
+    "elegant",
+    "user-friendly"
   ],
+  "author": "Social-chan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/d8vjork/tadaima/issues"
+    "url": "https://github.com/Social-chan/Tadaima/issues"
   },
-  "homepage": "http://devs.social-chan.com/tadaima",
-  "devDependencies": {
-    "del": "^2.2.2",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-bless": "^3.1.0",
-    "gulp-bower": "0.0.13",
-    "gulp-clean-css": "^2.0.12",
-    "gulp-coffee": "^2.3.2",
-    "gulp-concat": "^2.6.0",
-    "gulp-concat-css": "^2.3.0",
-    "gulp-imagemin": "^3.0.3",
-    "gulp-import-css": "^0.1.2",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.2",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^2.0.0",
-    "webpack": "^1.13.2"
-  },
-  "dependencies": {
-    "gulp": "^3.9.1",
-    "gulp-bower": "0.0.13",
-    "gulp-clean-css": "^2.0.12",
-    "gulp-coffee": "^2.3.2",
-    "gulp-concat": "^2.6.0",
-    "gulp-import-css": "^0.1.2"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }
+  "homepage": "https://github.com/Social-chan/Tadaima#readme"
 }
