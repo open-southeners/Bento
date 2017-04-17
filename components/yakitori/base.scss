@@ -1,0 +1,101 @@
+/**
+ * Menu base component
+ */
+
+@import 'navs';
+
+nav.primary {
+	background-color: $bkg_real_black;
+	max-height: 54px;
+	border: none;
+	color: $default_text;
+	text-align: center;
+	& ul {
+		display: inline-flex;
+		height: 54px;
+		list-style: none;
+		align-items: center;
+		-ms-box-orient: horizontal;
+		& li.item {
+			display: inline-flex;
+			cursor: pointer;
+			background-image: none;
+			background-color: $primary_color;
+			color: $default_text;
+			padding: 10px 20px;
+			margin-right: 8px;
+			@include user-select(none);
+			&.active {
+				padding: 8px 18px;
+				border: 2px solid $primary_color;
+				background-color: transparent;
+				&:active {
+					border-color: $real_white;
+				}
+			}
+		}
+		& li a {
+			color: $default_text;
+		}
+		& li select {
+			-webkit-appearance: inherit;
+			font: 16px 'Open Sans', sans-serif;
+			background: transparent;
+			color: $default_text;
+			padding: 8px 18px;
+			border: 2px solid $primary_color;
+			outline: none;
+			& option {
+				border: 0;
+				display: inherit;
+				font-weight: inherit;
+				padding: 4px 2px;
+				background-color: $bkg_real_black;
+				color: $default-text;
+				&:hover, :focus {
+					background-color: $primary_color;
+				}
+			}
+		}
+	}
+}
+
+nav li.header {
+	display: inline-flex;
+	margin-right: 26px;
+}
+
+nav.vertical {
+	position: fixed;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: #f7f7f7;
+    & ul {
+        list-style-type: none;
+        margin-left: 0;
+        & li a {
+            display: block;
+            height: 4em;
+            width: 4em;
+            line-height: 4em;
+            text-align: center;
+            color: #999;
+            position: relative;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            @include transition(background 0.1s ease-in-out);
+            &:hover, :first-child a {
+                background: $primary_color; /* #47a3da */
+                color: $default_text;
+            }
+        }
+        /* current item */
+        & li.active a {
+            background: #fff;
+            color: #47a3da;
+        }
+    }
+}

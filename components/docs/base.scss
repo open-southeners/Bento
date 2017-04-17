@@ -1,0 +1,16 @@
+h2 > a.anchor-link {
+	opacity: 0;
+	color: inherit;
+	position: absolute;
+	margin-left: -1em;
+}
+
+:hover > a.anchor-link {
+	opacity: .75;
+}
+
+a.anchor-link:focus,
+:hover > a.anchor-link:hover {
+	opacity: 1;
+	text-decoration: none;
+}

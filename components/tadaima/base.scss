@@ -1,0 +1,88 @@
+// Too much important files for all
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+
+// All component mixes, temporally here
+@import 'mixes';
+
+html, body {
+	font: $font_size $site_fonts;
+	color: $body_text;
+	width: $site_width;
+	margin: 0;
+	line-height: $body_line_height;
+	-webkit-font-smoothing: antialiased;
+}
+
+/** Basic overrides */
+a,
+a:active,
+a:hover,
+a:focus {
+	text-decoration: none;
+}
+
+a {
+	color: $primary_color;
+}
+
+/** 
+ * Typography
+ */
+@import 'typography';
+
+
+hr {
+	border-bottom: 2px solid $okaeri_bkg;
+	margin-top: 34px;
+	margin-bottom: 32px;
+}
+
+img {
+	-webkit-user-drag: none;
+	user-select: none;
+	border: 0;
+	&.omusubi {
+		@include border-radius(50%);
+	}
+}
+
+section {
+	padding-left: 60px;
+	padding-right: 60px;
+}
+
+/** 
+ * Customize selection 
+ */
+::-webkit-selection {
+		background-color: $selection_bkg;
+		color: rgba(0, 0, 0, 0.87);
+}
+
+::-moz-selection {
+		background-color: $selection_bkg;
+		color: rgba(0, 0, 0, 0.87);
+}
+
+::selection {
+		background-color: $selection_bkg;
+		color: rgba(0, 0, 0, 0.87);
+}
+
+/** Other components & utilities */
+.wrapper {
+		margin-left: 4em;
+		margin-bottom: 2em;
+}
+
+.text {
+	background: none;
+	background-color: none;
+}
+
+.clearfix {
+	overflow: auto;
+	zoom: 1;
+}
