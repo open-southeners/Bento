@@ -19,3 +19,21 @@
 		-moz-user-select: $user-select;
 		-ms-user-select: $user-select;
 }
+
+@mixin transition($args) {
+    transition: $args;
+        -webkit-transition: $args;
+        -moz-transition: $args;
+}
+
+@mixin transition-delay($delay) {
+    transition-delay: $delay;
+        -webkit-transition-delay: $delay;
+        -moz-transition-delay: $delay;
+}
+
+@mixin translate3d($a1, $a2, $a3) {
+    transform: translate3d($a1, $a2, $a3);
+        -webkit-transform: translate3d($a1, $a2, $a3);
+        -moz-transform: translate3d($a1, $a2, $a3);
+}

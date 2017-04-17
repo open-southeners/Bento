@@ -1,0 +1,25 @@
+/** 
+ * Okaeri base component
+ */
+
+.okaeri {
+	display: block;
+	width: 100%;
+	padding-top: 48px;
+	background: $okaeri_bkg;
+	margin-bottom: 24px;
+	& h2 {
+		margin-bottom: 12px;
+	}
+	& .action {
+		margin-top: 24px;
+        margin-bottom: 48px;
+		text-align: center;
+		& button, a[role="button"] {
+			padding: 12px 32px;
+			&.alt {
+				padding: 10px 30px;
+			}
+		}
+	}
+}

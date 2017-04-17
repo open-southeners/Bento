@@ -1,14 +1,25 @@
-![Tadaima logo](http://devs.social-chan.com/tadaima/tadaima_logo.png)
+<p align="center">
+	<img src="https://raw.githubusercontent.com/Social-chan/Tadaima/master/logo.png" alt="Tadaima logo">
+	<h3 align="center">Tadaima</h3>
+	<p align="center">
+		Stylish, pure CSS, user-friendly web design framework 
+		<br>
+		<a href="http://tadaima.social-chan.com"><strong>Visit documentation</strong></a>
+	</p>
+</p>
 
-# Documentation
+## Getting starter
+A quick and small introduction:
 
-Coming soon...
+- [Download the latest release](https://github.com/Social-chan/Tadaima/archive/0.2.2.zip).
+- See [contribution guide](https://github.com/Social-chan/Tadaima/blob/master/CONTRIBUTING.md) for more details.
 
-# To-Do list
-- Documentation page.
-- Examples page.
-- Better responsive for smaller-screen devices.
-- CSS for UI animations.
-- Adapt font sizes and font family.
-- Integrate to mixes.
-- And much more pure elements and fixes
+**Note: We're releasing the first beta, so the project is under alpha pre-release versions and should not be used with production purposes.**
+
+## To-Do
+We're centering on browser compatibility and framework features, and better documentation page in near future.
+
+**Important note: More details on [Projects tab](https://github.com/Social-chan/Tadaima/projects).**
+
+## Copyright and license
+Code released under the [MIT License](https://github.com/Social-chan/Tadaima/blob/master/LICENSE).
