@@ -1,69 +1,62 @@
 var 
+	fs 				= require('fs'),
 	gulp			= require('gulp'),
+	bump 			= require('gulp-bump'),
 	rename			= require('gulp-rename'),
-	bower			= require('gulp-bower'),
-	coffee			= require('gulp-coffee'),
+	replace 		= require('gulp-replace')
 	uglify			= require('gulp-uglify'),
-	imagemin		= require('gulp-imagemin'),
 	sass			= require('gulp-sass'),
+	sassJson 		= require('gulp-sass-json'),
 	cleanCSS		= require('gulp-clean-css'),
 	strip_comments	= require('gulp-strip-css-comments'),
-	bless 			= require('gulp-bless'),
 	autoprefixer	= require('gulp-autoprefixer'),
 	sourcemaps		= require('gulp-sourcemaps'),
-	del				= require('del'),
+	zip 			= require('gulp-zip'),
+	del				= require('del');
 
-	URI = {
-		src_styles:			'src/css/*.css',
-		src_scripts:		'src/js/*.js',
-		src_images:			'src/images/*',
-		dist_styles:		'dist/css/*.css',
-		dist_scripts:		'dist/js/*.js',
-		dist_images:		'dist/images/*',
-		libs:						'libs/'
-	};
+const 
+	scss_dir	= './components',
+	src_styles	= './src',
+	dist_styles	= './dist/css';
 
-gulp.task('bower', function () {
-	return bower();
+var getPackageJson = function () {
+	return JSON.parse(fs.readFileSync('./package.json', 'utf8'));
+};
+
+// Build task process concat different tasks
+gulp.task('build', function () {
+	gulp.run('patch');
+	gulp.run('bump');
+	gulp.run('sass');
+	gulp.run('clean');
 });
 
+// Preprocess SASS components
 gulp.task('sass', function () {
-	return gulp.src('./components/*.scss')
+	return gulp.src(scss_dir + '/*.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
 		.pipe(sourcemaps.write('./'))
 		.pipe(strip_comments())
-		.pipe(gulp.dest('./src/css'));
+		.pipe(gulp.dest(src_styles));
 });
 
+// DEV ONLY! Watch for any change in components dir
 gulp.task('watch', function () {
-	gulp.watch('./components/**/*.scss', ['sass']);
+	gulp.watch(scss_dir + '/**/*.scss', ['sass']);
 });
 
-gulp.task('build', ['delete', 'autoprefix', 'adapt', 'clean', 'optimize']);
-
+// Delete all files from dist styles
 gulp.task('delete', function () {
-  return del([URI.dist_styles, URI.dist_scripts, URI.dist_images]);
+	return del(dist_styles);
 });
 
-gulp.task('autoprefix', ['delete'], function () {
-  return gulp.src(URI.src_styles)
+// Autoprefix, clean & minify CSS
+gulp.task('clean', ['delete'], function () {
+	return gulp.src(src_styles + '/*.css')
 		.pipe(sourcemaps.init())
 		.pipe(autoprefixer())
-		.pipe(sourcemaps.write())
-		.pipe(gulp.dest('src/css'));
-});
-
-gulp.task('adapt', ['autoprefix'], function () {
-  return gulp.src('src/css/screen.css')
-		.pipe(bless())
-		.pipe(rename({basename: 'ie'}))
-		.pipe(gulp.dest('src/css'));
-});
-
-gulp.task('clean', ['adapt'], function () {
-  return gulp.src(URI.src_styles)
-		.pipe(sourcemaps.init())
+		.pipe(rename({ suffix: '.min' }))
 		.pipe(cleanCSS({
 			keepSpecialComments: 1,
 			processImportFrom: 'local',
@@ -73,15 +66,29 @@ gulp.task('clean', ['adapt'], function () {
 			console.log(details.name + ': ' + details.stats.originalSize);
 			console.log(details.name + ': ' + details.stats.minifiedSize);
 		}))
-		.pipe(rename({suffix: '.min'}))
-		.pipe(sourcemaps.write())
-		.pipe(gulp.dest('dist/css'));
+		.pipe(sourcemaps.write('./'))
+		.pipe(gulp.dest(dist_styles));
 });
 
-gulp.task('optimize', ['clean'], function () {
-	return gulp.src(URI.src_images)
-		.pipe(sourcemaps.init())
-		.pipe(imagemin())
-		.pipe(sourcemaps.write())
-		.pipe(gulp.dest('dist/images'));
+// Compress build (dist) pack in zip
+gulp.task('compress', function () {
+	var pkg = getPackageJson();
+	return gulp.src('./dist/*/**')
+		.pipe(zip(pkg.name + '-' + pkg.version + '.zip'))
+		.pipe(gulp.dest('./'));
+});
+
+// Minor patch to package
+gulp.task('patch', function () {
+	return gulp.src('./package.json')
+		.pipe(bump({ key: "version" }))
+		.pipe(gulp.dest('./'));
+});
+
+// Bump replacement for SASS variable
+gulp.task('bump', function () {
+	var pkg = getPackageJson();
+	return gulp.src(scss_dir + '/tadaima/variables.scss')
+		.pipe(replace(/"(\d+.\d+.\d+)"/g, '"' + pkg.version + '"'))
+		.pipe(gulp.dest(scss_dir + '/tadaima'));
 });

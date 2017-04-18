@@ -1,2 +1,4 @@
 _blueprints
+src
+*.zip
 node_modules
