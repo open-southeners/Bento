@@ -1,7 +1,3 @@
-/**
- * Buttons base component
- */
- 
 button {
 	cursor: pointer;
 	display: inline-block;
@@ -16,12 +12,6 @@ button {
 	color: $default_text;
     @include transition(background-color 0.1s ease-in-out);
     @include user-select(none);
-	&.alt {
-		padding: 8px 16px;
-		border-width: 2px;
-		border-style: solid;
-		border-color: none;
-	}
 }
 
 // Links with buttons styles

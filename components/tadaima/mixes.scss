@@ -1,17 +1,8 @@
-/**
- * Element mixes
- */
-.omusubi {
-	@include border-radius(2px);
-	&.panel {
-		@include border-radius(50%);
-		width: 20vw;
-    	vertical-align: middle;
-    	text-align: center;
-    	height: 20vw;
-    	padding-top: 40%;
-	}
-}
+// Buttons mixes
+@import 'button/mixes';
+
+// Panels mixes
+@import 'panel/mixes';
 
 .fixed {
 	position: fixed;
@@ -39,9 +30,7 @@
 	}
 }
 
-/**
- * Element positioning mixes
- */
+// Element positioning mixes
 .right {
 	margin-left: auto;
 }
@@ -50,377 +39,39 @@
 	margin-right: auto;
 }
 
-/**
- * Color mixes
- */
-.primary {
-	background-color: $primary_color;
-	&.alt {
-		background-color: transparent;
-		border-color: $primary_color;
-		color: $primary_color;
-		&.alt:hover {
-			background-color: $primary_color;
-			color: $default_text;
-		}
-	}
-	&.panel {
-		border-color: $primary_color;
-		color: $primary_color;
-		background-color: $fix_primary_bkg;
-		background-color: $primary_bkg;
-		& a {
-			font-weight: bold;
-			border-bottom: $primary_color dashed 1px;
-			color: $primary_color;
-			&:hover,
-			&:focus {
-				text-decoration: none;
-				color: $primary_color;
-			}
-		}
-	}
-	&.text {
+// Color mixes
+.text {
+	&.primary {
 		color: $primary_color;
 	}
-}
-
-.secondary {
-	background-color: $secondary_color;
-	&.alt {
-		background-color: transparent;
-		border-color: $secondary_color;
-		color: $secondary_color;
-		&:hover,
-		&:focus {
-			background-color: $secondary_color;
-			color: $default_text;
-		}
-	}
-	&.panel {
-		border-color: $secondary_color;
-		color: $secondary_color;
-		background-color: $fix_secondary_bkg;
-		background-color: $secondary_bkg;
-		& a {
-			font-weight: bold;
-			border-bottom: $secondary_color dashed 1px;
-			color: $secondary_color;
-			&:hover,
-			&:focus {
-				text-decoration: none;
-				color: $secondary_color;
-			}
-		}
-	}
-	&.text {
+	&.secondary {
 		color: $secondary_color;
 	}
-}
-
-.red {
-	background-color: $red_color;
-	&.alt {
-		background-color: transparent;
-		border-color: $red_color;
-		color: $red_color;
-		&:hover {
-			background-color: $red_color;
-			color: $default_text;
-		}
-	}
-	&.panel {
-		border-color: $red_color;
-		color: $red_color;
-		background-color: $fix_red_bkg;
-		background-color: $red_bkg;
-		& a {
-			font-weight: bold;
-			border-bottom: $red_color dashed 1px;
-			color: $red_color;
-			&:hover {
-				text-decoration: none;
-				color: $red_color;
-			}
-		}
-	}
-	&.text {
+	&.red {
 		color: $red_color;
 	}
-}
-
-.black {
-	background-color: $black_color;
-	&.alt {
-		background-color: transparent;
-		border-color: $black_color;
-		color: $black_color;
-		&:hover {
-			background-color: $black_color;
-			color: $default_text;
-		}
-	}
-}
-
-.green {
-	background-color: $green_color;
-	&.alt {
-		background-color: transparent;
-		border-color: $green_color;
-		color: $green_color;
-		&:hover {
-			background-color: $green_color;
-			color: $default_text;
-		}
-	}
-	&.panel {
-		border-color: $green_color;
-		color: $green_color;
-		background-color: $fix_green_bkg;
-		background-color: $green_bkg;
-		& a {
-			font-weight: bold;
-			border-bottom: $green_color dashed 1px;
-			color: $green_color;
-			&:hover,
-			&:focus {
-				text-decoration: none;
-				color: $green_color;
-			}
-		}
-	}
-	&.text {
+	&.green {
 		color: $green_color;
 	}
-}
-
-.brown {
-	background-color: $brown_color;
-	&.alt {
-		background-color: transparent;
-		border-color: $brown_color;
-		color: $brown_color;
-		&:hover {
-			background-color: $brown_color;
-			color: $default_text;
-		}
-	}
-	&.text {
+	&.brown {
 		color: $brown_color;
 	}
-}
-
-.orange {
-	background-color: $orange_color;
-	&.alt {
-		background-color: transparent;
-		border-color: $orange_color;
-		color: $orange_color;
-		&:hover {
-			background-color: $orange_color;
-			color: $default_text;
-		}
-	}
-	&.text {
+	&.orange {
 		color: $orange_color;
 	}
-}
-
-.purple {
-	background-color: $purple_color;
-	&.alt {
-		background-color: transparent;
-		border-color: $purple_color;
-		color: $purple_color;
-		&:hover {
-			background-color: $purple_color;
-			color: $default_text;
-		}
-	}
-	&.text {
+	&.purple {
 		color: $purple_color;
 	}
-}
-
-.yellow {
-	background-color: $yellow_color;
-	&.alt {
-		background-color: transparent;
-		border-color: $yellow_color;
-		color: $yellow_color;
-		&:hover {
-			background-color: $yellow_color;
-			color: $default_text;
-		}
-	}
-	&.panel {
-		border-color: $yellow_color;
-		color: $yellow_color;
-		background-color: $fix_yellow_bkg;
-		background-color: $yellow_bkg;
-		& a {
-			font-weight: bold;
-			border-bottom: $yellow_color dashed 1px;
-			color: $yellow_color;
-			&:hover,
-			&:focus {
-				text-decoration: none;
-				color: $yellow_color;
-			}
-		}
-	}
-	&.text {
+	&.yellow {
 		color: $yellow_color;
 	}
-}
-
-.pink {
-	background-color: $pink_color;
-	&.alt {
-		background-color: transparent;
-		border-color: $pink_color;
-		color: $pink_color;
-		&:hover {
-			background-color: $pink_color;
-			color: $default_text;
-		}
-	}
-	&.text {
+	&.pink {
 		color: $pink_color;
 	}
-}
-
-.darkgreen {
-	background-color: $darkgreen_color;
-	&.alt {
-		background-color: transparent;
-		border-color: $darkgreen_color;
-		color: $darkgreen_color;
-		&:hover {
-			background-color: $darkgreen_color;
-			color: $default_text;
-		}
-	}
-	&.text {
+	&.darkgreen {
 		color: $darkgreen_color;
 	}
-}
-
-.cyan {
-	background-color: $cyan_color;
-	&.alt {
-		background-color: transparent;
-		border-color: $cyan_color;
-		color: $cyan_color;
-		&:hover {
-			background-color: $cyan_color;
-			color: $default_text;
-		}
-	}
-	&.text {
+	&.cyan {
 		color: $cyan_color;
 	}
-}
-
-/**
- * Responsive sizes mixes
- */
-.container-fluid,
-.container {
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.container-fluid {
-    padding-right: 2rem;
-    padding-left: 2rem;
-}
-
-.row {
-    box-sizing: border-box;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-
-.column,
-.column-1 {
-    -ms-flex-preferred-size: 8.33333333%;
-    flex-basis: 8.33333333%;
-    max-width: 8.33333333%;
-}
-
-.column-2 {
-    -ms-flex-preferred-size: 16.66666667%;
-    flex-basis: 16.66666667%;
-    max-width: 16.66666667%;
-}
-
-.column-3 {
-    -ms-flex-preferred-size: 25%;
-    flex-basis: 25%;
-    max-width: 25%;
-}
-
-.column-4 {
-    -ms-flex-preferred-size: 33.33333333%;
-    flex-basis: 33.33333333%;
-    max-width: 33.33333333%;
-}
-
-.column-5 {
-    -ms-flex-preferred-size: 41.66666667%;
-    flex-basis: 41.66666667%;
-    max-width: 41.66666667%;
-}
-
-.column-6 {
-    -ms-flex-preferred-size: 50%;
-    flex-basis: 50%;
-    max-width: 50%;
-}
-
-.column-7 {
-    -ms-flex-preferred-size: 58.33333333%;
-    flex-basis: 58.33333333%;
-    max-width: 58.33333333%;
-}
-
-.column-8 {
-    -ms-flex-preferred-size: 66.66666667%;
-    flex-basis: 66.66666667%;
-    max-width: 66.66666667%;
-}
-
-.column-9 {
-    -ms-flex-preferred-size: 75%;
-    flex-basis: 75%;
-    max-width: 75%;
-}
-
-.column-10 {
-    -ms-flex-preferred-size: 83.33333333%;
-    flex-basis: 83.33333333%;
-    max-width: 83.33333333%;
-}
-
-.column-11 {
-    -ms-flex-preferred-size: 91.66666667%;
-    flex-basis: 91.66666667%;
-    max-width: 91.66666667%;
-}
-
-.column-12 {
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
 }

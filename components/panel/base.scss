@@ -1,12 +1,6 @@
-/** 
- * Panels base component
- */
-
 .panel {
 	display: block;
 	width: 100%;
-	outline: 3px dashed;
-	border-color: none;
 	padding: 10px 15px;
 	margin: 12px 0px;
 	& h5 {

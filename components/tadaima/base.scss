@@ -1,10 +1,14 @@
-// Too much important files for all
+// Reset CSS
 @import 'reset';
-@import 'variables';
+
+// SASS Mixins
 @import 'mixins';
 
 // All component mixes, temporally here
 @import 'mixes';
+
+// Responsive utilities, BUGGED POSITION!
+@import 'responsive';
 
 html, body {
 	font: $font_size $site_fonts;
@@ -71,7 +75,7 @@ section {
 		color: rgba(0, 0, 0, 0.87);
 }
 
-/** Other components & utilities */
+// Other components & utilities
 .wrapper {
 		margin-left: 4em;
 		margin-bottom: 2em;

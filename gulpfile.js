@@ -7,6 +7,7 @@ var
 	imagemin		= require('gulp-imagemin'),
 	sass			= require('gulp-sass'),
 	cleanCSS		= require('gulp-clean-css'),
+	strip_comments	= require('gulp-strip-css-comments'),
 	bless 			= require('gulp-bless'),
 	autoprefixer	= require('gulp-autoprefixer'),
 	sourcemaps		= require('gulp-sourcemaps'),
@@ -28,7 +29,10 @@ gulp.task('bower', function () {
 
 gulp.task('sass', function () {
 	return gulp.src('./components/*.scss')
+		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
+		.pipe(sourcemaps.write('./'))
+		.pipe(strip_comments())
 		.pipe(gulp.dest('./src/css'));
 });
 

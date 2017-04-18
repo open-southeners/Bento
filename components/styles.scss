@@ -1,45 +1,30 @@
+@import 'tadaima/variables';
 /*!
- * Tadaima v0.3.0-alpha (http://devs.social-chan.com/tadaima/)
+ * Tadaima v#{$version} (http://tadaima.social-chan.com/)
  * Copyright 2016-2017 D8vjörk
  * Licensed under MIT (https://github.com/Social-chan/Tadaima/blob/master/LICENSE)
  */
 
-/**
- * Tadaima base component
- */
+// Tadaima base component
 @import 'tadaima/base';
 
-/**
- * Icons base component
- */
+// Icons base component
 @import 'icons/base';
 
-/**
- * Onigiri base component
- */
-@import 'onigiri/base';
+// Tooltips base component
+@import 'tooltip/base';
 
-/**
- * Buttons base component
- */
+// Buttons base component
 @import 'button/base';
 
-/**
- * Yakitori base component
- */
-@import 'yakitori/base';
+// Menus base component
+@import 'menu/base';
 
-/**
- * Okaeri base component
- */
+// Okaeri base component
 @import 'okaeri/base';
 
-/**
- * Sushi base component
- */
-@import 'sushi/base';
+// Panels base component
+@import 'panel/base';
 
-/**
- * Docs base styles
- */
+// Docs base styles
 @import 'docs/base';
