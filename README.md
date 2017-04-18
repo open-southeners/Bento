@@ -4,7 +4,7 @@
 	<p align="center">
 		Stylish, pure CSS, user-friendly web design framework 
 		<br>
-		<a href="http://tadaima.social-chan.com"><strong>Visit documentation</strong></a>
+		<a href="https://tadaima.social-chan.com"><strong>Visit documentation</strong></a>
 	</p>
 </p>
 
