@@ -1,3 +1,9 @@
+/*!
+ * Tadaima Docs (https://tadaima.social-chan.com/)
+ * Copyright 2016-2017 D8vjörk
+ * Licensed under MIT (https://github.com/Social-chan/Tadaima/blob/master/LICENSE)
+ */
+
 h2 > a.anchor-link {
 	opacity: 0;
 	color: inherit;
@@ -13,4 +19,8 @@ a.anchor-link:focus,
 :hover > a.anchor-link:hover {
 	opacity: 1;
 	text-decoration: none;
+}
+
+.demo-icon i {
+	margin-right: 6px;
 }

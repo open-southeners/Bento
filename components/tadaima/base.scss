@@ -1,10 +1,14 @@
-// Too much important files for all
+// Reset CSS
 @import 'reset';
-@import 'variables';
+
+// SASS Mixins
 @import 'mixins';
 
 // All component mixes, temporally here
 @import 'mixes';
+
+// Responsive utilities, BUGGED POSITION!
+@import 'responsive';
 
 html, body {
 	font: $font_size $site_fonts;
@@ -15,7 +19,7 @@ html, body {
 	-webkit-font-smoothing: antialiased;
 }
 
-/** Basic overrides */
+// Basic overrides
 a,
 a:active,
 a:hover,
@@ -27,11 +31,8 @@ a {
 	color: $primary_color;
 }
 
-/** 
- * Typography
- */
+// Typography
 @import 'typography';
-
 
 hr {
 	border-bottom: 2px solid $okaeri_bkg;
@@ -53,9 +54,7 @@ section {
 	padding-right: 60px;
 }
 
-/** 
- * Customize selection 
- */
+// Customize selection 
 ::-webkit-selection {
 		background-color: $selection_bkg;
 		color: rgba(0, 0, 0, 0.87);
@@ -71,7 +70,7 @@ section {
 		color: rgba(0, 0, 0, 0.87);
 }
 
-/** Other components & utilities */
+// Other components & utilities
 .wrapper {
 		margin-left: 4em;
 		margin-bottom: 2em;
