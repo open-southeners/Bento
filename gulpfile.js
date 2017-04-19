@@ -17,7 +17,8 @@ var
 const 
 	scss_dir	= './components',
 	src_styles	= './src',
-	dist_styles	= './dist/css';
+	dist_styles	= './dist/css',
+	docs_styles = './docs/dist/css';
 
 var getPackageJson = function () {
 	return JSON.parse(fs.readFileSync('./package.json', 'utf8'));
@@ -67,7 +68,8 @@ gulp.task('clean', ['delete'], function () {
 			console.log(details.name + ': ' + details.stats.minifiedSize);
 		}))
 		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest(dist_styles));
+		.pipe(gulp.dest(dist_styles))
+		.pipe(gulp.dest(docs_styles));
 });
 
 // Compress build (dist) pack in zip
