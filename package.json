@@ -4,7 +4,7 @@
   "description": "Stylish, pure CSS, user-friendly web design framework.",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "start"
+    "build": "npm version patch"
   },
   "author": "D8vjork",
   "repository": {
@@ -12,12 +12,12 @@
     "url": "git+https://github.com/Social-chan/Tadaima.git"
   },
   "keywords": [
+    "front-end",
+    "design",
+    "html",
     "css",
     "framework",
-    "interface",
-    "minimalist",
-    "simple",
-    "pure"
+    "tadaima"
   ],
   "license": "MIT",
   "bugs": {
@@ -44,5 +44,10 @@
     "gulp-zip": "^4.0.0",
     "webpack": "^1.13.2"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "files": [
+    "dist",
+    "components",
+    "LICENSE"
+  ]
 }
