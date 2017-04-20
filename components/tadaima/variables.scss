@@ -3,7 +3,8 @@ $version: "0.3.4";
 
 // Font sizes and families
 $font_size: 14px !default;
-$site_fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+$site_fonts: BlinkMacSystemFont, -apple-system, "Open Sans", "Helvetica", "Arial", sans-serif !default;
+$title_fonts: "Source Sans Pro", sans-serif !default;
 
 // Component sizes and metrics
 $site_width: 100% !default;

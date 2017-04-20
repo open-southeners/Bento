@@ -11,8 +11,7 @@ var
 	strip_comments	= require('gulp-strip-css-comments'),
 	autoprefixer	= require('gulp-autoprefixer'),
 	sourcemaps		= require('gulp-sourcemaps'),
-	zip 			= require('gulp-zip'),
-	del				= require('del');
+	zip 			= require('gulp-zip');
 
 const 
 	scss_dir	= './components',
@@ -47,13 +46,8 @@ gulp.task('watch', function () {
 	gulp.watch(scss_dir + '/**/*.scss', ['sass']);
 });
 
-// Delete all files from dist styles
-gulp.task('delete', function () {
-	return del(dist_styles);
-});
-
 // Autoprefix, clean & minify CSS
-gulp.task('clean', ['delete'], function () {
+gulp.task('clean', function () {
 	return gulp.src(src_styles + '/*.css')
 		.pipe(sourcemaps.init())
 		.pipe(autoprefixer())
