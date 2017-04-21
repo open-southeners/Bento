@@ -1,287 +1,256 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-
-	<title>Tadaima - Pure CSS Framework</title>
-
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet"> 
-	<link rel="stylesheet" href="dist/css/tadaima.min.css">
-	<link rel="stylesheet" href="dist/css/docs.css">
-</head>
-<body>
-	<nav class="vertical">
-		<ul>
+---
+layout: home
+---
+<div class="wrapper container">
+	<section class="okaeri">
+		<h2>Components</h2>
+		Components base designed for the Tadaima framework. More coming soon...
+		<div class="action">
+			<a href="https://github.com/Social-chan/Tadaima/releases/download/v0.3.4-alpha/tadaima-0.3.4-alpha-dist.zip" class="primary"
+			 role="button">
+				<i class="icon-cloud-download"></i> Download
+			</a>
+		</div>
+		<nav>
+			<li>
+				<a href="{{ site.baseurl }}/">Getting started</a>
+			</li>
 			<li class="active">
-				<a href="#">
-					<i class="icon-home-alt"></i>
-				</a>
+				<a href="{{ site.baseurl }}/components">Components</a>
 			</li>
 			<li>
-				<a href="#">
-					<i class="icon-left-bubbles"></i>
-				</a>
+				<a href="{{ site.baseurl }}/mixes">Mixes</a>
 			</li>
-			<li>
-				<a href="#">
-					<i class="icon-feather-square"></i>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<i class="icon-user-square"></i>
-				</a>
-			</li>
-		</ul>
-	</nav>
-	<div class="wrapper container">
-		<section class="okaeri">
-			<h2>Components</h2>
-			Components base designed for the Tadaima framework. More coming soon...
-			<div class="action">
-				<a href="https://github.com/Social-chan/Tadaima/releases/download/v0.3.4-alpha/tadaima-0.3.4-alpha-dist.zip" class="primary" role="button">
-					<i class="icon-cloud-download"></i> Download
-				</a>
-			</div>
-			<nav>
-				<li>
-					<a href="index.html">Getting started</a>
-				</li>
-				<li class="active">
-					<a href="#">Components</a>
-				</li>
-				<li>
-					<a href="mixes.html">Mixes</a>
-				</li>
-			</nav>
-		</section>
-		<section>
-			<h2 id="buttons">
-				<a class="anchor-link" href="#buttons">
-					<i class="icon-section"></i>
-				</a>
-				Buttons
-			</h2>
-			<button class="primary">Primary</button>
-			<button class="secondary">Secondary</button>
-			<br>
-			<button class="red">Red</button>
-			<button class="black">Black</button>
-			<button class="green">Green</button>
-			<button class="brown">Brown</button>
-			<button class="orange">Orange</button>
-			<button class="purple">Purple</button>
-			<button class="yellow">Yellow</button>
-			<button class="pink">Pink</button>
-			<button class="darkgreen">Dark green</button>
-			<button class="cyan">Cyan</button>
-			<h3>With icons</h3>
-			<button class="primary">
+		</nav>
+	</section>
+	<section>
+		<h2 id="buttons">
+			<a class="anchor-link" href="#buttons">
+				<i class="icon-section"></i>
+			</a>
+			Buttons
+		</h2>
+		<button class="primary">Primary</button>
+		<button class="secondary">Secondary</button>
+		<br>
+		<button class="red">Red</button>
+		<button class="black">Black</button>
+		<button class="green">Green</button>
+		<button class="brown">Brown</button>
+		<button class="orange">Orange</button>
+		<button class="purple">Purple</button>
+		<button class="yellow">Yellow</button>
+		<button class="pink">Pink</button>
+		<button class="darkgreen">Dark green</button>
+		<button class="cyan">Cyan</button>
+		<h3>With icons</h3>
+		<button class="primary">
 				<i class="icon-user-plus"></i>
 				Add friend
 			</button>
 
-			<h2 id="panels">
-				<a class="anchor-link" href="#panels">
-					<i class="icon-section"></i>
-				</a>
-				Panels
-			</h2>
-			<div class="panel primary">
-				<h5>Panel Primary</h5>
-				<a href="#">Lorem ipsum</a> dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
-			</div>
-			<div class="panel secondary">
-				<h5>Panel Secondary</h5>
-				<a href="#">Lorem ipsum</a> dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
-			</div>
-			<div class="panel red">
-				<h5>Panel Red</h5>
-				<a href="#">Lorem ipsum</a> dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
-			</div>
-			<div class="panel green">
-				<h5>Panel Green</h5>
-				<a href="#">Lorem ipsum</a> dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
-			</div>
-			<div class="panel yellow">
-				<h5>Panel Yellow</h5>
-				<a href="#">Lorem ipsum</a> dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
-			</div>
-			<hr>
-			<h2 id="icons">
-				<a class="anchor-link" href="#icons">
-					<i class="icon-section"></i>
-				</a>
-				Icons 
-				<small>
+		<h2 id="panels">
+			<a class="anchor-link" href="#panels">
+				<i class="icon-section"></i>
+			</a>
+			Panels
+		</h2>
+		<div class="panel primary">
+			<h5>Panel Primary</h5>
+			<a href="#">Lorem ipsum</a> dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere,
+			magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
+		</div>
+		<div class="panel secondary">
+			<h5>Panel Secondary</h5>
+			<a href="#">Lorem ipsum</a> dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere,
+			magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
+		</div>
+		<div class="panel red">
+			<h5>Panel Red</h5>
+			<a href="#">Lorem ipsum</a> dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere,
+			magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
+		</div>
+		<div class="panel green">
+			<h5>Panel Green</h5>
+			<a href="#">Lorem ipsum</a> dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere,
+			magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
+		</div>
+		<div class="panel yellow">
+			<h5>Panel Yellow</h5>
+			<a href="#">Lorem ipsum</a> dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere,
+			magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
+		</div>
+		<hr>
+		<h2 id="icons">
+			<a class="anchor-link" href="#icons">
+				<i class="icon-section"></i>
+			</a>
+			Icons
+			<small>
 					by <a href="http://adamwhitcroft.com/batch/" target="_blank">batch</a>
 				</small>
-			</h2>
-			<div class="row">
-				<div class="column-3 demo-icon">
-					<i class="icon-left-bubble"></i>icon-left-bubble
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-center-bubble"></i>icon-center-bubble
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-right-bubble"></i>icon-right-bubble
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-left-text-bubble"></i>icon-left-text-bubble
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-center-text-bubble"></i>icon-center-text-bubble
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-right-text-bubble"></i>icon-right-text-bubble
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-left-black-bubble"></i>icon-left-black-bubble
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-center-black-bubble"></i>icon-center-black-bubble
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-right-black-bubble"></i>icon-right-black-bubble
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-left-bubbles"></i>icon-left-bubbles
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-right-bubbles"></i>icon-right-bubbles
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-window"></i>icon-window
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-window-plus"></i>icon-window-plus
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-window-minus"></i>icon-window-minus
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-window-cross"></i>icon-window-cross
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-window-upload"></i>icon-window-upload
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-window-download"></i>icon-window-download
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-console"></i>icon-console
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-windows"></i>icon-windows
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-window-alt"></i>icon-window-alt
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-window-plus-alt"></i>icon-window-plus-alt
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-window-minus-alt"></i>icon-window-minus-alt
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-window-cross-alt"></i>icon-window-cross-alt
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-window-upload-alt"></i>icon-window-upload-alt
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-window-download-alt"></i>icon-window-download-alt
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-console-alt"></i>icon-console-alt
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-windows-alt"></i>icon-windows-alt
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-frames"></i>icon-frames
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-frame-plus"></i>icon-frame-plus
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-frame-minus"></i>icon-frame-minus
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-frame-alt"></i>icon-frame-alt
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-frame-plus-alt"></i>icon-frame-plus-alt
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-frame-minus-alt"></i>icon-frame-minus-alt
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-frame-upload-alt"></i>icon-frame-upload-alt
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-frame-download-alt"></i>icon-frame-download-alt
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-crate"></i>icon-crate
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-grid"></i>icon-grid
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-grid-alt"></i>icon-grid-alt
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-list"></i>icon-list
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-list-alt"></i>icon-list-alt
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-right-in"></i>icon-right-in
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-left-out"></i>icon-left-out
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-down-in"></i>icon-down-in
-				</div>
-				<div class="column-3 demo-icon">
-					<i class="icon-up-out"></i>icon-up-out
-				</div>
+		</h2>
+		<div class="row">
+			<div class="column-3 demo-icon">
+				<i class="icon-left-bubble"></i>icon-left-bubble
 			</div>
-			<h2 id="tooltips">
-				<a class="anchor-link" href="#tooltips">
-					<i class="icon-section"></i>
-				</a>
-				Tooltips
-			</h2>
-			<div class="row">
-				<div class="column-3">
-					<a href="#" class="tooltip-top" aria-label="Top tooltip">
+			<div class="column-3 demo-icon">
+				<i class="icon-center-bubble"></i>icon-center-bubble
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-right-bubble"></i>icon-right-bubble
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-left-text-bubble"></i>icon-left-text-bubble
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-center-text-bubble"></i>icon-center-text-bubble
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-right-text-bubble"></i>icon-right-text-bubble
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-left-black-bubble"></i>icon-left-black-bubble
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-center-black-bubble"></i>icon-center-black-bubble
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-right-black-bubble"></i>icon-right-black-bubble
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-left-bubbles"></i>icon-left-bubbles
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-right-bubbles"></i>icon-right-bubbles
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-window"></i>icon-window
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-window-plus"></i>icon-window-plus
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-window-minus"></i>icon-window-minus
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-window-cross"></i>icon-window-cross
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-window-upload"></i>icon-window-upload
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-window-download"></i>icon-window-download
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-console"></i>icon-console
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-windows"></i>icon-windows
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-window-alt"></i>icon-window-alt
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-window-plus-alt"></i>icon-window-plus-alt
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-window-minus-alt"></i>icon-window-minus-alt
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-window-cross-alt"></i>icon-window-cross-alt
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-window-upload-alt"></i>icon-window-upload-alt
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-window-download-alt"></i>icon-window-download-alt
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-console-alt"></i>icon-console-alt
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-windows-alt"></i>icon-windows-alt
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-frames"></i>icon-frames
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-frame-plus"></i>icon-frame-plus
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-frame-minus"></i>icon-frame-minus
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-frame-alt"></i>icon-frame-alt
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-frame-plus-alt"></i>icon-frame-plus-alt
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-frame-minus-alt"></i>icon-frame-minus-alt
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-frame-upload-alt"></i>icon-frame-upload-alt
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-frame-download-alt"></i>icon-frame-download-alt
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-crate"></i>icon-crate
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-grid"></i>icon-grid
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-grid-alt"></i>icon-grid-alt
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-list"></i>icon-list
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-list-alt"></i>icon-list-alt
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-right-in"></i>icon-right-in
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-left-out"></i>icon-left-out
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-down-in"></i>icon-down-in
+			</div>
+			<div class="column-3 demo-icon">
+				<i class="icon-up-out"></i>icon-up-out
+			</div>
+		</div>
+		<h2 id="tooltips">
+			<a class="anchor-link" href="#tooltips">
+				<i class="icon-section"></i>
+			</a>
+			Tooltips
+		</h2>
+		<div class="row">
+			<div class="column-3">
+				<a href="#" class="tooltip-top" aria-label="Top tooltip">
 						Top
 					</a>
-				</div>
-				<div class="column-3">
-					<a href="#" class="tooltip-bottom" aria-label="Bottom tooltip">
+			</div>
+			<div class="column-3">
+				<a href="#" class="tooltip-bottom" aria-label="Bottom tooltip">
 						Bottom
 					</a>
-				</div>
-				<div class="column-3">
-					<a href="#" class="tooltip-left" aria-label="Left tooltip">
+			</div>
+			<div class="column-3">
+				<a href="#" class="tooltip-left" aria-label="Left tooltip">
 						Left
 					</a>
-				</div>
-				<div class="column-3">
-					<a href="#" class="tooltip-right" aria-label="Right tooltip">
+			</div>
+			<div class="column-3">
+				<a href="#" class="tooltip-right" aria-label="Right tooltip">
 						Right
 					</a>
-				</div>
 			</div>
-		</section>
-	</div>
-</body>
-</html>
+		</div>
+	</section>
+</div>
