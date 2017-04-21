@@ -23,6 +23,7 @@ authors: Social-chan Team and Tadaima contributors
 
 # Server
 source: docs
+destination: docs/_site
 encoding: UTF-8
 port: 9001
 baseurl: "" # the subpath of your site, e.g. /blog

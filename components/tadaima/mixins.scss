@@ -20,6 +20,14 @@
 		-ms-user-select: $user-select;
 }
 
+@mixin vertical-align($position: relative) {
+	position: $position;
+	top: 50%;
+	transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+}
+
 @mixin transition($args) {
     transition: $args;
         -webkit-transition: $args;

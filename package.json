@@ -4,9 +4,15 @@
   "description": "Stylish, pure CSS, user-friendly web design framework.",
   "main": "gulpfile.js",
   "scripts": {
-    "build": "npm version patch"
+    "build": "npm version patch",
+    "build-docs": "bundle exec jekyll build --watch",
+    "docs": "bundle exec jekyll serve"
   },
-  "author": "D8vjork",
+  "author": {
+    "name": "D8vjork",
+    "email": "contact@d8vjork.es",
+    "url": "https://d8vjork.es"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Social-chan/Tadaima.git"
@@ -41,8 +47,7 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-strip-css-comments": "^1.2.0",
     "gulp-uglify": "^2.0.0",
-    "gulp-zip": "^4.0.0",
-    "webpack": "^1.13.2"
+    "gulp-zip": "^4.0.0"
   },
   "dependencies": {},
   "files": [
