@@ -5,7 +5,10 @@
 </head>
 <body>
 	{% include sidebar-menu.html %}
-	{{ content }}
+	<div class="wrapper container">
+		{% include page-header.html %}
+		{{ content }}
+	</div>
 	{% include footer.html %}
 </body>
 </html>

@@ -7,13 +7,13 @@ var
 	postcss			= require('gulp-postcss'),
 	sassJson 		= require('gulp-sass-json'),
 	cleanCSS		= require('gulp-clean-css'),
+	autoprefixer	= require('autoprefixer'),
 	strip_comments	= require('gulp-strip-css-comments'),
-	autoprefixer	= require('gulp-autoprefixer'),
 	sourcemaps		= require('gulp-sourcemaps'),
 	zip 			= require('gulp-zip');
 
 const 
-	scss_dir	= './components',
+	scss_dir	= './scss',
 	src_styles	= './src',
 	dist_styles	= './dist/css',
 	docs_styles = './docs/dist/css';
@@ -54,7 +54,6 @@ gulp.task('bump', function () {
 gulp.task('compile', ['bump'], function () {
 	return gulp.run('sass');
 });
-
 
 // Clean/minify and PostCSS (autoprefix)
 gulp.task('clean', ['compile'], function () {
