@@ -10,8 +10,9 @@
 // Responsive utilities, BUGGED POSITION!
 @import 'responsive';
 
-html, body {
-	font: $font_size $site_fonts;
+body {
+	font-family: $site_fonts;
+	font-size: $font_size;
 	color: $body_text;
 	width: $site_width;
 	margin: 0;
@@ -84,4 +85,9 @@ section {
 .clearfix {
 	overflow: auto;
 	zoom: 1;
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
 }

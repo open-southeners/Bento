@@ -1,23 +1,29 @@
 {
   "name": "tadaima",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "Stylish, pure CSS, user-friendly web design framework.",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "start"
+    "build": "npm version patch && gulp build && gulp compress",
+    "build-docs": "bundle exec jekyll build",
+    "docs": "bundle exec jekyll serve"
   },
-  "author": "D8vjork",
+  "author": {
+    "name": "D8vjork",
+    "email": "contact@d8vjork.es",
+    "url": "https://d8vjork.es"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Social-chan/Tadaima.git"
   },
   "keywords": [
+    "front-end",
+    "design",
+    "html",
     "css",
     "framework",
-    "interface",
-    "minimalist",
-    "simple",
-    "pure"
+    "tadaima"
   ],
   "license": "MIT",
   "bugs": {
@@ -25,15 +31,14 @@
   },
   "homepage": "https://tadaima.social-chan.com",
   "devDependencies": {
-    "del": "^2.2.2",
+    "autoprefixer": "^6.7.7",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-bump": "^2.7.0",
     "gulp-clean-css": "^2.0.12",
     "gulp-concat": "^2.6.0",
     "gulp-concat-css": "^2.3.0",
     "gulp-gzip": "^1.4.0",
     "gulp-import-css": "^0.1.2",
+    "gulp-postcss": "^6.4.0",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
     "gulp-sass": "^2.3.2",
@@ -42,7 +47,12 @@
     "gulp-strip-css-comments": "^1.2.0",
     "gulp-uglify": "^2.0.0",
     "gulp-zip": "^4.0.0",
-    "webpack": "^1.13.2"
+    "lost": "^8.0.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "files": [
+    "dist",
+    "components",
+    "LICENSE"
+  ]
 }

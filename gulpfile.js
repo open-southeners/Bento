@@ -1,21 +1,19 @@
 var 
 	fs 				= require('fs'),
 	gulp			= require('gulp'),
-	bump 			= require('gulp-bump'),
 	rename			= require('gulp-rename'),
-	replace 		= require('gulp-replace')
-	uglify			= require('gulp-uglify'),
+	replace 		= require('gulp-replace'),
 	sass			= require('gulp-sass'),
+	postcss			= require('gulp-postcss'),
 	sassJson 		= require('gulp-sass-json'),
 	cleanCSS		= require('gulp-clean-css'),
+	autoprefixer	= require('autoprefixer'),
 	strip_comments	= require('gulp-strip-css-comments'),
-	autoprefixer	= require('gulp-autoprefixer'),
 	sourcemaps		= require('gulp-sourcemaps'),
-	zip 			= require('gulp-zip'),
-	del				= require('del');
+	zip 			= require('gulp-zip');
 
 const 
-	scss_dir	= './components',
+	scss_dir	= './scss',
 	src_styles	= './src',
 	dist_styles	= './dist/css',
 	docs_styles = './docs/dist/css';
@@ -24,16 +22,13 @@ var getPackageJson = function () {
 	return JSON.parse(fs.readFileSync('./package.json', 'utf8'));
 };
 
-// Build task process concat different tasks
-gulp.task('build', function () {
-	gulp.run('patch');
-	gulp.run('bump');
-	gulp.run('sass');
-	gulp.run('clean');
+// DEV ONLY! Watch for any change in components dir
+gulp.task('watch', function () {
+	gulp.watch(scss_dir + '/**/*.scss', ['sass']);
 });
 
-// Preprocess SASS components
-gulp.task('sass', function () {
+// Compile SASS components
+gulp.task('sass', function() {
 	return gulp.src(scss_dir + '/*.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
@@ -42,26 +37,36 @@ gulp.task('sass', function () {
 		.pipe(gulp.dest(src_styles));
 });
 
-// DEV ONLY! Watch for any change in components dir
-gulp.task('watch', function () {
-	gulp.watch(scss_dir + '/**/*.scss', ['sass']);
+/**
+ * Build process
+ */
+gulp.task('build', ['bump', 'compile', 'clean']);
+
+// Bump replacement for SASS variable
+gulp.task('bump', function () {
+	var pkg = getPackageJson();
+	return gulp.src(scss_dir + '/tadaima/variables.scss')
+		.pipe(replace(/"(\d+.\d+.\d+)"/g, '"' + pkg.version + '"'))
+		.pipe(gulp.dest(scss_dir + '/tadaima'));
 });
 
-// Delete all files from dist styles
-gulp.task('delete', function () {
-	return del(dist_styles);
+// Compile SASS components
+gulp.task('compile', ['bump'], function () {
+	return gulp.run('sass');
 });
 
-// Autoprefix, clean & minify CSS
-gulp.task('clean', ['delete'], function () {
+// Clean/minify and PostCSS (autoprefix)
+gulp.task('clean', ['compile'], function () {
+	var plugins = [
+		autoprefixer({ browsers: ['last 2 versions'] })
+	];
 	return gulp.src(src_styles + '/*.css')
 		.pipe(sourcemaps.init())
-		.pipe(autoprefixer())
+		.pipe(postcss(plugins))
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(cleanCSS({
 			keepSpecialComments: 1,
 			processImportFrom: 'local',
-			compatibility: 'ie8',
 			debug: true
 		}, function(details) {
 			console.log(details.name + ': ' + details.stats.originalSize);
@@ -78,19 +83,4 @@ gulp.task('compress', function () {
 	return gulp.src('./dist/*/**')
 		.pipe(zip(pkg.name + '-' + pkg.version + '.zip'))
 		.pipe(gulp.dest('./'));
-});
-
-// Minor patch to package
-gulp.task('patch', function () {
-	return gulp.src('./package.json')
-		.pipe(bump({ key: "version" }))
-		.pipe(gulp.dest('./'));
-});
-
-// Bump replacement for SASS variable
-gulp.task('bump', function () {
-	var pkg = getPackageJson();
-	return gulp.src(scss_dir + '/tadaima/variables.scss')
-		.pipe(replace(/"(\d+.\d+.\d+)"/g, '"' + pkg.version + '"'))
-		.pipe(gulp.dest(scss_dir + '/tadaima'));
 });

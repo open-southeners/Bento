@@ -1,0 +1,26 @@
+{
+  "name": "tadaima",
+  "description": "Stylish, pure CSS, user-friendly web design framework.",
+  "main": "gulpfile.js",
+  "authors": [
+    "[object Object]"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "front-end",
+    "design",
+    "html",
+    "css",
+    "framework",
+    "tadaima"
+  ],
+  "homepage": "https://tadaima.social-chan.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "docs",
+    "test",
+    "tests"
+  ]
+}

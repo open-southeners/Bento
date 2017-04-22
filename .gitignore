@@ -1,4 +1,17 @@
+# Docs files
+_gh_pages
+_site
+
+# Making Tadaima
 _blueprints
+
+# SCSS source files
 src
+
+# Jekyll data
+.sass-cache
+.jekyll-metadata
+
 *.zip
+npm-debug.log
 node_modules

@@ -1,0 +1,24 @@
+# Site settings
+title: Tadaima
+email: contact@d8vjork.es
+description: > # this means to ignore newlines until "baseurl:"
+  Pure CSS Framework
+twitter_username: d8vjork
+github_username: d8vjork
+authors: Social-chan Team and Tadaima contributors
+current_version: 0.3.5
+
+# Server
+source: docs
+destination: docs/_site
+encoding: UTF-8
+port: 9001
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+gems:
+  - jekyll-sitemap
+exclude:
+  - Gemfile
+  - Gemfile.lock
