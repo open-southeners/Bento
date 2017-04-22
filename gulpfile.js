@@ -2,9 +2,9 @@ var
 	fs 				= require('fs'),
 	gulp			= require('gulp'),
 	rename			= require('gulp-rename'),
-	replace 		= require('gulp-replace')
-	uglify			= require('gulp-uglify'),
+	replace 		= require('gulp-replace'),
 	sass			= require('gulp-sass'),
+	postcss			= require('gulp-postcss'),
 	sassJson 		= require('gulp-sass-json'),
 	cleanCSS		= require('gulp-clean-css'),
 	strip_comments	= require('gulp-strip-css-comments'),
@@ -55,16 +55,19 @@ gulp.task('compile', ['bump'], function () {
 	return gulp.run('sass');
 });
 
-// Autoprefix, clean & minify CSS
+
+// Clean/minify and PostCSS (autoprefix)
 gulp.task('clean', ['compile'], function () {
+	var plugins = [
+		autoprefixer({ browsers: ['last 2 versions'] })
+	];
 	return gulp.src(src_styles + '/*.css')
 		.pipe(sourcemaps.init())
-		.pipe(autoprefixer())
+		.pipe(postcss(plugins))
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(cleanCSS({
 			keepSpecialComments: 1,
 			processImportFrom: 'local',
-			compatibility: 'ie8',
 			debug: true
 		}, function(details) {
 			console.log(details.name + ': ' + details.stats.originalSize);
