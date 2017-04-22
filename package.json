@@ -1,6 +1,6 @@
 {
   "name": "tadaima",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "Stylish, pure CSS, user-friendly web design framework.",
   "main": "gulpfile.js",
   "scripts": {
