@@ -1,7 +1,6 @@
 var 
 	fs 				= require('fs'),
 	gulp			= require('gulp'),
-	bump 			= require('gulp-bump'),
 	rename			= require('gulp-rename'),
 	replace 		= require('gulp-replace')
 	uglify			= require('gulp-uglify'),
@@ -23,16 +22,13 @@ var getPackageJson = function () {
 	return JSON.parse(fs.readFileSync('./package.json', 'utf8'));
 };
 
-// Build task process concat different tasks
-gulp.task('build', function () {
-	gulp.run('patch');
-	gulp.run('bump');
-	gulp.run('sass');
-	gulp.run('clean');
+// DEV ONLY! Watch for any change in components dir
+gulp.task('watch', function () {
+	gulp.watch(scss_dir + '/**/*.scss', ['sass']);
 });
 
-// Preprocess SASS components
-gulp.task('sass', function () {
+// Compile SASS components
+gulp.task('sass', function() {
 	return gulp.src(scss_dir + '/*.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
@@ -41,13 +37,26 @@ gulp.task('sass', function () {
 		.pipe(gulp.dest(src_styles));
 });
 
-// DEV ONLY! Watch for any change in components dir
-gulp.task('watch', function () {
-	gulp.watch(scss_dir + '/**/*.scss', ['sass']);
+/**
+ * Build process
+ */
+gulp.task('build', ['bump', 'compile', 'clean']);
+
+// Bump replacement for SASS variable
+gulp.task('bump', function () {
+	var pkg = getPackageJson();
+	return gulp.src(scss_dir + '/tadaima/variables.scss')
+		.pipe(replace(/"(\d+.\d+.\d+)"/g, '"' + pkg.version + '"'))
+		.pipe(gulp.dest(scss_dir + '/tadaima'));
+});
+
+// Compile SASS components
+gulp.task('compile', ['bump'], function () {
+	return gulp.run('sass');
 });
 
 // Autoprefix, clean & minify CSS
-gulp.task('clean', function () {
+gulp.task('clean', ['compile'], function () {
 	return gulp.src(src_styles + '/*.css')
 		.pipe(sourcemaps.init())
 		.pipe(autoprefixer())
@@ -72,19 +81,4 @@ gulp.task('compress', function () {
 	return gulp.src('./dist/*/**')
 		.pipe(zip(pkg.name + '-' + pkg.version + '.zip'))
 		.pipe(gulp.dest('./'));
-});
-
-// Minor patch to package
-gulp.task('patch', function () {
-	return gulp.src('./package.json')
-		.pipe(bump({ key: "version" }))
-		.pipe(gulp.dest('./'));
-});
-
-// Bump replacement for SASS variable
-gulp.task('bump', function () {
-	var pkg = getPackageJson();
-	return gulp.src(scss_dir + '/tadaima/variables.scss')
-		.pipe(replace(/"(\d+.\d+.\d+)"/g, '"' + pkg.version + '"'))
-		.pipe(gulp.dest(scss_dir + '/tadaima'));
 });
