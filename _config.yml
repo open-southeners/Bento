@@ -12,13 +12,9 @@ current_version: 0.3.5
 source: docs
 destination: docs/_site
 encoding: UTF-8
+host: 0.0.0.0
 port: 9001
 baseurl: ""
 
 # Build settings
 markdown: kramdown
-gems:
-  - jekyll-sitemap
-exclude:
-  - Gemfile
-  - Gemfile.lock
