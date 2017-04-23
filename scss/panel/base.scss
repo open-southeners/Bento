@@ -3,7 +3,27 @@
 	width: 100%;
 	padding: 10px 15px;
 	margin: 12px 0px;
-	& h5 {
+	overflow: hidden;
+	& > h4 {
+		display: inline-block;
+		position: relative;
+		margin-top: 0;
 		margin-bottom: 6px;
+		z-index: 1;
+	}
+	& > i.feat:first-child {
+		display: inline-block;
+		margin-left: -48px;
+		margin-top: -12px;
+		position: relative;
+		font-size: 32px;
+		top: -2px;
+		left: 22px;
+		color: #fff;
+		z-index: 0;
+	}
+	& > p {
+		position: relative;
+		z-index: 1;
 	}
 }
