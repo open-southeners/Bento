@@ -4,9 +4,7 @@
   "description": "Stylish, pure CSS, user-friendly web design framework.",
   "main": "gulpfile.js",
   "scripts": {
-    "build": "npm version patch && gulp build && gulp compress",
-    "build-docs": "bundle exec jekyll build",
-    "docs": "bundle exec jekyll serve"
+    "build": "npm version patch && gulp build && gulp compress"
   },
   "author": {
     "name": "D8vjork",

@@ -8,8 +8,6 @@ authors: Social-chan Team and Tadaima contributors
 current_version: 0.3.5
 
 # Server
-source: docs
-destination: docs/_site
 encoding: UTF-8
 host: 0.0.0.0
 port: 9001
