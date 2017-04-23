@@ -46,6 +46,7 @@
     "gulp-strip-css-comments": "^1.2.0",
     "gulp-uglify": "^2.0.0",
     "gulp-zip": "^4.0.0",
+    "js-yaml": "^3.8.3",
     "lost": "^8.0.0"
   },
   "dependencies": {},

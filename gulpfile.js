@@ -41,19 +41,27 @@ gulp.task('sass', function() {
 /**
  * Build process
  */
-gulp.task('build', ['bump', 'compile', 'clean']);
+gulp.task('build', ['scss_bump', 'yaml_bump', 'compile', 'clean']);
 
-// Bump replacement for SASS variable
-gulp.task('bump', function () {
+// Bump replacement for SCSS variable
+gulp.task('scss_bump', function () {
 	var pkg = getPackageJson();
 	return gulp.src(scss_dir + '/tadaima/variables.scss')
 		.pipe(replace(/"(\d+.\d+.\d+)"/g, '"' + pkg.version + '"'))
 		.pipe(gulp.dest(scss_dir + '/tadaima'));
 });
 
-// Compile SASS components
-gulp.task('compile', ['bump'], function () {
-	return gulp.run('sass');
+// Bump replacement for YAML value
+gulp.task('yaml_bump', ['scss_bump'], function () {
+	var pkg = getPackageJson();
+	return gulp.src('./docs/_config.yml')
+		.pipe(replace(/(current_version:\s)(\d+.\d+.\d+)/g, `$1` + pkg.version))
+		.pipe(gulp.dest('./docs'));
+});
+
+// Compile SCSS components
+gulp.task('compile', ['yaml_bump'], function () {
+	return gulp.task('sass');
 });
 
 // Clean/minify and PostCSS (autoprefix)
