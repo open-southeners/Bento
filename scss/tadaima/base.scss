@@ -7,9 +7,6 @@
 // All component mixes, temporally here
 @import 'mixes';
 
-// Responsive utilities, BUGGED POSITION!
-@import 'responsive';
-
 body {
 	font-family: $site_fonts;
 	font-size: $font_size;

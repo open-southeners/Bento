@@ -5,6 +5,7 @@ var
 	replace 		= require('gulp-replace'),
 	sass			= require('gulp-sass'),
 	postcss			= require('gulp-postcss'),
+	lostgrid		= require('lost'),
 	sassJson 		= require('gulp-sass-json'),
 	cleanCSS		= require('gulp-clean-css'),
 	autoprefixer	= require('autoprefixer'),
@@ -58,7 +59,8 @@ gulp.task('compile', ['bump'], function () {
 // Clean/minify and PostCSS (autoprefix)
 gulp.task('clean', ['compile'], function () {
 	var plugins = [
-		autoprefixer({ browsers: ['last 2 versions'] })
+		autoprefixer({ browsers: ['last 2 versions'] }),
+		lostgrid()
 	];
 	return gulp.src(src_styles + '/*.css')
 		.pipe(sourcemaps.init())
