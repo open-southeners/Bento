@@ -1,19 +1,10 @@
-/*! Tadaima v#{$version} | MIT License | https://tadaima.social-chan.com */
-h2 > a.anchor-link {
-	opacity: 0;
-	color: inherit;
-	position: absolute;
-	margin-left: -1.2em;
+/*! Tadaima Docs | MIT License | https://tadaima.social-chan.com */
+.anchorjs-link {
+	transition: all .25s linear;
 }
 
-:hover > a.anchor-link {
-	opacity: .75;
-}
-
-a.anchor-link:focus,
-:hover > a.anchor-link:hover {
-	opacity: 1;
-	text-decoration: none;
+*:hover > .anchorjs-link {
+	margin-left: -1.125em !important;
 }
 
 .demo-icon i {

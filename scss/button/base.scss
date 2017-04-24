@@ -1,4 +1,5 @@
-button {
+button,
+a[role="button"] {
 	cursor: pointer;
 	display: inline-block;
 	font-size: 16px;
@@ -12,14 +13,11 @@ button {
 	color: $default_text;
     @include transition(background-color 0.1s ease-in-out);
     @include user-select(none);
-}
-
-// Links with buttons styles
-a[role="button"] {
-	@extend button;
-}
-
-// General states
-button:active {
-	cursor: pointer;
+	& > i[class="icon-"],
+	span[class="icon-"] {
+		margin-left: 2px;
+	}
+	&:active {
+		cursor: pointer;
+	}
 }

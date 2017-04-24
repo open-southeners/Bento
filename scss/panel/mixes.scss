@@ -23,12 +23,12 @@
 		background-color: $fix_primary_bkg;
 		background-color: $primary_bkg;
 		& a {
-			font-weight: bold;
 			border-bottom: $primary_color dashed 1px;
 			color: $primary_color;
 			&:hover,
 			&:focus {
 				text-decoration: none;
+				border-bottom-style: solid;
 				color: $primary_color;
 			}
 		}
@@ -40,12 +40,12 @@
 		background-color: $fix_secondary_bkg;
 		background-color: $secondary_bkg;
 		& a {
-			font-weight: bold;
 			border-bottom: $secondary_color dashed 1px;
 			color: $secondary_color;
 			&:hover,
 			&:focus {
 				text-decoration: none;
+				border-bottom-style: solid;
 				color: $secondary_color;
 			}
 		}
@@ -60,11 +60,11 @@
 			color: rgba(240, 128, 128, 0.5);
 		}
 		& a {
-			font-weight: bold;
 			border-bottom: $red_color dashed 1px;
 			color: $red_color;
 			&:hover {
 				text-decoration: none;
+				border-bottom-style: solid;
 				color: $red_color;
 			}
 		}
@@ -79,12 +79,12 @@
 			color: rgba(66, 209, 127, 0.5);
 		}
 		& a {
-			font-weight: bold;
 			border-bottom: $green_color dashed 1px;
 			color: $green_color;
 			&:hover,
 			&:focus {
 				text-decoration: none;
+				border-bottom-style: solid;
 				color: $green_color;
 			}
 		}
@@ -99,12 +99,12 @@
 			color: rgba(206, 178, 22, 0.5);
 		}
 		& a {
-			font-weight: bold;
 			border-bottom: $yellow_color dashed 1px;
 			color: $yellow_color;
 			&:hover,
 			&:focus {
 				text-decoration: none;
+				border-bottom-style: solid;
 				color: $yellow_color;
 			}
 		}
