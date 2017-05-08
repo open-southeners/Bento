@@ -11,6 +11,7 @@ var
 	autoprefixer	= require('autoprefixer'),
 	strip_comments	= require('gulp-strip-css-comments'),
 	sourcemaps		= require('gulp-sourcemaps'),
+	cssbeautify		= require('gulp-cssbeautify'),
 	zip 			= require('gulp-zip');
 
 const 
@@ -33,6 +34,7 @@ gulp.task('sass', function() {
 	return gulp.src(scss_dir + '/*.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
+		.pipe(cssbeautify())
 		.pipe(sourcemaps.write('./'))
 		.pipe(strip_comments())
 		.pipe(gulp.dest(src_styles));

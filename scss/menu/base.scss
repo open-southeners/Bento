@@ -99,3 +99,53 @@ nav.vertical {
         }
     }
 }
+
+footer nav {
+	font-size: 1.2em;
+	text-transform: capitalize;
+	& ul {
+		list-style-type: none;
+		margin-left: 0;
+		& li {
+			display: inline-block;
+			margin-right: 46px;
+			position: relative;
+			& a {
+				color: $default_text;
+			}
+			& ul {
+				position: absolute;
+				display: block;
+				visibility: hidden;
+				background: #f7f7f7;
+				transform: translateX(-26px) translateY(-20px);
+				bottom: 100%;
+				left: calc(50% - 6px);
+				transition: visibility 0.3s;
+				& li {
+					border: 4px solid transparent;
+					margin: 0;
+					& a {
+						padding: 2px 8px;
+						color: $primary_color;
+						&:hover {
+							background-color: $primary_color;
+							color: $default_text;
+						}
+					}
+				}
+				&:after {
+					content: ' ';
+					position: absolute;
+					border-left: 8px solid transparent;
+					border-right: 8px solid transparent;
+					border-top: 6px solid #f7f7f7;
+					transform: translateX(26px);
+				}
+			}
+		}
+		& li:hover > ul {
+			visibility: visible;
+		} 
+	}
+}
