@@ -75,3 +75,12 @@
 		color: $cyan_color;
 	}
 }
+
+section {
+	&.primary {
+		background: $primary_bkg;
+	}
+	&.secondary {
+		background: $secondary_bkg;
+	}
+}
