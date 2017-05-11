@@ -1,11 +1,12 @@
-/** 
- * Okaeri base component
- */
+header {
+	padding: 48px 60px 0;
+}
 
 .okaeri {
 	display: block;
 	width: 100%;
 	padding-top: 48px;
+	padding-bottom: 0;
 	background: $okaeri_bkg;
 	margin-bottom: 24px;
 	& h2 {
