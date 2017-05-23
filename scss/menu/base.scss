@@ -96,6 +96,14 @@ nav.vertical {
     }
 }
 
+.off-canvas {
+	position: fixed;
+    top: 0;
+    bottom: auto;
+    margin: 15px 10px;
+    font-size: 26px;
+}
+
 footer nav {
 	font-size: 1.2em;
 	text-transform: capitalize;
