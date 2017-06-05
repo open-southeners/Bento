@@ -8,6 +8,8 @@
 	</p>
 </p>
 
+[![Coverage Status](https://coveralls.io/repos/github/Social-chan/Tadaima/badge.svg?branch=master)](https://coveralls.io/github/Social-chan/Tadaima?branch=master)
+
 ## Getting starter
 A quick and small introduction:
 
@@ -15,9 +17,6 @@ A quick and small introduction:
 - See [contribution guide](https://github.com/Social-chan/Tadaima/blob/master/CONTRIBUTING.md) for more details.
 
 **Note: We're releasing the first beta, so the project is under alpha pre-release versions and should not be used with production purposes.**
-
-## Status
-[![Coverage Status](https://coveralls.io/repos/github/Social-chan/Tadaima/badge.svg?branch=master)](https://coveralls.io/github/Social-chan/Tadaima?branch=master)
 
 ## To-Do
 We're centering on browser compatibility and framework features, and better documentation page in near future.
