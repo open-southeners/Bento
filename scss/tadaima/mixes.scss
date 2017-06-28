@@ -79,8 +79,14 @@
 section {
 	&.primary {
 		background: $primary_bkg;
+		& small {
+		    color: $primary_color;
+		}
 	}
 	&.secondary {
 		background: $secondary_bkg;
+		& small {
+		    color: $secondary_color;
+		}
 	}
 }
