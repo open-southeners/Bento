@@ -7,6 +7,12 @@
 	margin-left: -1.125em !important;
 }
 
+figure.highlight {
+	padding: 16px;
+	border-radius: 8px;
+    background-color: #eee;
+}
+
 .demo-icon {
 	text-align: center;
 }
