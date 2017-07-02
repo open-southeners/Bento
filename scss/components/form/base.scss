@@ -10,11 +10,11 @@ input {
 	&.primary {
 		border-color: $input_primary_bkg;
 		color: $input_default_bkg;
-		&:focus {
-			outline: none;
-			border-color: $primary_color;
-			color: $secondary_color;
-		}
+	}
+	&.primary:focus {
+		outline: none;
+		border-color: $primary_color;
+		color: $secondary_color;
 	}
 }
 
@@ -40,9 +40,15 @@ input {
 		padding: 4px 4px 5px 4px;
 		border-radius: 2px;
 	}
+	&.with-button button i {
+		position: relative;
+		top: 1px;
+	}
 }
 
 // Placeholder custom color
 ::placeholder {
 	color: $placeholder_color;
 }
+
+@import "mixes";

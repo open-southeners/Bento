@@ -98,6 +98,7 @@ sub {
 
 pre {
 	overflow: auto;
+	white-space: pre-wrap;
 }
 
 code,
@@ -106,4 +107,16 @@ pre,
 samp {
 	font-family: monospace, monospace;
 	font-size: 1em;
+}
+
+.text {
+	&-left {
+		text-align: left;
+	}
+	&-center {
+		text-align: center;
+	}
+	&-right {
+		text-align: right;
+	}
 }

@@ -1,29 +1,18 @@
-@import 'tadaima/variables';
-/*! Tadaima v#{$version} | MIT License | https://tadaima.social-chan.com */
+/*! Tadaima v0.4.0 | MIT License | https://tadaima.social-chan.com */
+@charset "utf-8";
 
-// Tadaima base component
-@import 'tadaima/base';
+// All variables
+@import "variables";
 
-// Grid base component
-@import 'grid/base';
+// Tadaima component
+@import "tadaima/base";
 
-// Forms base component
-@import 'forms/base';
-
-// Icons base component
-@import 'icons/base';
-
-// Tooltips base component
-@import 'tooltip/base';
-
-// Buttons base component
-@import 'button/base';
-
-// Menus base component
-@import 'menu/base';
-
-// Okaeri base component
-@import 'okaeri/base';
-
-// Panels base component
-@import 'panel/base';
+// Base components
+@import "components/grid/base",
+	"components/form/base",
+	"components/icon/base",
+	"components/tooltip/base",
+	"components/menu/base",
+	"components/button/base",
+	"components/okaeri/base",
+	"components/panel/base";

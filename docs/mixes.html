@@ -5,45 +5,257 @@ description: We can mix all components (yes, this is crazy) with different globa
 group: mixes
 ---
 <section>
-	<h2 id="buttons">
-		Buttons
-	</h2>
-	<h3>Alt version</h3>
-	<button class="alt primary">Primary</button>
-	<button class="alt secondary">Secondary</button>
-	<h3>Omusubi version</h3>
-	<button class="omusubi primary">Primary</button>
-	<button class="omusubi secondary">Secondary</button>
-	<h3>Sushi version</h3>
-	<button class="sushi alt primary">Primary</button>
-	<button class="sushi alt secondary">Secondary</button>
-	<h2 id="panels">
-		Panels
-	</h2>
-	<h3>Sushi version</h3>
-	<div class="row">
-		<div class="column three">
-			<div class="sushi panel primary">
-				<h4>Panel Primary</h4>
-				<p>
-					<a href="#">Lorem ipsum</a> dolor sit amet, consectetuer adipiscing elit.
-				</p>
-			</div>
-		</div>
-		<div class="column three">
-			<div class="sushi panel secondary">
-				<h4>Panel Secondary</h4>
-				<p>
-					<a href="#">Lorem ipsum</a> dolor sit amet, consectetuer adipiscing elit.
-				</p>
-			</div>
-		</div>
-	</div>
-	<h3>Omusubi version</h3>
-	<div class="omusubi panel primary">
-		<h4>Panel Primary</h4>
-		<p>
-			<a href="#">Lorem ipsum</a> dolor sit amet, consectetuer adipiscing elit.
-		</p>
-	</div>
+  <h2 id="buttons">
+    Buttons
+  </h2>
+
+  <div class="row">
+    <div class="column three">
+      <h3>Alt variation</h3>
+
+{% capture alt_buttons %}
+<button class="alt primary">Primary</button>
+<button class="alt secondary">Secondary</button>
+{% endcapture %}
+
+      {{ alt_buttons }}
+
+{% highlight html %}
+{{ alt_buttons }}
+{% endhighlight %}
+    </div>
+    <div class="column three">
+      <h3>Omusubi variation</h3>
+
+{% capture omusubi_buttons %}
+<button class="omusubi primary">Primary</button>
+<button class="omusubi secondary">Secondary</button>
+{% endcapture %}
+
+      {{ omusubi_buttons }}
+
+{% highlight html %}
+{{ omusubi_buttons }}
+{% endhighlight %}
+    </div>
+  </div>
+  <div class="row margin-top-big">
+    <div class="column three">
+      <h3>Sushi variation</h3>
+
+{% capture sushi_buttons %}
+<button class="sushi primary">Primary</button>
+<button class="sushi secondary">Secondary</button>
+{% endcapture %}
+  
+      {{ sushi_buttons }}
+
+{% highlight html %}
+{{ sushi_buttons }}
+{% endhighlight %}
+    </div>
+    <div class="column three">
+      <h3>With icons</h3>
+
+{% capture with_icon_buttons %}
+<button class="primary"><i class="icon-plus-user"></i> Add friend</button>
+<button class="alt red"><i class="icon-minus-user"></i> Remove friend</button>
+{% endcapture %}
+
+      {{ with_icon_buttons }}
+
+{% highlight html %}
+{{ with_icon_buttons }}
+{% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 id="forms">
+    Forms
+  </h2>
+  
+  <h3>Inputs with</h3>
+
+{% capture text_inputs %}
+<p class="control with-icon">
+  <input type="text" placeholder="input .with-icon">
+  <i class="icon-lens"></i>
+</p>
+<p class="control with-button">
+  <input type="text" class="primary" placeholder="input .with-button">
+  <button>
+    <i class="icon-lens"></i>
+  </button>
+</p>
+{% endcapture %}
+
+  {{ text_inputs }}
+
+{% highlight html %}
+{{ text_inputs }}
+{% endhighlight %}
+</section>
+
+<section>
+  <h2 id="panels">
+      Panels
+  </h2>
+
+  <h3>Sushi variation</h3>
+
+{% capture sushi_panel_primary %}
+<div class="sushi panel primary">
+  <h4>Panel Primary</h4>
+  <p>
+    <a href="#">Lorem ipsum</a> dolor sit amet, consectetuer adipiscing elit.
+  </p>
+</div>
+{% endcapture %}
+
+{% capture sushi_panel_secondary %}
+<div class="sushi panel secondary">
+  <h4>Panel Secondary</h4>
+  <p>
+    <a href="#">Lorem ipsum</a> dolor sit amet, consectetuer adipiscing elit.
+  </p>
+</div>
+{% endcapture %}
+
+  <div class="row">
+    <div class="column three">
+      {{ sushi_panel_primary }}
+{% highlight html %}
+{{ sushi_panel_primary }}
+{% endhighlight %}
+    </div>
+    <div class="column three">
+      {{ sushi_panel_secondary }}
+{% highlight html %}
+{{ sushi_panel_secondary }}
+{% endhighlight %}
+    </div>
+  </div>
+
+  <h3>Omusubi variation</h3>
+  
+{% capture omusubi_panel_primary %}
+<div class="omusubi panel primary">
+  <h4>Panel Primary</h4>
+  <p>
+    <a href="#">Lorem ipsum</a> dolor sit amet, consectetuer adipiscing elit.
+  </p>
+</div>
+{% endcapture %}
+
+{% capture omusubi_panel_secondary %}
+<div class="omusubi panel secondary">
+  <h4>Panel Secondary</h4>
+  <p>
+    <a href="#">Lorem ipsum</a> dolor sit amet, consectetuer adipiscing elit.
+  </p>
+</div>
+{% endcapture %}
+
+  <div class="row">
+    <div class="column three">
+      {{ omusubi_panel_primary }}
+{% highlight html %}
+{{ omusubi_panel_primary }}
+{% endhighlight %}
+    </div>
+    <div class="column three">
+      {{ omusubi_panel_secondary }}
+{% highlight html %}
+{{ omusubi_panel_secondary }}
+{% endhighlight %}
+    </div>
+  </div>
+
+  <h3>With icon variations</h3>
+
+{% capture panel_with_icon1 %}
+<div class="panel red">
+  <i class="feat icon-exclamation-round"></i>
+  <h4>Panel Red</h4>
+  <p>
+    <a href="#">Lorem ipsum</a> dolor sit amet, consectetuer adipiscing elit.
+  </p>
+</div>
+{% endcapture %}
+
+{% capture panel_with_icon2 %}
+<div class="panel green">
+  <i class="feat icon-star-round"></i>
+  <h4>Panel Green</h4>
+  <p>
+    <a href="#">Lorem ipsum</a> dolor sit amet, consectetuer adipiscing elit.
+  </p>
+</div>
+{% endcapture %}
+
+{% capture panel_with_icon3 %}
+<div class="panel yellow">
+  <i class="feat icon-bullhorn"></i>
+  <h4>Panel Yellow</h4>
+  <p>
+    <a href="#">Lorem ipsum</a> dolor sit amet, consectetuer adipiscing elit.
+  </p>
+</div>
+{% endcapture %}
+
+  <div class="row">
+    <div class="column two">
+      {{ panel_with_icon1 }}
+
+{% highlight html %}
+{{ panel_with_icon1 }}
+{% endhighlight %}
+    </div>
+    <div class="column two">
+      {{ panel_with_icon2 }}
+
+{% highlight html %}
+{{ panel_with_icon2 }}
+{% endhighlight %}
+    </div>
+    <div class="column two">
+      {{ panel_with_icon3 }}
+
+{% highlight html %}
+{{ panel_with_icon3 }}
+{% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 id="sections">
+    Sections
+  </h2>
+
+{% capture sections %}
+<section class="primary">
+  <h2>
+    Section
+    <small>Primary</small>
+  </h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos saepe minima sint cupiditate placeat inventore voluptate consequatur, repellat labore et ullam, odio ipsa iure expedita laborum maxime, molestias commodi! Corrupti.</p>
+</section>
+
+<section class="secondary">
+  <h2>
+    Section
+    <small>Secondary</small>
+  </h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos saepe minima sint cupiditate placeat inventore voluptate consequatur, repellat labore et ullam, odio ipsa iure expedita laborum maxime, molestias commodi! Corrupti.</p>
+</section>
+{% endcapture %}
+
+  {{ sections }}
+
+{% highlight html %}
+{{ sections }}
+{% endhighlight %}
 </section>

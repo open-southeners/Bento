@@ -55,3 +55,15 @@ $cyan_bkg: rgba(135, 206, 250, 0.4) !default;
 $input_default_bkg: rgba(153, 153, 153, 0.9) !default;
 $input_primary_bkg: rgba(71, 163, 218, 0.9) !default;
 $placeholder_color: rgba(153, 153, 153, 0.8) !default;
+
+// Sizing units: Fonts, icons...
+$size_mini: 9px !default;
+$size_small: 12px !default;
+$size_big: 16px !default;
+$size_giant: 24px !default;
+
+// No sizing units: Margings, paddings...
+$nos_mini: 4px !default;
+$nos_small: 8px !default;
+$nos_big: 16px !default;
+$nos_giant: 24px !default;

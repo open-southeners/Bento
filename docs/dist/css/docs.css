@@ -26,3 +26,8 @@ figure.highlight {
 	text-align: center;
 	font-size: 36px;
 }
+
+.docs-clipboard {
+    float: right;
+	color: #000;
+}

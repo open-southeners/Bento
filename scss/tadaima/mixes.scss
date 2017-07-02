@@ -1,14 +1,8 @@
-// Buttons mixes
-@import 'button/mixes';
-
-// Panels mixes
-@import 'panel/mixes';
-
 .fixed {
 	position: fixed;
 	&.top {
 		bottom: auto;
-    top: 0;
+    	top: 0;
 	}
 	&.bottom {
 		top: auto;
@@ -30,61 +24,78 @@
 	}
 }
 
-// Element positioning mixes
-.right {
-	margin-left: auto;
-}
-
-.left {
-	margin-right: auto;
-}
-
 // Color mixes
+.primary {
+	&.text, [class*="text-"] { color: $primary_color; }
+}
+
+.secondary {
+	&.text, [class*="text-"] { color: $secondary_color; }
+}
+
+.red {
+	&.text, [class*="text-"] { color: $red_color; }
+}
+
+.green {
+	&.text, [class*="text-"] { color: $green_color; }
+}
+
+.brown {
+	&.text, [class*="text-"] { color: $brown_color; }
+}
+
+.orange {
+	&.text, [class*="text-"] { color: $orange_color; }
+}
+
+.purple {
+	&.text, [class*="text-"] { color: $purple_color; }
+}
+
+.yellow {
+	&.text, [class*="text-"] { color: $yellow_color; }
+}
+
+.pink {
+	&.text, [class*="text-"] { color: $pink_color; }
+}
+
+.darkgreen {
+	&.text, [class*="text-"] { color: $darkgreen_color; }
+}
+
+.cyan {
+	&.text, [class*="text-"] { color: $cyan_color; }
+}
+
+// Text mixes
 .text {
-	&.primary {
-		color: $primary_color;
+	&-mini {
+		font-size: 9px;
 	}
-	&.secondary {
-		color: $secondary_color;
+	&-small {
+		font-size: 12px;
 	}
-	&.red {
-		color: $red_color;
+	&-big {
+		font-size: 20px;
 	}
-	&.green {
-		color: $green_color;
-	}
-	&.brown {
-		color: $brown_color;
-	}
-	&.orange {
-		color: $orange_color;
-	}
-	&.purple {
-		color: $purple_color;
-	}
-	&.yellow {
-		color: $yellow_color;
-	}
-	&.pink {
-		color: $pink_color;
-	}
-	&.darkgreen {
-		color: $darkgreen_color;
-	}
-	&.cyan {
-		color: $cyan_color;
+	&-giant {
+		font-size: 32px;
 	}
 }
 
 section {
 	&.primary {
 		background: $primary_bkg;
+		margin-bottom: 46px;
 		& small {
 		    color: $primary_color;
 		}
 	}
 	&.secondary {
 		background: $secondary_bkg;
+		margin-bottom: 46px;
 		& small {
 		    color: $secondary_color;
 		}

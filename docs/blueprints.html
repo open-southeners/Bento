@@ -12,78 +12,11 @@ group: blueprints
       by <a href="http://adamwhitcroft.com/batch/" target="_blank">batch</a>
     </small>
   </h2>
-  <div class="flow wrap">
-    <div class="waffle demo-icon">
-      <i class="icon-left-bubble"></i>
-      icon-left-bubble
-    </div>
-    <div class="waffle demo-icon">
-        <i class="icon-center-bubble"></i>
-        icon-center-bubble
-    </div>
-    <div class="waffle demo-icon">
-        <i class="icon-right-bubble"></i>
-        icon-right-bubble
-    </div>
-    <div class="waffle demo-icon">
-        <i class="icon-left-text-bubble"></i>
-        icon-left-text-bubble
-    </div>
-    <div class="waffle demo-icon">
-        <i class="icon-center-text-bubble"></i>
-        icon-center-text-bubble
-    </div>
-    <div class="waffle demo-icon">
-        <i class="icon-right-text-bubble"></i>
-        icon-right-text-bubble
-    </div>
-    <div class="waffle demo-icon">
-        <i class="icon-left-alt-text-bubble"></i>
-        icon-left-alt-text-bubble
-    </div>
-    <div class="waffle demo-icon">
-        <i class="icon-center-alt-text-bubble"></i>
-        icon-center-alt-text-bubble
-    </div>
-    <div class="waffle demo-icon">
-        <i class="icon-right-alt-text-bubble"></i>
-        icon-right-alt-text-bubble
-    </div>
-    <div class="waffle demo-icon">
-      <i class="icon-left-bubbles"></i>
-      icon-left-bubbles
-    </div>
-    <div class="waffle demo-icon">
-      <i class="icon-right-bubbles"></i>
-      icon-right-bubbles
-    </div>
-    <div class="waffle demo-icon">
-      <i class="icon-window"></i>
-      icon-window
-    </div>
-  </div>
-</section>
-
-<section class="primary">
-  <h2 id="section-primary">
-    Section
-    <small>Primary</small>
-  </h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos saepe minima sint cupiditate placeat inventore voluptate consequatur, repellat labore et ullam, odio ipsa iure expedita laborum maxime, molestias commodi! Corrupti.</p>
-</section>
-
-<section class="secondary">
-  <h2 id="section-secondary">
-    Section
-    <small>Secondary</small>
-  </h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos saepe minima sint cupiditate placeat inventore voluptate
-        consequatur, repellat labore et ullam, odio ipsa iure expedita laborum maxime, molestias commodi! Corrupti.</p>
 </section>
 
 <section>
   <h2 id="flow">
-    Flow <small>flex</small>
+    Flow <small>flex grid</small>
   </h2>
   <h3>Row</h3>
 
@@ -127,32 +60,6 @@ group: blueprints
 
 {% highlight html %}
 {{ flow_waffle }}
-{% endhighlight %}
-</section>
-
-<section>
-  <h2 id="forms">
-    Forms <small>inputs</small>
-  </h2>
-  <h3>Control inputs</h3>
-
-{% capture text_inputs %}
-<p class="control with-icon">
-  <input type="text" placeholder="input .with-icon">
-  <i class="icon-lens"></i>
-</p>
-<p class="control with-button">
-  <input type="text" class="primary" placeholder="input .with-button">
-  <button>
-    <i class="icon-lens"></i>
-  </button>
-</p>
-{% endcapture %}
-
-  {{ text_inputs }}
-
-{% highlight html %}
-{{ text_inputs }}
 {% endhighlight %}
 </section>
 {% endif %}
