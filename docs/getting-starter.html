@@ -1,38 +1,9 @@
 ---
 layout: home
 title: Tadaima!
-description: Tadaima is a pure CSS framework based on modern components and highly customizable with mixes.
+description: Getting starter with Tadaima framework and learn how to create a website based on it.
 group: getting-started
 ---
-<section>
-  <h2 id="nomenclature">
-    Nomenclature
-  </h2>
-
-  <p>
-    Tadaima has got a semantic nomenclature for its classes, then the developers learning 
-    maybe is more easy. Take a look on this example:
-  </p>
-
-  <div class="row">
-    <div class="column">
-      <span class="text giant cyan"><strong>mixes</strong></span>
-    </div>
-    <div class="column">
-      <span class="text giant">+</span>
-    </div>
-    <div class="column">
-      <span class="text giant orange"><strong>component</strong></span>
-    </div>
-    <div class="column">
-      <span class="text giant">+</span>
-    </div>
-    <div class="column">
-      <span class="text giant purple"><strong>extra/mixes</strong></span>
-    </div>
-  </div>
-</section>
-
 <section>
   <h2 id="grid">
       Grid
@@ -114,40 +85,68 @@ group: getting-started
 {% endhighlight %}
 
   <h3>Text utilities</h3>
-  
-  <span class="text mini">Text mini</span>
-  <span class="text small">Text small</span>
-  <span class="text big">Text big</span>
-  <span class="text giant">Text giant</span>
 
-  <p class="left">Left text</p>
-  <p class="center">Centered text</p>
-  <p class="right">Right text</p>
-  
-  <p>
-      <span class="dotted text">Dotted text</span>
-  </p>
-  <p>
-      <span class="dashed text">Dashed text</span>
-  </p>
-  <p class="primary text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
-  <p class="secondary text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-  <p class="red text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-  <p class="green text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-  <p class="brown text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-  <p class="orange text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-  <p class="purple text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-  <p class="yellow text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-  <p class="pink text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-  <p class="darkgreen text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-  <p class="cyan text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-</section>
+{% capture typo_utilities_sizes %}
+<span class="text-mini">Text mini</span>
+<span class="text-small">Text small</span>
+<span class="text-big">Text big</span>
+<span class="text-giant">Text giant</span>
+{% endcapture %}
 
-<section>
-  <h2 id="variables">
-    Variables
-  </h2>
+  {{ typo_utilities_sizes }}
 
-  <table>
-  </table>
+{% highlight html %}
+{{ typo_utilities_sizes }}
+{% endhighlight %}
+
+{% capture typo_utilities_positions %}
+<p class="text-left">Left text</p>
+<p class="text-center">Centered text</p>
+<p class="text-right">Right text</p>
+{% endcapture %}
+
+  {{ typo_utilities_positions }}
+
+{% highlight html %}
+{{ typo_utilities_positions }}
+{% endhighlight %}
+
+{% capture typo_utilities_colors %}
+<p class="primary text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+<p class="secondary text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+<p class="red text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+<p class="green text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+<p class="brown text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+<p class="orange text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+<p class="purple text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+<p class="yellow text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+<p class="pink text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+<p class="darkgreen text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+<p class="cyan text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+{% endcapture %}
+
+  {{ typo_utilities_colors }}
+
+{% highlight html %}
+{{ typo_utilities_colors }}
+{% endhighlight %}
+
+  <h3>Text basics</h3>
+
+{% capture typo_basics %}
+<p>
+  <strong>Bold text with strong</strong>. 
+  <b>Bold text with b</b>. 
+  <u>Underline text</u>. 
+  <em>Emphasis text</em>. 
+  <span class="dotted text">Dotted text</span>. 
+  <span class="dashed text">Dashed text</span>. 
+</p>
+{% endcapture %}
+
+  {{ typo_basics }}
+
+{% highlight html %}
+{{ typo_basics }}
+{% endhighlight %}
 </section>

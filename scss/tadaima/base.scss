@@ -1,11 +1,16 @@
+/* ==========================================================================
+   Tadaima core component
+   ========================================================================== */
+
 // Reset CSS
-@import 'reset';
+@import "reset";
 
 // SASS Mixins
-@import 'mixins';
+@import "mixins";
 
-// All component mixes, temporally here
-@import 'mixes';
+/* Tadaima variations, temporal
+   ========================================================================== */
+@import "mixes";
 
 body {
 	font-family: $site_fonts;
@@ -17,7 +22,6 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
-// Basic overrides
 a,
 a:active,
 a:hover,
@@ -29,11 +33,13 @@ a {
 	color: $primary_color;
 }
 
-// Typography
-@import 'typography';
+/* Typography subcomponent
+   ========================================================================== */
+@import "typography";
 
-// Utilities
-@import 'utilities';
+/* Utilities subcomponent
+   ========================================================================== */
+@import "utilities";
 
 hr {
 	border-bottom: 2px solid $okaeri_bkg;
@@ -67,28 +73,22 @@ section {
 
 // Customize selection
 ::-webkit-selection {
-		background-color: $selection_bkg;
-		color: rgba(0, 0, 0, 0.87);
+	background-color: $selection_bkg;
+	color: rgba(0, 0, 0, 0.87);
 }
 
 ::-moz-selection {
-		background-color: $selection_bkg;
-		color: rgba(0, 0, 0, 0.87);
+	background-color: $selection_bkg;
+	color: rgba(0, 0, 0, 0.87);
 }
 
 ::selection {
-		background-color: $selection_bkg;
-		color: rgba(0, 0, 0, 0.87);
+	background-color: $selection_bkg;
+	color: rgba(0, 0, 0, 0.87);
 }
 
-// Other components & utilities
 .wrapper {
 	margin-left: 4em;
-}
-
-.text {
-	background: none;
-	background-color: none;
 }
 
 .clearfix {

@@ -1,33 +1,34 @@
 /*! Tadaima Docs | MIT License | https://tadaima.social-chan.com */
 .anchorjs-link {
-	transition: all .25s linear;
+  transition: all .25s linear;
 }
 
 *:hover > .anchorjs-link {
-	margin-left: -1.125em !important;
+  margin-left: -1.125em !important;
 }
 
 figure.highlight {
-	padding: 16px;
-	border-radius: 8px;
-    background-color: #eee;
+  margin: 4px 0px;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #eee;
 }
 
 .demo-icon {
-	text-align: center;
+  text-align: center;
 }
 
 .demo-icon i {
-	display: block;
-	font-size: 32px;
+  display: block;
+  font-size: 32px;
 }
 
 .demo.panel {
-	text-align: center;
-	font-size: 36px;
+  text-align: center;
+  font-size: 36px;
 }
 
 .docs-clipboard {
-    float: right;
-	color: #000;
+  float: right;
+  color: #000;
 }

@@ -4,10 +4,12 @@
   "description": "Stylish, pure CSS, user-friendly web design framework.",
   "main": "gulpfile.js",
   "scripts": {
-    "build": "npm run build-clean && npm run build-sass",
+    "build": "npm run build-clean && npm run build-sass && npm run post-build",
     "build-clean": "rimraf src/*",
-    "build-sass": "node-sass --include-path --output-style expanded --indent-type space --indent-width 2 --linefeed crlf scss/tadaima.scss src/tadaima.css",
-    "post-build": ""
+    "build-sass": "node-sass --include-path --output-style expanded --source-map true --indent-type space --indent-width 2 --linefeed crlf scss/tadaima.scss src/tadaima.css",
+    "post-build": "postcss src/tadaima.css --use autoprefixer lost cssnano --no-map true -o dist/css/tadaima.min.css",
+    "watch": "npm-run-all --parallel \"build-sass -- --watch\" \"post-build -- --watch\" \"docs\"",
+    "docs": "cpy dist/css/tadaima.min.css docs/dist/css"
   },
   "author": {
     "name": "D8vjork",
@@ -33,10 +35,14 @@
   "homepage": "https://tadaima.social-chan.com",
   "devDependencies": {
     "autoprefixer": "^7.1.1",
+    "cpy-cli": "^1.0.1",
+    "cssnano": "^3.10.0",
+    "lost": "^8.1.0",
     "node-sass": "^4.5.3",
+    "npm-run-all": "^4.0.2",
     "postcss-cli": "^4.1.0",
     "rimraf": "^2.6.1",
-    "lost": "^8.0.0"
+    "watch": "^1.0.2"
   },
   "files": [
     "scss",

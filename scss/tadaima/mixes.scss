@@ -69,22 +69,6 @@
 	&.text, [class*="text-"] { color: $cyan_color; }
 }
 
-// Text mixes
-.text {
-	&-mini {
-		font-size: 9px;
-	}
-	&-small {
-		font-size: 12px;
-	}
-	&-big {
-		font-size: 20px;
-	}
-	&-giant {
-		font-size: 32px;
-	}
-}
-
 section {
 	&.primary {
 		background: $primary_bkg;
