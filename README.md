@@ -8,6 +8,11 @@
 	</p>
 </p>
 
+<center>
+
+![GitHub (pre-)release](https://img.shields.io/github/release/Social-chan/Tadaima/all.svg?style=flat-square) [![npm package](https://img.shields.io/npm/v/tadaima.svg?style=flat-square)](https://www.npmjs.com/package/tadaima) [![npm downloads](https://img.shields.io/npm/dt/tadaima.svg?style=flat-square)](https://github.com/Social-chan/Hikari/releases) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/Social-chan/Tadaima/master/LICENSE) [![Patreon donation](https://img.shields.io/badge/patreon-donate-orange.svg?style=flat-square)](https://www.patreon.com/d8vjork) [![Paypal donation](https://img.shields.io/badge/paypal-donate-blue.svg?style=flat-square)](https://www.paypal.me/d8vjork) [![Coverage Status](https://img.shields.io/coveralls/Social-chan/Tadaima/master.svg?style=flat-square)](https://coveralls.io/github/Social-chan/Tadaima?branch=master) 
+</center>
+
 ## Getting starter
 A quick and small introduction:
 
@@ -15,9 +20,6 @@ A quick and small introduction:
 - See [contribution guide](https://github.com/Social-chan/Tadaima/blob/master/CONTRIBUTING.md) for more details.
 
 **Note: We're releasing the first beta, so the project is under alpha pre-release versions and should not be used with production purposes.**
-
-## Status
-[![Coverage Status](https://coveralls.io/repos/github/Social-chan/Tadaima/badge.svg?branch=master)](https://coveralls.io/github/Social-chan/Tadaima?branch=master)
 
 ## To-Do
 We're centering on browser compatibility and framework features, and better documentation page in near future.

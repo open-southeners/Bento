@@ -1,9 +1,9 @@
-// Tadaima special
-$version: "0.4.0";
+// Tadaima version
+$version: "0.5.0";
 
 // Font sizes and families
 $font_size: 14px !default;
-$site_fonts: BlinkMacSystemFont, -apple-system, "Open Sans", "Helvetica", "Arial", sans-serif !default;
+$site_fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !default;
 $title_fonts: "Source Sans Pro", sans-serif !default;
 
 // Component sizes and metrics
@@ -51,16 +51,19 @@ $pink_bkg: rgba(255, 182, 193, 0.4) !default;
 $darkgreen_bkg: rgba(46, 139, 87, 0.4) !default;
 $cyan_bkg: rgba(135, 206, 250, 0.4) !default;
 
-// IE8 RGBa fixes
-$fix_primary_bkg: rgb(153, 205, 243) !default;
-$fix_secondary_bkg: rgb(204, 204, 204) !default;
-$fix_red_bkg: rgb(239, 172, 172) !default;
-$fix_black_bkg: rgb(169, 169, 169) !default;
-$fix_green_bkg: rgb(153, 226, 161) !default;
-$fix_brown_bkg: rgb(205, 174, 153) !default;
-$fix_orange_bkg: rgb(243, 189, 153) !default;
-$fix_purple_bkg: rgb(215, 171, 235) !default;
-$fix_yellow_bkg: rgb(243, 225, 153) !default;
-$fix_pink_bkg: rgb(255, 187, 246) !default;
-$fix_darkgreen_bkg: rgb(153, 198, 157) !default;
-$fix_cyan_bkg: rgb(153, 232, 245) !default;
+// Forms variables
+$input_default_bkg: rgba(153, 153, 153, 0.9) !default;
+$input_primary_bkg: rgba(71, 163, 218, 0.9) !default;
+$placeholder_color: rgba(153, 153, 153, 0.8) !default;
+
+// Sizing units: Fonts, icons...
+$size_mini: 9px !default;
+$size_small: 12px !default;
+$size_big: 16px !default;
+$size_giant: 24px !default;
+
+// No sizing units: Margings, paddings...
+$nos_mini: 4px !default;
+$nos_small: 8px !default;
+$nos_big: 16px !default;
+$nos_giant: 24px !default;

@@ -1,0 +1,161 @@
+button,
+a[role="button"] {
+  &.alt {
+    padding: 8px 16px;
+    border: 2px solid;
+    border-color: none;
+    // Alt colors
+    &.primary {
+      background-color: transparent;
+      border-color: $primary_color;
+      color: $primary_color;
+    }
+    &.primary:hover {
+      background-color: $primary_color;
+      color: $default_text;
+    }
+    &.secondary {
+      background-color: transparent;
+      border-color: $secondary_color;
+      color: $secondary_color;
+    }
+    &.secondary:hover {
+      background-color: $secondary_color;
+      color: $default_text;
+    }
+    &.red {
+      background-color: transparent;
+      border-color: $red_color;
+      color: $red_color;
+    }
+    &.red:hover {
+      background-color: $red_color;
+      color: $default_text;
+    }
+    &.black {
+      background-color: transparent;
+      border-color: $black_color;
+      color: $black_color;
+    }
+    &.black:hover {
+      background-color: $black_color;
+      color: $default_text;
+    }
+    &.green {
+      background-color: transparent;
+      border-color: $green_color;
+      color: $green_color;
+    }
+    &.green:hover {
+      background-color: $green_color;
+      color: $default_text;
+    }
+    &.brown {
+      background-color: transparent;
+      border-color: $brown_color;
+      color: $brown_color;
+    }
+    &.brown:hover {
+      background-color: $brown_color;
+      color: $default_text;
+    }
+    &.orange {
+      background-color: transparent;
+      border-color: $orange_color;
+      color: $orange_color;
+    }
+    &.orange:hover {
+      background-color: $orange_color;
+      color: $default_text;
+    }
+    &.purple {
+      background-color: transparent;
+      border-color: $purple_color;
+      color: $purple_color;
+    }
+    &.purple:hover {
+      background-color: $purple_color;
+      color: $default_text;
+    }
+    &.yellow {
+      background-color: transparent;
+      border-color: $yellow_color;
+      color: $yellow_color;
+    }
+    &.yellow:hover {
+      background-color: $yellow_color;
+      color: $default_text;
+    }
+    &.pink {
+      background-color: transparent;
+      border-color: $pink_color;
+      color: $pink_color;
+    }
+    &.pink:hover {
+      background-color: $pink_color;
+      color: $default_text;
+    }
+    &.darkgreen {
+      background-color: transparent;
+      border-color: $darkgreen_color;
+      color: $darkgreen_color;
+    }
+    &.darkgreen:hover {
+      background-color: $darkgreen_color;
+      color: $default_text;
+    }
+    &.cyan {
+      background-color: transparent;
+      border-color: $cyan_color;
+      color: $cyan_color;
+    }
+    &.cyan:hover {
+      background-color: $cyan_color;
+      color: $default_text;
+    }
+  }
+  &.sushi {
+    @extend button.alt;
+    border-style: dashed;
+  }
+  &.omusubi {
+    @include border-radius(2px);
+  }
+  // Color variations
+  &.primary {
+    background-color: $primary_color;
+  }
+  &.secondary {
+    background-color: $secondary_color;
+  }
+  &.red {
+    background-color: $red_color;
+  }
+  &.black {
+    background-color: $black_color;
+  }
+  &.green {
+    background-color: $green_color;
+  }
+  &.brown {
+    background-color: $brown_color;
+  }
+  &.orange {
+    background-color: $orange_color;
+  }
+  &.purple {
+    background-color: $purple_color;
+  }
+  &.yellow {
+    background-color: $yellow_color;
+  }
+  &.pink {
+    background-color: $pink_color;
+  }
+  &.darkgreen {
+    background-color: $darkgreen_color;
+  }
+  &.cyan {
+    background-color: $cyan_color;
+  }
+}

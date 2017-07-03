@@ -1,3 +1,7 @@
+/* ==========================================================================
+   Grids component
+   ========================================================================== */
+
 .row {
 	lost-utility: clearfix;
 }
@@ -7,6 +11,7 @@
 }
 
 @media (min-width: 400px) {
+	.waffle { lost-waffle: 1/3; }
 	.column { lost-column: 1/3; }
 	.column.two { lost-column: 2/3; }
 	.column.three, .column.four, 
@@ -23,3 +28,7 @@
 }
 
 @media (min-width: 1200px) {}
+
+/* Flow subcomponent (flex rows)
+   ========================================================================== */
+@import 'flow';

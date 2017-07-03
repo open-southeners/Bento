@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	{% include header.html %}
+  {% include header.html %}
 </head>
 <body>
-	{% include sidebar-menu.html %}
-	<div class="wrapper container">
-		{% include page-header.html %}
-		{{ content }}
-	</div>
-	{% include footer.html %}
+  <div class="container">
+    {% include page-header.html %}
+    {{ content }}
+    {% include footer.html %}
+  </div>
+  
+  <script src="//cdn.jsdelivr.net/jquery/3.2.1/jquery.slim.min.js"></script>
+  <script src="//cdn.jsdelivr.net/anchorjs/3.2.2/anchor.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
+  <script src="/dist/js/docs.js"></script>
 </body>
 </html>
