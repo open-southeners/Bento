@@ -8,8 +8,8 @@
     "build-clean": "rimraf src/*",
     "build-sass": "node-sass --include-path --output-style expanded --source-map true --indent-type space --indent-width 2 --linefeed crlf scss/tadaima.scss src/tadaima.css",
     "post-build": "postcss src/tadaima.css --use autoprefixer lost cssnano --no-map true -o dist/css/tadaima.min.css",
-    "watch": "npm-run-all --parallel \"build-sass -- --watch\" \"post-build -- --watch\" \"docs\"",
-    "docs": "cpy dist/css/tadaima.min.css docs/dist/css"
+    "watch": "npm-run-all --parallel \"build-sass -- --watch\" \"post-build -- --watch\" docs",
+    "docs": "watch \"cpy dist/css/tadaima.min.css docs/dist/css\" dist/css"
   },
   "author": {
     "name": "D8vjork",
