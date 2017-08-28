@@ -1,8 +1,8 @@
 {
   "name": "tadaima",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Stylish, pure CSS, user-friendly web design framework.",
-  "main": "gulpfile.js",
+  "main": "scss/tadaima.scss",
   "scripts": {
     "build": "npm run build-clean && npm run build-sass && npm run post-build",
     "build-clean": "rimraf src/*",
@@ -37,7 +37,6 @@
     "autoprefixer": "^7.1.1",
     "cpy-cli": "^1.0.1",
     "cssnano": "^3.10.0",
-    "lost": "^8.1.0",
     "node-sass": "^4.5.3",
     "npm-run-all": "^4.0.2",
     "postcss-cli": "^4.1.0",

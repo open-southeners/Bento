@@ -1,8 +1,12 @@
-/*! Tadaima v0.4.0 | MIT License | tadaima.social-chan.com */
+/*! Tadaima v0.6.0 | MIT License | tadaima.social-chan.com */
 @import "variables";
 
-@import "tadaima/base";
+// Core
+@import "tadaima/base",
+  "mixins",
+  "utilities";
 
+// Components
 @import "components/grid/base",
   "components/form/base",
   "components/icon/base",
