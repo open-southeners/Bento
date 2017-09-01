@@ -1,0 +1,17 @@
+//
+// Texts decorations
+//
+
+.dotted {
+  border-style: dotted;
+  &.text {
+    border-bottom-width: 1px;
+  }
+}
+
+.dashed {
+  border-style: dashed;
+  &.text {
+    border-bottom-width: 1px;
+  }
+}

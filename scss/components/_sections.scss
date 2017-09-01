@@ -1,0 +1,30 @@
+//
+// Sections
+//
+
+section {
+  padding: 40px 60px;
+  border-top: 2px solid $secondary_bkg;
+
+  &:nth-child(2) {
+    border-top: 0;
+  }
+
+  &.primary {
+    background: $primary_bkg;
+    margin-bottom: 46px;
+  }
+
+  &.primary small {
+    color: $ui-primary;
+  }
+
+  &.secondary {
+    background: $secondary_bkg;
+    margin-bottom: 46px;
+  }
+
+  &.secondary small {
+    color: $ui-secondary;
+  }
+}

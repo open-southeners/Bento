@@ -17,35 +17,35 @@
   }
   // Color variations
   &.primary {
-    outline-color: $primary_color;
-    border-color: $primary_color;
-    color: $primary_color;
+    outline-color: $ui-primary;
+    border-color: $ui-primary;
+    color: $ui-primary;
     background-color: $primary_bkg;
     & a {
-      border-bottom: $primary_color dashed 1px;
-      color: $primary_color;
+      border-bottom: $ui-primary dashed 1px;
+      color: $ui-primary;
     }
     & a:hover,
     a:focus {
       text-decoration: none;
       border-bottom-style: solid;
-      color: $primary_color;
+      color: $ui-primary;
     }
   }
   &.secondary {
-    outline-color: $secondary_color;
-    border-color: $secondary_color;
-    color: $secondary_color;
+    outline-color: $ui-secondary;
+    border-color: $ui-secondary;
+    color: $ui-secondary;
     background-color: $secondary_bkg;
     & a {
-      border-bottom: $secondary_color dashed 1px;
-      color: $secondary_color;
+      border-bottom: $ui-secondary dashed 1px;
+      color: $ui-secondary;
     }
     & a:hover,
     a:focus {
       text-decoration: none;
       border-bottom-style: solid;
-      color: $secondary_color;
+      color: $ui-secondary;
     }
   }
   &.red {

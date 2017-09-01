@@ -28,8 +28,8 @@ group: mixes
       <h3>Omusubi variation</h3>
 
 {% capture omusubi_buttons %}
-<button class="omusubi primary">Primary</button>
-<button class="omusubi secondary">Secondary</button>
+<button class="omusubi primary text-white">Primary</button>
+<button class="omusubi secondary text-white">Secondary</button>
 {% endcapture %}
 
       {{ omusubi_buttons }}
@@ -47,7 +47,7 @@ group: mixes
 <button class="sushi primary">Primary</button>
 <button class="sushi secondary">Secondary</button>
 {% endcapture %}
-  
+
       {{ sushi_buttons }}
 
 {% highlight html %}
@@ -58,8 +58,8 @@ group: mixes
       <h3>With icons</h3>
 
 {% capture with_icon_buttons %}
-<button class="alt primary"><i class="icon-plus-user"></i> Add friend</button>
-<button class="red"><i class="icon-minus-user"></i> Remove friend</button>
+<button class="alt primary"><i data-feather="user-plus"></i> Add friend</button>
+<button class="red text-white"><i data-feather="user-minus"></i> Remove friend</button>
 {% endcapture %}
 
       {{ with_icon_buttons }}
@@ -75,7 +75,7 @@ group: mixes
   <h2 id="forms">
     Forms
   </h2>
-  
+
   <h3>Inputs with</h3>
 
 {% capture text_inputs %}
@@ -139,7 +139,7 @@ group: mixes
   </div>
 
   <h3>Omusubi variation</h3>
-  
+
 {% capture omusubi_panel_primary %}
 <div class="omusubi panel primary">
   <h4>Panel Primary</h4>

@@ -1,3 +1,5 @@
+feather.replace();
+
 anchors.options = {
   placement: 'left',
   icon: "#"

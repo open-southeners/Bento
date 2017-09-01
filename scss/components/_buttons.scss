@@ -1,0 +1,52 @@
+//
+// Buttons
+//
+
+button,
+a[role="button"] {
+	cursor: pointer;
+	display: inline-block;
+	font-size: 16px;
+	outline: none;
+  border: none;
+	padding: 10px 20px;
+	margin: 2px;
+	text-align: center;
+	line-height: 1em;
+	vertical-align: baseline;
+	color: $body-color;
+  transition: background-color 0.1s ease-in-out;
+  user-select: none;
+
+	& svg {
+		width: 16px;
+		height: 16px;
+		vertical-align: bottom;
+  }
+
+	&:active {
+		cursor: pointer;
+	}
+
+	// Buttons variations
+	@each $color, $value in $ui-colors {
+		&.#{$color} {
+			@include button-variant($value, $value);
+		}
+	}
+}
+
+// Alt version
+button.alt,
+a[role="button"].alt {
+  padding: 8px 16px;
+  border: 2px solid;
+  border-color: none;
+
+  // Alt buttons variations
+	@each $color, $value in $ui-colors {
+		&.#{$color} {
+			@include button-alt-variant($value);
+		}
+	}
+}

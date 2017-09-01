@@ -1,0 +1,73 @@
+//
+// Form inputs
+//
+
+input {
+  border: 2px solid $input_default_bkg;
+  padding: 8px 6px;
+  border-radius: 2px;
+  color: $ui-secondary;
+
+  &:focus {
+    outline: none;
+    border-color: $ui-secondary;
+  }
+
+  &.primary {
+    border-color: $input_primary_bkg;
+    color: $input_default_bkg;
+  }
+
+  &.primary:focus {
+    outline: none;
+    border-color: $ui-primary;
+    color: $ui-secondary;
+  }
+}
+
+.control {
+  position: relative;
+  margin-bottom: 12px;
+
+  &[class^="with-"] > input {
+    padding-right: 32px;
+  }
+
+  &[class*="with-"] > input {
+    padding-right: 32px;
+  }
+
+  &.with-icon i,
+  &.with-icon span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: $ui-secondary;
+    width: 2.25em;
+    height: 2.25em;
+  }
+
+  &.with-icon svg {
+    width: 20px;
+    height: auto;
+  }
+
+  &.with-button button {
+    @extend .secondary;
+    position: absolute;
+    right: 1px;
+    top: -6px;
+    @include border-radius(2px);
+    padding: 7px 6px 6px;
+  }
+
+  &.with-button button i {
+    position: relative;
+    top: 1px;
+  }
+}
+
+// Placeholder custom color
+::placeholder {
+  color: $placeholder_color;
+}

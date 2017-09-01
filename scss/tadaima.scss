@@ -2,16 +2,16 @@
 @import "variables";
 
 // Core
-@import "tadaima/base",
-  "mixins",
-  "utilities";
+@import "base";
+@import "mixins";
+@import "utilities";
 
 // Components
-@import "components/grid/base",
-  "components/form/base",
-  "components/icon/base",
-  "components/tooltip/base",
-  "components/menu/base",
-  "components/button/base",
-  "components/okaeri/base",
-  "components/panel/base";
+@import "components/typography";
+@import "components/grids";
+@import "components/forms";
+@import "components/buttons";
+@import "components/tooltips";
+@import "components/menus";
+@import "components/okaeri";
+@import "components/panels";

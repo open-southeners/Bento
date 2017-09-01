@@ -1,0 +1,159 @@
+// Table of Contents
+//
+// Color system
+// Options
+// Spacing
+// Body
+// Misc
+
+//
+// Colors
+//
+
+$white:  #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:  #000 !default;
+
+$grayscale: (
+  100: $gray-100,
+  200: $gray-200,
+  300: $gray-300,
+  400: $gray-400,
+  500: $gray-500,
+  600: $gray-600,
+  700: $gray-700,
+  800: $gray-800,
+  900: $gray-900
+) !default;
+
+$ui-primary:     hsl(202, 67%, 57%) !default;
+$ui-secondary:   hsl(0, 0%, 60%) !default;
+$ui-red:         hsl(0, 79%, 72%) !default;
+$ui-black:       hsl(0, 0%, 33%) !default;
+$ui-green:       hsl(145, 63%, 49%) !default;
+$ui-brown:       hsl(0, 25%, 65%) !default;
+$ui-orange:      hsl(17, 100%, 74%) !default;
+$ui-purple:      hsl(260, 60%, 65%) !default;
+$ui-yellow:      hsl(51, 100%, 39%) !default;
+$ui-pink:        hsl(351, 100%, 86%) !default;
+$ui-darkgreen:   hsl(146, 50%, 36%) !default;
+$ui-cyan:        hsl(203, 92%, 76%) !default;
+
+$ui-colors: (
+  primary: $ui-primary,
+  secondary: $ui-secondary,
+  red: $ui-red,
+  black: $ui-black,
+  green: $ui-green,
+  brown: $ui-brown,
+  orange: $ui-orange,
+  purple: $ui-purple,
+  yellow: $ui-yellow,
+  pink: $ui-pink,
+  darkgreen: $ui-darkgreen,
+  cyan: $ui-cyan,
+  white: $white
+) !default;
+
+//
+// Options
+//
+
+$solids: true !default;
+$shadows: false !default;
+$rounded: true !default;
+$transitions: true !default;
+
+//
+// Sizing
+//
+
+// Sizing units: Fonts, icons...
+$size_mini: 9px !default;
+$size_small: 12px !default;
+$size_big: 16px !default;
+$size_giant: 24px !default;
+
+// No sizing units: Margings, paddings...
+$nos_mini: 4px !default;
+$nos_small: 8px !default;
+$nos_big: 16px !default;
+$nos_giant: 24px !default;
+
+//
+// Spacing
+//
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 3)
+) !default;
+
+//
+// Body
+//
+
+$body-bg:       $white !default;
+$body-color:    $gray-900 !default;
+
+$selection-bg: rgba(71, 163, 218, 0.6) !default;
+
+// Component sizes and metrics
+$site_width: 100% !default;
+$container_margins: 156px !default;
+$body_line_height: 1.8125em !default;
+$navs_font_size: 14px !default;
+
+//
+// Typography
+//
+
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-headings: "Source Sans Pro", sans-serif !default;
+$font-size: 14px !default;
+
+//
+// Grids
+//
+
+$grid-cols: 12 !default;
+$grid-spacing: 140px !default;
+
+//
+// Menus
+//
+
+$navs_hover_bkg: rgba(10, 10, 10, 0.1) !default;
+
+//
+// Okaeri
+//
+
+$okaeri-bg: $gray-200 !default;
+
+//
+// Forms
+//
+
+$input_default_bkg: rgba(153, 153, 153, 0.9) !default;
+$input_primary_bkg: rgba(71, 163, 218, 0.9) !default;
+$placeholder_color: rgba(153, 153, 153, 0.8) !default;
+
+//
+// Misc
+//
+
+$version: "0.5.0";

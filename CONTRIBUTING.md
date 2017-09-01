@@ -1,9 +1,9 @@
 # Contribute guide
 Before all, you need download and install the latests versions of:
 
-- Node.js: https://nodejs.org/en/download/
-- Git: https://git-scm.com/downloads
-- Gulp-CLI (globally for gulp commands): https://www.npmjs.com/package/gulp-cli
+- Install Node.js: https://nodejs.org/en/download/
+- Install Git: https://git-scm.com/downloads
+- And clone the repository: `git clone https://github.com/Social-chan/Tadaima.git`
 
 ## Setup dependencies
 In the root of the project directory, enter that command in the console:
@@ -12,21 +12,18 @@ In the root of the project directory, enter that command in the console:
 npm install
 ```
 
-That install all project dependencies for CSS, JS and images building.
+So you install all project dependencies for compiling SASS and build for production.
 
-Now you need install all external libraries (/libs), do it with:
+## Setup docs
+Tadaima docs pages is created with [Jekyll](https://jekyllrb.com/), so you need:
 
-```
-gulp bower
-```
+- Install Ruby (Windows, Linux or Mac): https://www.ruby-lang.org/es/downloads/
+- Finally, go to docs folder and execute `bundle install` (remember that you need [Bundler](http://bundler.io/) gem in your Ruby installation)
 
-That download on /libs folder all dependencies of bower.json file.
-
-Finally, you have all Gulp commands for building here:
+## Build commands
 
 Command | Do 
 ------------ | ------------
-**gulp sass**  | Compile SASS 
-**gulp watch** | Watch if one of the /components files has changed
-**gulp bower** | Install other dependencies on /libs folder
-**gulp build** | Build, minify and concat all CSS, JS and image files and allocate it under /dist folder
+**npm run build**  | It runs build-clean, build-sass and post-build 
+**npm run watch** | Watch if one of the scss files has changed
+**npm run docs** | Copy files to docs folder (necessary for jekyll)

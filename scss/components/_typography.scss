@@ -1,0 +1,144 @@
+b,
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+abbr[title] {
+  cursor: help;
+  border-bottom: 2px dashed $ui-yellow;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  padding: 0em;
+}
+
+h1 {
+  min-height: 1rem;
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 12px;
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+  margin-top: 0em;
+}
+
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child {
+  margin-bottom: 0em;
+}
+
+small {
+  font-size: 80%;
+  font-weight: 400;
+  padding-left: 4px;
+  color: $ui-secondary;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+pre {
+  overflow: auto;
+  white-space: pre-wrap;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.text {
+  background: none;
+  background-color: none;
+  // positions
+  &-left {
+    text-align: left;
+  }
+  &-center {
+    text-align: center;
+  }
+  &-right {
+    text-align: right;
+  }
+  // sizes
+  &-mini {
+		font-size: 9px;
+	}
+	&-small {
+		font-size: 12px;
+	}
+	&-big {
+		font-size: 20px;
+	}
+	&-giant {
+		font-size: 32px;
+	}
+}
+
+@each $color, $value in $ui-colors {
+  .text-#{$color} {
+    color: $color !important;
+  }
+}

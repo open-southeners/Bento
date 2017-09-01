@@ -1,0 +1,22 @@
+.sushi {
+  border-style: dashed;
+
+  // Small fix for panels
+  &.panel {
+    outline-color: none;
+    border: none;
+  }
+}
+
+.omusubi {
+  @include border-radius(2px);
+}
+
+.onigiri {
+  @include border-radius(50%);
+  width: 20vw;
+  vertical-align: middle;
+  text-align: center;
+  height: 20vw;
+  padding-top: 40%;
+}
