@@ -6,3 +6,25 @@
   padding-left:  ($grid-spacing / 2);
   width: 100%;
 }
+
+.flow {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 0 0 percentage(1 / $grid-cols);
+
+  @for $i from 1 through $grid-cols {
+    &-#{$i} {
+      flex: 0 0 percentage($i / $grid-cols);
+      max-width: percentage($i / $grid-cols);
+    }
+  }
+
+  &-auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+  }
+}

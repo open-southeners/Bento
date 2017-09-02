@@ -32,8 +32,8 @@
   // Tooltip content
   &:after {
     visibility: hidden;
-    background: $black;
-    color: $body-color;
+    background: $tooltip-bg;
+    color: $tooltip-color;
     @include border-radius(4px);
     padding: 8px 16px;
     line-height: 12px;
@@ -48,7 +48,7 @@
 /* Tooltip positions */
 // Top
 .tooltip-top:before {
-  border-top-color: $black;
+  border-top-color: $tooltip-bg;
 }
 
 .tooltip-top:before,
@@ -79,7 +79,7 @@
 
 // Bottom
 .tooltip-bottom:before {
-  border-bottom-color: $black;
+  border-bottom-color: $tooltip-bg;
 }
 
 .tooltip-bottom:before,
@@ -107,7 +107,7 @@
 // Right
 .tooltip-right:before {
   margin-bottom: -8px;
-  border-right-color: $black;
+  border-right-color: $tooltip-bg;
 }
 
 .tooltip-right:after {
@@ -127,7 +127,7 @@
 // Left
 .tooltip-left:before {
   margin-bottom: -8px;
-  border-left-color: $black;
+  border-left-color: $tooltip-bg;
 }
 
 .tooltip-left:after {

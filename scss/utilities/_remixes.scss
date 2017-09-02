@@ -1,5 +1,5 @@
 .sushi {
-  border-style: dashed;
+  border-style: dashed !important;
 
   // Small fix for panels
   &.panel {
@@ -14,9 +14,11 @@
 
 .onigiri {
   @include border-radius(50%);
-  width: 20vw;
-  vertical-align: middle;
-  text-align: center;
-  height: 20vw;
-  padding-top: 40%;
+
+  @each $size, $value in $onigiri-sizes {
+    &-#{$size} {
+      @include border-radius(50%);
+      font-size: $value;
+    }
+  }
 }

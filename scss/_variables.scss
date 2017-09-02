@@ -73,22 +73,6 @@ $rounded: true !default;
 $transitions: true !default;
 
 //
-// Sizing
-//
-
-// Sizing units: Fonts, icons...
-$size_mini: 9px !default;
-$size_small: 12px !default;
-$size_big: 16px !default;
-$size_giant: 24px !default;
-
-// No sizing units: Margings, paddings...
-$nos_mini: 4px !default;
-$nos_small: 8px !default;
-$nos_big: 16px !default;
-$nos_giant: 24px !default;
-
-//
 // Spacing
 //
 
@@ -99,7 +83,8 @@ $spacers: (
   2: ($spacer * .5),
   3: $spacer,
   4: ($spacer * 1.5),
-  5: ($spacer * 3)
+  5: ($spacer * 3),
+  auto: auto
 ) !default;
 
 //
@@ -125,6 +110,13 @@ $font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica 
 $font-family-headings: "Source Sans Pro", sans-serif !default;
 $font-size: 14px !default;
 
+$text-size: 1rem !default;
+$text-sizes: (
+  1: $text-size,
+  2: ($text-size * 1.25),
+  3: ($text-size * 1.5)
+) !default;
+
 //
 // Grids
 //
@@ -145,12 +137,29 @@ $navs_hover_bkg: rgba(10, 10, 10, 0.1) !default;
 $okaeri-bg: $gray-200 !default;
 
 //
+// Tooltips
+//
+
+$tooltip-bg: $gray-700 !default;
+$tooltip-color: $white !default;
+
+//
 // Forms
 //
 
-$input_default_bkg: rgba(153, 153, 153, 0.9) !default;
-$input_primary_bkg: rgba(71, 163, 218, 0.9) !default;
-$placeholder_color: rgba(153, 153, 153, 0.8) !default;
+$input-border: $ui-secondary !default;
+$placeholder-color: $ui-secondary !default;
+
+//
+// Versions
+//
+
+// Onigiri
+$onigiri-size: 2rem;
+$onigiri-sizes: (
+  1: $onigiri-size,
+  2: $onigiri-size * 1.5
+) !default;
 
 //
 // Misc
