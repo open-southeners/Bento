@@ -150,22 +150,6 @@ footer {
   color: $body-color;
 }
 
-// Customize selection
-::-webkit-selection {
-  background-color: $selection-bg;
-  color: rgba(0, 0, 0, 0.87);
-}
-
-::-moz-selection {
-  background-color: $selection-bg;
-  color: rgba(0, 0, 0, 0.87);
-}
-
-::selection {
-  background-color: $selection-bg;
-  color: rgba(0, 0, 0, 0.87);
-}
-
 .wrapper {
   margin-left: 4em;
 }

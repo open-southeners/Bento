@@ -226,21 +226,6 @@ footer {
   color: #212529;
 }
 
-::-webkit-selection {
-  background-color: rgba(71, 163, 218, 0.6);
-  color: rgba(0, 0, 0, 0.87);
-}
-
-::-moz-selection {
-  background-color: rgba(71, 163, 218, 0.6);
-  color: rgba(0, 0, 0, 0.87);
-}
-
-::selection {
-  background-color: rgba(71, 163, 218, 0.6);
-  color: rgba(0, 0, 0, 0.87);
-}
-
 .wrapper {
   margin-left: 4em;
 }
@@ -1927,9 +1912,6 @@ a[role="button"].alt.white.active {
   background-color: #fff;
 }
 
-/* ==========================================================================
-   Tooltips component
-   ========================================================================== */
 [class*="tooltip-"] {
   position: relative;
   display: inline-block;
@@ -1975,7 +1957,6 @@ a[role="button"].alt.white.active {
   content: attr(aria-label);
 }
 
-/* Tooltip positions */
 .tooltip-top:before {
   border-top-color: #495057;
 }
@@ -2348,4 +2329,4 @@ header {
   z-index: 1;
 }
 
-/*# sourceMappingURL=tadaima.css.map */
+/*# sourceMappingURL=bento.css.map */
