@@ -1,0 +1,32 @@
+//
+// Text utilities
+//
+
+.text {
+  // Text styles
+  &-light { font-weight: 300 !important; }
+  &-bold { font-weight: bold !important; }
+
+  // Text aligns
+  &-left { text-align: left; }
+  &-center { text-align: center; }
+  &-right { text-align: right; }
+
+  // Text colors
+  @each $color, $value in $ui-colors {
+    &-#{$color} {
+      color: $value !important;
+    }
+  }
+
+  &-white a {
+    color: $white !important;
+  }
+
+  // Text sizes
+  @each $size, $value in $text-sizes {
+    &-#{$size} {
+      font-size: $value !important;
+    }
+  }
+}

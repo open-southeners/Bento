@@ -1,0 +1,15 @@
+// Background colors
+
+@mixin bg-variant($parent, $color) {
+  #{$parent} {
+    background-color: transparentize($color, 0.2) !important;
+  }
+}
+
+@mixin bg-solid-variant($parent, $color) {
+  @if $solids {
+    #{$parent} {
+      background-color: $color !important;
+    }
+  }
+}

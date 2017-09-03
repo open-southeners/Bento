@@ -1,0 +1,39 @@
+//
+// Grids
+//
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: ($grid-spacing / 2);
+  padding-left:  ($grid-spacing / 2);
+  width: 100%;
+}
+
+.flow {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 0 0 percentage(1 / $grid-cols);
+
+  @each $breakpoint in map-keys($breakpoints) {
+    $prefix: breakpoint-prefix($breakpoint);
+
+    @include breakpoint-up($breakpoint) {
+      @for $i from 1 through $grid-cols {
+        &#{$prefix}-#{$i} {
+          flex: 0 0 percentage($i / $grid-cols);
+          max-width: percentage($i / $grid-cols);
+        }
+      }
+    }
+  }
+
+  &-auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+  }
+}

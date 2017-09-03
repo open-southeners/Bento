@@ -1,0 +1,15 @@
+//
+// Positioning utilities
+//
+
+.fixed {
+  position: fixed;
+  &.top {
+    bottom: auto;
+    top: 0;
+  }
+  &.bottom {
+    top: auto;
+    bottom: 0;
+  }
+}
