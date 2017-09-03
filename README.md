@@ -23,7 +23,7 @@ A quick and small introduction:
 **Note: We're releasing the first beta, so the project is under alpha pre-release versions and should not be used with production purposes.**
 
 ### CDN
-`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bento@0.6.0/dist/bento.min.css" integrity="sha256-RwHO+cDRBjqAPKa4NoGBwbVRMOTJCjQeATDu23TStm0=">`
+`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bento-ui@0.6.0/dist/bento.min.css" integrity="sha256-3LatI5kHPQbZWiKkPPwykRD3jVdV5lcMAnnURxb+s48=">`
 
 ### NPM
 `npm install bento-ui`
