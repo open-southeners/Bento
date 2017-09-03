@@ -26,7 +26,7 @@ Command | Do
 ------------ | ------------
 `npm run build`  | It runs build-clean, build-sass and post-build
 `npm run watch` | Watch if one of the scss files has changed
-`npm run preversion` | It runs automatically before run `npm version major|minor|patch`
+`npm run preversion` | It runs automatically before run `npm version major|minor|patch`.
 
 ## Branches and repos
 Framework and docs repos share...
