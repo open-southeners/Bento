@@ -32,6 +32,12 @@
     background-color: $color;
   }
 
+  // Small fix for teriyaki alt buttons
+  &.teriyaki:hover {
+    outline-style: solid;
+    outline-color: $color;
+  }
+
   &.disabled,
   &:disabled {
     color: $color;

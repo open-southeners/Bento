@@ -26,7 +26,7 @@ a[role="button"] {
 
 	&:active {
 		cursor: pointer;
-	}
+  }
 
 	// Buttons variations
 	@each $color, $value in $ui-colors {

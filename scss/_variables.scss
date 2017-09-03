@@ -1,9 +1,11 @@
 // Table of Contents
 //
-// Color system
+// Colors
 // Options
 // Spacing
+// Breakpoints
 // Body
+// Typography
 
 //
 // Colors
@@ -47,28 +49,28 @@ $ui-darkgreen:   hsl(146, 50%, 36%) !default;
 $ui-cyan:        hsl(203, 92%, 76%) !default;
 
 $ui-colors: (
-  primary: $ui-primary,
-  secondary: $ui-secondary,
-  red: $ui-red,
-  black: $ui-black,
-  green: $ui-green,
-  brown: $ui-brown,
-  orange: $ui-orange,
-  purple: $ui-purple,
-  yellow: $ui-yellow,
-  pink: $ui-pink,
-  darkgreen: $ui-darkgreen,
-  cyan: $ui-cyan,
-  white: $white
+  primary:      $ui-primary,
+  secondary:    $ui-secondary,
+  red:        $ui-red,
+  black:      $ui-black,
+  green:      $ui-green,
+  brown:      $ui-brown,
+  orange:     $ui-orange,
+  purple:     $ui-purple,
+  yellow:     $ui-yellow,
+  pink:       $ui-pink,
+  darkgreen:  $ui-darkgreen,
+  cyan:       $ui-cyan,
+  white:      $white
 ) !default;
 
 //
 // Options
 //
 
-$solids: true !default;
-$shadows: false !default;
-$rounded: true !default;
+$solids:      true !default;
+$shadows:     true !default;
+$rounded:     true !default;
 $transitions: true !default;
 
 //
@@ -87,13 +89,23 @@ $spacers: (
 ) !default;
 
 //
+// Breakpoints
+//
+
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+//
 // Body
 //
 
 $body-bg:       $white !default;
 $body-color:    $gray-900 !default;
-
-$selection-bg: rgba(71, 163, 218, 0.6) !default;
 
 // Component sizes and metrics
 $site_width: 100% !default;
@@ -109,7 +121,7 @@ $font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica 
 $font-family-headings: "Source Sans Pro", sans-serif !default;
 $font-size: 14px !default;
 
-$text-size: 1rem !default;
+$text-size: 1em !default;
 $text-sizes: (
   1: $text-size,
   2: ($text-size * 1.25),
@@ -120,6 +132,13 @@ $text-sizes: (
 // Grids
 //
 
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+
 $grid-cols: 12 !default;
 $grid-spacing: 140px !default;
 
@@ -127,7 +146,7 @@ $grid-spacing: 140px !default;
 // Menus
 //
 
-$navs_hover_bkg: rgba(10, 10, 10, 0.1) !default;
+$menu-tabs-hover-bg: rgba(10, 10, 10, 0.1) !default;
 
 //
 // Okaeri
@@ -141,6 +160,8 @@ $okaeri-bg: $gray-200 !default;
 
 $tooltip-bg: $gray-700 !default;
 $tooltip-color: $white !default;
+
+$tooltip-z: 100 !default;
 
 //
 // Forms
@@ -156,6 +177,9 @@ $progress-bg: $gray-400 !default;
 //
 // Remixes
 //
+
+// Shadow - no name for this
+$shadow-default: 0 2px 3px rgba(10, 10, 10, 0.1) !default;
 
 // Onigiri
 $onigiri-size: 2rem;

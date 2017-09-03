@@ -2,7 +2,7 @@
 
 @mixin bg-variant($parent, $color) {
   #{$parent} {
-    background-color: transparentize($color, 0.4) !important;
+    background-color: transparentize($color, 0.2) !important;
   }
 }
 

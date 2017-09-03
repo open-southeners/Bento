@@ -1,114 +1,198 @@
 .m {
-  @each $spacer, $value in $spacers {
-    &-#{$spacer} {
-      margin: $value !important;
+  @each $breakpoint in map-keys($breakpoints) {
+    $prefix: breakpoint-prefix($breakpoint);
+
+    @include breakpoint-up($breakpoint) {
+      @each $spacer, $value in $spacers {
+        &#{$prefix}-#{$spacer} {
+          margin: $value !important;
+        }
+      }
     }
   }
 
   &l {
-    @each $spacer, $value in $spacers {
-      &-#{$spacer} {
-        margin-left: $value !important;
+    @each $breakpoint in map-keys($breakpoints) {
+      $prefix: breakpoint-prefix($breakpoint);
+
+      @include breakpoint-up($breakpoint) {
+        @each $spacer, $value in $spacers {
+          &#{$prefix}-#{$spacer} {
+            margin-left: $value !important;
+          }
+        }
       }
     }
   }
 
   &r {
-    @each $spacer, $value in $spacers {
-      &-#{$spacer} {
-        margin-right: $value !important;
+    @each $breakpoint in map-keys($breakpoints) {
+      $prefix: breakpoint-prefix($breakpoint);
+
+      @include breakpoint-up($breakpoint) {
+        @each $spacer, $value in $spacers {
+          &#{$prefix}-#{$spacer} {
+            margin-right: $value !important;
+          }
+        }
       }
     }
   }
 
   &t {
-    @each $spacer, $value in $spacers {
-      &-#{$spacer} {
-        margin-top: $value !important;
+    @each $breakpoint in map-keys($breakpoints) {
+      $prefix: breakpoint-prefix($breakpoint);
+
+      @include breakpoint-up($breakpoint) {
+        @each $spacer, $value in $spacers {
+          &#{$prefix}-#{$spacer} {
+            margin-top: $value !important;
+          }
+        }
       }
     }
   }
 
   &b {
-    @each $spacer, $value in $spacers {
-      &-#{$spacer} {
-        margin-bottom: $value !important;
+    @each $breakpoint in map-keys($breakpoints) {
+      $prefix: breakpoint-prefix($breakpoint);
+
+      @include breakpoint-up($breakpoint) {
+        @each $spacer, $value in $spacers {
+          &#{$prefix}-#{$spacer} {
+            margin-bottom: $value !important;
+          }
+        }
       }
     }
   }
 
   &lr {
-    @each $spacer, $value in $spacers {
-      &-#{$spacer} {
-        margin-left: $value !important;
-        margin-right: $value !important;
+    @each $breakpoint in map-keys($breakpoints) {
+      $prefix: breakpoint-prefix($breakpoint);
+
+      @include breakpoint-up($breakpoint) {
+        @each $spacer, $value in $spacers {
+          &#{$prefix}-#{$spacer} {
+            margin-left: $value !important;
+            margin-right: $value !important;
+          }
+        }
       }
     }
   }
 
   &bt {
-    @each $spacer, $value in $spacers {
-      &-#{$spacer} {
-        margin-bottom: $value !important;
-        margin-top: $value !important;
+    @each $breakpoint in map-keys($breakpoints) {
+      $prefix: breakpoint-prefix($breakpoint);
+
+      @include breakpoint-up($breakpoint) {
+        @each $spacer, $value in $spacers {
+          &#{$prefix}-#{$spacer} {
+            margin-bottom: $value !important;
+            margin-top: $value !important;
+          }
+        }
       }
     }
   }
 }
 
 .p {
-  @each $spacer, $value in $spacers {
-    &-#{$spacer} {
-      padding: $value !important;
+  @each $breakpoint in map-keys($breakpoints) {
+    $prefix: breakpoint-prefix($breakpoint);
+
+    @include breakpoint-up($breakpoint) {
+      @each $spacer, $value in $spacers {
+        &#{$prefix}-#{$spacer} {
+          padding: $value !important;
+        }
+      }
     }
   }
 
   &l {
-    @each $spacer, $value in $spacers {
-      &-#{$spacer} {
-        padding-left: $value !important;
+    @each $breakpoint in map-keys($breakpoints) {
+      $prefix: breakpoint-prefix($breakpoint);
+
+      @include breakpoint-up($breakpoint) {
+        @each $spacer, $value in $spacers {
+          &#{$prefix}-#{$spacer} {
+            padding-left: $value !important;
+          }
+        }
       }
     }
   }
 
   &r {
-    @each $spacer, $value in $spacers {
-      &-#{$spacer} {
-        padding-right: $value !important;
+    @each $breakpoint in map-keys($breakpoints) {
+      $prefix: breakpoint-prefix($breakpoint);
+
+      @include breakpoint-up($breakpoint) {
+        @each $spacer, $value in $spacers {
+          &#{$prefix}-#{$spacer} {
+            padding-right: $value !important;
+          }
+        }
       }
     }
   }
 
   &t {
-    @each $spacer, $value in $spacers {
-      &-#{$spacer} {
-        padding-top: $value !important;
+    @each $breakpoint in map-keys($breakpoints) {
+      $prefix: breakpoint-prefix($breakpoint);
+
+      @include breakpoint-up($breakpoint) {
+        @each $spacer, $value in $spacers {
+          &#{$prefix}-#{$spacer} {
+            padding-top: $value !important;
+          }
+        }
       }
     }
   }
 
   &b {
-    @each $spacer, $value in $spacers {
-      &-#{$spacer} {
-        padding-bottom: $value !important;
+    @each $breakpoint in map-keys($breakpoints) {
+      $prefix: breakpoint-prefix($breakpoint);
+
+      @include breakpoint-up($breakpoint) {
+        @each $spacer, $value in $spacers {
+          &#{$prefix}-#{$spacer} {
+            padding-bottom: $value !important;
+          }
+        }
       }
     }
   }
 
   &lr {
-    @each $spacer, $value in $spacers {
-      &-#{$spacer} {
-        padding-left: $value !important;
-        padding-right: $value !important;
+    @each $breakpoint in map-keys($breakpoints) {
+      $prefix: breakpoint-prefix($breakpoint);
+
+      @include breakpoint-up($breakpoint) {
+        @each $spacer, $value in $spacers {
+          &#{$prefix}-#{$spacer} {
+            padding-left: $value !important;
+            padding-right: $value !important;
+          }
+        }
       }
     }
   }
 
   &bt {
-    @each $spacer, $value in $spacers {
-      &-#{$spacer} {
-        padding-bottom: $value !important;
-        padding-top: $value !important;
+    @each $breakpoint in map-keys($breakpoints) {
+      $prefix: breakpoint-prefix($breakpoint);
+
+      @include breakpoint-up($breakpoint) {
+        @each $spacer, $value in $spacers {
+          &#{$prefix}-#{$spacer} {
+            padding-bottom: $value !important;
+            padding-top: $value !important;
+          }
+        }
       }
     }
   }

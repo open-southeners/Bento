@@ -1,3 +1,5 @@
+// Okaeri
+
 header {
   padding: 48px 60px 0;
 }
@@ -8,7 +10,6 @@ header {
   padding-top: 48px;
   padding-bottom: 0;
   background: $okaeri-bg;
-  margin-bottom: 24px;
 
   & h2 {
     margin-bottom: 12px;
@@ -58,7 +59,7 @@ header {
 
     & li a:focus,
     li a:hover {
-      background-color: $navs_hover_bkg;
+      background-color: $menu-tabs-hover-bg;
     }
 
     & li.active > a {

@@ -50,6 +50,10 @@ h6 {
   margin-bottom: 1rem;
   font-weight: 300;
   padding: 0em;
+
+  & > span {
+    font-size: $font-size;
+  }
 }
 
 h1 {
