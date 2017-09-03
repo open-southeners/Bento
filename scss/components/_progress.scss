@@ -1,0 +1,31 @@
+//
+// Progress
+//
+
+progress[value] {
+  position: relative;
+  appearance: none;
+  text-align: center;
+  width: 100%;
+  height: 12px;
+
+  // Background color
+  &::-webkit-progress-bar {
+    background-color: $progress-bg;
+  }
+
+  // Progress value
+  &.value::after {
+    content: attr(value);
+    position: absolute;
+    top: -7px;
+    font-size: 12px;
+  }
+
+  // Bar colors
+  @each $color, $value in $ui-colors {
+    &.#{$color}::-webkit-progress-value {
+      background-color: $value;
+    }
+  }
+}

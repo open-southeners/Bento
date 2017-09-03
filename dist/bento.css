@@ -1,4 +1,4 @@
-/*! Tadaima v0.6.0 | MIT License | tadaima.social-chan.com */
+/*! Bento v0.6.0 | MIT License | bento.social-chan.com */
 /* ==========================================================================
    http://meyerweb.com/eric/tools/css/reset/ | v2.0 | License: Public domain
    ========================================================================== */
@@ -835,33 +835,6 @@ footer {
   border-style: dashed !important;
 }
 
-.sushi {
-  border-style: dashed !important;
-}
-
-.sushi.panel {
-  outline-color: none;
-  border: none;
-}
-
-.omusubi {
-  border-radius: 2px;
-}
-
-.onigiri {
-  border-radius: 50%;
-}
-
-.onigiri-1 {
-  border-radius: 50%;
-  font-size: 2rem;
-}
-
-.onigiri-2 {
-  border-radius: 50%;
-  font-size: 3rem;
-}
-
 .text-light {
   font-weight: 300 !important;
 }
@@ -1036,6 +1009,33 @@ footer {
 
 .d-inline-block {
   display: inline-block;
+}
+
+.sushi {
+  border-style: dashed !important;
+}
+
+.sushi.panel {
+  outline-color: none;
+  border: none;
+}
+
+.omusubi {
+  border-radius: 2px;
+}
+
+.onigiri {
+  border-radius: 50%;
+}
+
+.onigiri-1 {
+  border-radius: 50%;
+  font-size: 2rem;
+}
+
+.onigiri-2 {
+  border-radius: 50%;
+  font-size: 3rem;
 }
 
 .container {
@@ -1909,6 +1909,77 @@ button.alt.white:active, button.alt.white.active,
 a[role="button"].alt.white:active,
 a[role="button"].alt.white.active {
   color: #fff;
+  background-color: #fff;
+}
+
+progress[value] {
+  position: relative;
+  appearance: none;
+  text-align: center;
+  width: 100%;
+  height: 12px;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #ced4da;
+}
+
+progress[value].value::after {
+  content: attr(value);
+  position: absolute;
+  top: -7px;
+  font-size: 12px;
+}
+
+progress[value].primary::-webkit-progress-value {
+  background-color: #48a5db;
+}
+
+progress[value].secondary::-webkit-progress-value {
+  background-color: #999999;
+}
+
+progress[value].red::-webkit-progress-value {
+  background-color: #f07f7f;
+}
+
+progress[value].black::-webkit-progress-value {
+  background-color: #545454;
+}
+
+progress[value].green::-webkit-progress-value {
+  background-color: #2ecc70;
+}
+
+progress[value].brown::-webkit-progress-value {
+  background-color: rosybrown;
+}
+
+progress[value].orange::-webkit-progress-value {
+  background-color: lightsalmon;
+}
+
+progress[value].purple::-webkit-progress-value {
+  background-color: #9470db;
+}
+
+progress[value].yellow::-webkit-progress-value {
+  background-color: #c7a900;
+}
+
+progress[value].pink::-webkit-progress-value {
+  background-color: #ffb8c2;
+}
+
+progress[value].darkgreen::-webkit-progress-value {
+  background-color: #2e8a56;
+}
+
+progress[value].cyan::-webkit-progress-value {
+  background-color: #89cffa;
+}
+
+progress[value].white::-webkit-progress-value {
   background-color: #fff;
 }
 
