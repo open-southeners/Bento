@@ -1,9 +1,12 @@
 {
-  "name": "tadaima",
+  "name": "bento-ui",
   "description": "Stylish, pure CSS, user-friendly web design framework.",
-  "main": "gulpfile.js",
+  "main": [
+    "scss/bento.scss",
+    "dist/bento.css"
+  ],
   "authors": [
-    "[object Object]"
+    "d8vjork"
   ],
   "license": "MIT",
   "keywords": [
@@ -12,15 +15,14 @@
     "html",
     "css",
     "framework",
-    "tadaima"
+    "bento-ui"
   ],
-  "homepage": "https://tadaima.social-chan.com",
+  "homepage": "https://bento.social-chan.com",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
-    "docs",
-    "test",
-    "tests"
+    "_blueprints",
+    "*.zip"
   ]
 }
