@@ -2805,6 +2805,43 @@ footer {
   max-width: none;
 }
 
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.wrapper .one {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+
+.wrapper .two {
+  grid-column: 2 / 4;
+  grid-row: 1 / 3;
+}
+
+.wrapper .three {
+  grid-column: 1;
+  grid-row: 2 / 5;
+}
+
+.wrapper .four {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.wrapper .five {
+  grid-column: 2;
+  grid-row: 4;
+}
+
+.wrapper .six {
+  grid-column: 3;
+  grid-row: 4;
+}
+
 input {
   border: 1px solid #999999;
   padding: 8px 6px;
@@ -4254,21 +4291,17 @@ header {
   z-index: 1;
 }
 
-.panel > i.feat:first-child {
-  display: inline-block;
-  margin-left: -48px;
-  margin-top: -12px;
-  position: relative;
-  font-size: 32px;
-  top: -2px;
-  left: 22px;
-  color: #fff;
-  z-index: 0;
+.panel > .icon {
+  vertical-align: top;
 }
 
 .panel > p {
   position: relative;
   z-index: 1;
+}
+
+.panel a {
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=bento.css.map */
