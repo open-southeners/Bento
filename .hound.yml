@@ -1,0 +1,9 @@
+fail_on_violations: true
+
+stylelint:
+  config_file: .stylelintrc
+  enabled: true
+  ignore_file: .houndignore
+
+scss:
+  enabled: false
