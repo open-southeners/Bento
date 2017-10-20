@@ -2,11 +2,11 @@
 
 .b {
   // Border
-  &-1 { border: 1px solid !important; }
-  &l-1 { border-left: 1px solid !important; }
-  &r-1 { border-right: 1px solid !important; }
-  &t-1 { border-top: 1px solid !important; }
-  &b-1 { border-bottom: 1px solid !important; }
+  &-1 { border: 1px solid $border-color !important; }
+  &l-1 { border-left: 1px solid $border-color !important; }
+  &r-1 { border-right: 1px solid $border-color !important; }
+  &t-1 { border-top: 1px solid $border-color !important; }
+  &b-1 { border-bottom: 1px solid $border-color !important; }
 
   // Border-less
   &-0 { border: none !important; }

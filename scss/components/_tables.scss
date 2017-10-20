@@ -1,0 +1,26 @@
+//
+// Tables
+//
+
+table {
+  background-color: $table-bg;
+
+  th,
+  td {
+    padding: $table-cell-padding;
+    vertical-align: top;
+    border-top: $table-border-width solid $table-border-color;
+  }
+
+  thead th {
+    font-weight: $font-weight-bold;
+    text-align: left;
+    vertical-align: bottom;
+    border-bottom: (2 * $table-border-width) solid $table-border-color;
+  }
+
+  &.responsive {
+    width: 100%;
+    max-width: 100%;
+  }
+}

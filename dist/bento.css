@@ -174,7 +174,7 @@ a:focus {
 
 b,
 strong {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 em {
@@ -2277,23 +2277,23 @@ footer {
 }
 
 .b-1 {
-  border: 1px solid !important;
+  border: 1px solid #e9ecef !important;
 }
 
 .bl-1 {
-  border-left: 1px solid !important;
+  border-left: 1px solid #e9ecef !important;
 }
 
 .br-1 {
-  border-right: 1px solid !important;
+  border-right: 1px solid #e9ecef !important;
 }
 
 .bt-1 {
-  border-top: 1px solid !important;
+  border-top: 1px solid #e9ecef !important;
 }
 
 .bb-1 {
-  border-bottom: 1px solid !important;
+  border-bottom: 1px solid #e9ecef !important;
 }
 
 .b-0 {
@@ -2972,6 +2972,29 @@ input:focus {
 
 ::placeholder {
   color: #999999;
+}
+
+table {
+  background-color: transparent;
+}
+
+table th,
+table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #e9ecef;
+}
+
+table thead th {
+  font-weight: 600;
+  text-align: left;
+  vertical-align: bottom;
+  border-bottom: 2px solid #e9ecef;
+}
+
+table.responsive {
+  width: 100%;
+  max-width: 100%;
 }
 
 button,

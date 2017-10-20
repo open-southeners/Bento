@@ -81,6 +81,15 @@ $rounded:     true !default;
 $transitions: true !default;
 
 //
+// Common
+//
+
+$border-width: 1px !default;
+$border-color: $gray-200 !default;
+
+$font-weight-bold: 600 !default;
+
+//
 // Spacing
 //
 
@@ -117,10 +126,8 @@ $body-bg:       $white !default;
 $body-color:    $gray-900 !default;
 
 // Component sizes and metrics
-$site_width: 100% !default;
-$container_margins: 156px !default;
-$body_line_height: 1.8125em !default;
-$navs_font_size: 14px !default;
+$site-width: 100% !default;
+$body-line-height: 1.8125em !default;
 
 //
 // Typography
@@ -138,6 +145,18 @@ $text-sizes: (
   2: ($text-size * 1.25),
   3: ($text-size * 1.5)
 ) !default;
+
+//
+// Tables
+//
+
+$table-cell-padding: .75rem !default;
+$table-cell-padding-sm: .3rem !default;
+
+$table-bg: transparent !default;
+
+$table-border-width: $border-width !default;
+$table-border-color: $border-color !default;
 
 //
 // Grids

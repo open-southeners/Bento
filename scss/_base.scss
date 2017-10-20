@@ -2,11 +2,11 @@
 @import "reset";
 
 body {
-  width: $site_width;
+  width: $site-width;
   margin: 0;
   font-family: $font-family;
   font-size: $font-size;
-  line-height: $body_line_height;
+  line-height: $body-line-height;
   color: $body-color;
   -webkit-font-smoothing: antialiased;
 }
@@ -22,7 +22,7 @@ a:focus {
 // Typography
 b,
 strong {
-  font-weight: bold;
+  font-weight: $font-weight-bold;
 }
 
 em {

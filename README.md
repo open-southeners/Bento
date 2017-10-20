@@ -40,7 +40,7 @@ bower install bento-ui
 ## To-Do
 We're centering in documentation pages and making more framework components.
 
-**More details on [Projects tab](https://github.com/Social-chan/Bento/projects).**
+**More details on [Social-chan's projects tab](https://github.com/Social-chan/projects).**
 
 ## Copyright and license
 Code released under the [MIT License](https://github.com/Social-chan/Bento/blob/master/LICENSE).
