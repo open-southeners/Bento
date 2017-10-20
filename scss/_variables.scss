@@ -6,6 +6,13 @@
 // Breakpoints
 // Body
 // Typography
+// Grids
+// Menus
+// Okaeri
+// Tooltips
+// Forms
+// Progress
+// Badges
 
 //
 // Colors
@@ -77,6 +84,8 @@ $transitions: true !default;
 // Spacing
 //
 
+// CAUTION! Editing this changes $spacers list and
+// all $component-padding lists below
 $spacer: 1rem !default;
 $spacers: (
   0: 0,
@@ -121,7 +130,7 @@ $font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica 
 $font-family-headings: "Source Sans Pro", sans-serif !default;
 $font-size: 14px !default;
 
-$text-size: 1em !default;
+$text-size: 1rem !default;
 $text-sizes: (
   1: $text-size,
   2: ($text-size * 1.25),
@@ -173,6 +182,14 @@ $placeholder-color: $ui-secondary !default;
 // Progress
 
 $progress-bg: $gray-400 !default;
+
+// Badges
+
+$badge-padding: (
+  nth($spacers, 2),
+  nth($spacers, 3),
+  nth($spacers, 4)
+) !default;
 
 //
 // Remixes

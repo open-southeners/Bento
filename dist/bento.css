@@ -2387,15 +2387,15 @@ footer {
 }
 
 .text-1 {
-  font-size: 1em !important;
+  font-size: 1rem !important;
 }
 
 .text-2 {
-  font-size: 1.25em !important;
+  font-size: 1.25rem !important;
 }
 
 .text-3 {
-  font-size: 1.5em !important;
+  font-size: 1.5rem !important;
 }
 
 .justify-content-start {
@@ -4302,6 +4302,18 @@ header {
 
 .panel a {
   font-weight: 600;
+}
+
+.badge {
+  padding: 0.25rem 0.5rem;
+}
+
+.badge-2 {
+  padding: 0.5rem 1rem;
+}
+
+.badge-3 {
+  padding: 1rem 2rem;
 }
 
 /*# sourceMappingURL=bento.css.map */
