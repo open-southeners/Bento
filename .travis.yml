@@ -1,0 +1,15 @@
+language: node_js
+git:
+  depth: 3
+node_js:
+  - "6"
+  - "8"
+before_install:
+  - npm i -g npm@version-number
+install:
+  - npm install
+stages:
+  - test
+cache:
+  directories:
+    - node_modules

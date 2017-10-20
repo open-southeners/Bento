@@ -6,11 +6,13 @@
   "main": "scss/bento.scss",
   "scripts": {
     "lint": "stylelint --config .stylelintrc --syntax scss \"scss/**/*.scss\"",
+    "bundlesize": "bundlesize",
     "build": "npm run build-sass && npm run post-build",
     "build-sass": "node-sass --include-path --output-style expanded --source-map true --indent-type space --indent-width 2 --linefeed crlf scss/bento.scss dist/bento.css",
     "post-build": "postcss dist/bento.css --use autoprefixer cssnano -m true -o dist/bento.min.css",
     "watch": "npm-run-all -p \"build -- --watch\"",
-    "preversion": "cross-var cross-zip dist/ bento-ui-$npm_package_version.zip"
+    "preversion": "cross-var cross-zip dist/ bento-ui-$npm_package_version.zip",
+    "test": "npm-run-all build --sequential bundlesize"
   },
   "author": {
     "name": "D8vjork",
@@ -63,5 +65,15 @@
     "dist",
     "src",
     "LICENSE"
+  ],
+  "bundlesize": [
+    {
+      "path": "./dist/bento.css",
+      "maxSize": "20 kB"
+    },
+    {
+      "path": "./dist/bento.min.css",
+      "maxSize": "15 kB"
+    }
   ]
 }
