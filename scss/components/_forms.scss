@@ -3,14 +3,14 @@
 //
 
 input {
-  border: 1px solid $input-border;
-  padding: 8px 6px;
-  border-radius: 2px;
   width: 100%;
+  padding: 8px 6px;
+  border: 1px solid $input-border;
+  border-radius: 2px;
 
   &:focus {
-    outline: none;
     border-color: $ui-secondary;
+    outline: none;
   }
 }
 
@@ -26,8 +26,8 @@ input {
   &.with-icon i,
   &.with-icon span {
     position: absolute;
-    right: 0;
     top: 0;
+    right: 0;
     padding: 7px 6px 6px;
     color: $ui-secondary;
   }
@@ -40,8 +40,8 @@ input {
   &.with-button button {
     @extend .secondary;
     position: absolute;
-    right: 0;
     top: 0;
+    right: 0;
     @include border-radius(2px);
     padding: 7px 6px 6px;
   }

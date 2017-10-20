@@ -1,3 +1,5 @@
+// stylelint-disable declaration-no-important
+
 .m {
   @each $breakpoint in map-keys($breakpoints) {
     $prefix: breakpoint-prefix($breakpoint);
@@ -74,8 +76,8 @@
       @include breakpoint-up($breakpoint) {
         @each $spacer, $value in $spacers {
           &#{$prefix}-#{$spacer} {
-            margin-left: $value !important;
             margin-right: $value !important;
+            margin-left: $value !important;
           }
         }
       }
@@ -89,8 +91,8 @@
       @include breakpoint-up($breakpoint) {
         @each $spacer, $value in $spacers {
           &#{$prefix}-#{$spacer} {
-            margin-bottom: $value !important;
             margin-top: $value !important;
+            margin-bottom: $value !important;
           }
         }
       }
@@ -174,8 +176,8 @@
       @include breakpoint-up($breakpoint) {
         @each $spacer, $value in $spacers {
           &#{$prefix}-#{$spacer} {
-            padding-left: $value !important;
             padding-right: $value !important;
+            padding-left: $value !important;
           }
         }
       }
@@ -189,8 +191,8 @@
       @include breakpoint-up($breakpoint) {
         @each $spacer, $value in $spacers {
           &#{$prefix}-#{$spacer} {
-            padding-bottom: $value !important;
             padding-top: $value !important;
+            padding-bottom: $value !important;
           }
         }
       }

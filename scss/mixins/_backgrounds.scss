@@ -1,8 +1,12 @@
+// stylelint-disable declaration-no-important
+
+//
 // Background colors
+//
 
 @mixin bg-variant($parent, $color) {
   #{$parent} {
-    background-color: transparentize($color, 0.2) !important;
+    background-color: transparentize($color, .2) !important;
   }
 }
 

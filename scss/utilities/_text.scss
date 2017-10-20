@@ -1,3 +1,5 @@
+// stylelint-disable declaration-no-important
+
 //
 // Text utilities
 //
@@ -5,7 +7,7 @@
 .text {
   // Text styles
   &-light { font-weight: 300 !important; }
-  &-bold { font-weight: bold !important; }
+  &-bold { font-weight: 500 !important; }
 
   // Text aligns
   &-left { text-align: left; }

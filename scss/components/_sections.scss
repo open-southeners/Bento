@@ -1,3 +1,5 @@
+// stylelint-disable selector-no-qualifying-type
+
 //
 // Sections
 //
@@ -11,8 +13,8 @@ section {
   }
 
   &.primary {
-    background: $primary_bkg;
     margin-bottom: 46px;
+    background: $primary_bkg;
   }
 
   &.primary small {
@@ -20,8 +22,8 @@ section {
   }
 
   &.secondary {
-    background: $secondary_bkg;
     margin-bottom: 46px;
+    background: $secondary_bkg;
   }
 
   &.secondary small {

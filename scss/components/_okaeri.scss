@@ -1,4 +1,8 @@
+// stylelint-disable selector-no-qualifying-type
+
+//
 // Okaeri
+//
 
 header {
   padding: 48px 60px 0;
@@ -34,14 +38,14 @@ header {
   // Nav menu - fix multi level
   & nav {
     display: flex;
+    flex-grow: 1;
+    align-items: center;
     list-style: none;
-    align-items: center;
-    align-items: center;
+    // stylelint-disable property-no-vendor-prefix
     -webkit-box-align: center;
     -webkit-box-flex: 1;
-    flex-grow: 1;
+    // stylelint-enable property-no-vendor-prefix
     flex-shrink: 1;
-    -ms-box-orient: horizontal;
 
     & li {
       display: flex;
@@ -49,12 +53,11 @@ header {
     }
 
     & li a {
-      //font-size: $navs_font_size;
-      background-image: none;
       padding: 8px 16px;
-      @include border-radius(2px 2px 0 0);
-      user-select: none;
       color: $body-color;
+      user-select: none;
+      background-image: none;
+      @include border-radius(2px 2px 0 0);
     }
 
     & li a:focus,

@@ -5,7 +5,7 @@
 
 @function breakpoint-min($name) {
   $min: map-get($breakpoints, $name);
-  @return if($min != 0, $min, null);
+  @return if($min !=0, $min, null);
 }
 
 @function breakpoint-max($name) {
@@ -14,7 +14,7 @@
 }
 
 @function breakpoint-prefix($name) {
-  @return if(breakpoint-min($name) == null, "", "-#{$name}");
+  @return if(breakpoint-min($name)==null, "", "-#{$name}");
 }
 
 @mixin breakpoint-up($name) {
@@ -23,7 +23,8 @@
     @media (min-width: $min) {
       @content;
     }
-  } @else {
+  }
+  @else {
     @content;
   }
 }
@@ -34,7 +35,8 @@
     @media (max-width: $max) {
       @content;
     }
-  } @else {
+  }
+  @else {
     @content;
   }
 }
@@ -42,7 +44,6 @@
 @mixin media-breakpoint-between($lower, $upper) {
   $min: breakpoint-min($lower);
   $max: breakpoint-max($upper);
-
   @media (min-width: $min) and (max-width: $max) {
     @content;
   }
@@ -51,14 +52,15 @@
 @mixin breakpoint-only($name) {
   $min: breakpoint-min($name);
   $max: breakpoint-max($name);
-
-  @if $min != null and $max != null {
+  @if $min !=null and $max !=null {
     @media (min-width: $min) and (max-width: $max) {
       @content;
     }
-  } @else if $max == null {
-    @include breakpoint-up($name)
-  } @else if $min == null {
-    @include breakpoint-down($name)
+  }
+  @else if $max==null {
+    @include breakpoint-up($name);
+  }
+  @else if $min==null {
+    @include breakpoint-down($name);
   }
 }

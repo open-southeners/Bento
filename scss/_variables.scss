@@ -126,8 +126,10 @@ $navs_font_size: 14px !default;
 // Typography
 //
 
+// stylelint-disable value-keyword-case
 $font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
 $font-family-headings: "Source Sans Pro", sans-serif !default;
+// stylelint-enable value-keyword-case
 $font-size: 14px !default;
 
 $text-size: 1rem !default;
@@ -155,7 +157,7 @@ $grid-spacing: 140px !default;
 // Menus
 //
 
-$menu-tabs-hover-bg: rgba(10, 10, 10, 0.1) !default;
+$menu-tabs-hover-bg: rgba(10, 10, 10, .1) !default;
 
 //
 // Okaeri
@@ -196,7 +198,7 @@ $badge-padding: (
 //
 
 // Shadow - no name for this
-$shadow-default: 0 2px 3px rgba(10, 10, 10, 0.1) !default;
+$shadow-default: 0 2px 3px rgba(10, 10, 10, .1) !default;
 
 // Onigiri
 $onigiri-size: 2rem;

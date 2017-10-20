@@ -2,38 +2,39 @@
 // Buttons
 //
 
+// stylelint-disable selector-no-qualifying-type
 button,
 a[role="button"] {
-	cursor: pointer;
-	display: inline-block;
-	font-size: 16px;
-	outline: none;
-  border: none;
-	padding: 10px 20px;
-	margin: 2px;
-	text-align: center;
-	line-height: 1em;
-	vertical-align: baseline;
-	color: $body-color;
-  transition: background-color 0.1s ease-in-out;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 2px;
+  font-size: 16px;
+  line-height: 1em;
+  color: $body-color;
+  text-align: center;
+  vertical-align: baseline;
+  cursor: pointer;
   user-select: none;
+  border: none;
+  outline: none;
+  transition: background-color .1s ease-in-out;
 
-	& svg {
-		width: 16px;
-		height: 16px;
-		vertical-align: bottom;
+  & svg {
+    width: 16px;
+    height: 16px;
+    vertical-align: bottom;
   }
 
-	&:active {
-		cursor: pointer;
+  &:active {
+    cursor: pointer;
   }
 
-	// Buttons variations
-	@each $color, $value in $ui-colors {
-		&.#{$color} {
-			@include button-variant($value, $value);
-		}
-	}
+  // Buttons variations
+  @each $color, $value in $ui-colors {
+    &.#{$color} {
+      @include button-variant($value, $value);
+    }
+  }
 }
 
 // Alt version
@@ -44,9 +45,10 @@ a[role="button"].alt {
   border-color: none;
 
   // Alt buttons variations
-	@each $color, $value in $ui-colors {
-		&.#{$color} {
-			@include button-alt-variant($value);
-		}
-	}
+  @each $color, $value in $ui-colors {
+    &.#{$color} {
+      @include button-alt-variant($value);
+    }
+  }
 }
+// stylelint-enable selector-no-qualifying-type
