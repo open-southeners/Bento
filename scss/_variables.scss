@@ -3,16 +3,17 @@
 // Colors
 // Options
 // Spacing
+// Sizing
 // Breakpoints
 // Body
 // Typography
+// Shadows
 // Grids
 // Menus
 // Okaeri
 // Tooltips
 // Forms
 // Progress
-// Badges
 
 //
 // Colors
@@ -80,14 +81,16 @@ $shadows:     true !default;
 $rounded:     true !default;
 $transitions: true !default;
 
-//
-// Common
-//
-
-$border-width: 1px !default;
-$border-color: $gray-200 !default;
-
-$font-weight-bold: 600 !default;
+// CAUTION! Don't modify any key/value
+$positions: (
+  0: null,
+  t: top,
+  r: right,
+  b: bottom,
+  l: left,
+  x: (top, bottom),
+  y: (right, left)
+) !default;
 
 //
 // Spacing
@@ -104,6 +107,40 @@ $spacers: (
   4: ($spacer * 1.5),
   5: ($spacer * 3),
   auto: auto
+) !default;
+
+//
+// Sizing
+//
+
+$sizes: (
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%
+) !default;
+
+$fixed-base-size: 8px !default;
+$fixed-sizes: (
+  1: $fixed-base-size,
+  2: ($fixed-base-size * 2),
+  3: ($fixed-base-size * 4),
+  4: ($fixed-base-size * 6),
+  5: ($fixed-base-size * 8),
+  6: ($fixed-base-size * 12)
+) !default;
+
+//
+// Borders
+//
+
+$border-color: $gray-200 !default;
+
+$border-width:  1px !default;
+$border-widths: (
+  0: none,
+  1: 1px,
+  2: 2px
 ) !default;
 
 //
@@ -126,31 +163,41 @@ $body-bg:       $white !default;
 $body-color:    $gray-900 !default;
 
 // Component sizes and metrics
-$site-width: 100% !default;
-$body-line-height: 1.8125em !default;
+$site-width:        100% !default;
+$body-line-height:  1.8125em !default;
 
 //
 // Typography
 //
 
 // stylelint-disable value-keyword-case
-$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
-$font-family-headings: "Source Sans Pro", sans-serif !default;
+$font-family:           -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-headings:  "Source Sans Pro", sans-serif !default;
 // stylelint-enable value-keyword-case
-$font-size: 14px !default;
+$font-size:             14px !default;
+$font-weight-light:     300 !default;
+$font-weight-semibold:  600 !default;
+$font-weight-bold:      700 !default;
 
 $text-size: 1rem !default;
 $text-sizes: (
+  0: ($text-size / 1.25),
   1: $text-size,
   2: ($text-size * 1.25),
   3: ($text-size * 1.5)
 ) !default;
 
 //
+// Shadows
+//
+
+$shadow-default: 0 2px 3px rgba(10, 10, 10, .1) !default;
+
+//
 // Tables
 //
 
-$table-cell-padding: .75rem !default;
+$table-cell-padding:    .75rem !default;
 $table-cell-padding-sm: .3rem !default;
 
 $table-bg: transparent !default;
@@ -169,8 +216,8 @@ $container-max-widths: (
   xl: 1140px
 ) !default;
 
-$grid-cols: 12 !default;
-$grid-spacing: 140px !default;
+$grid-cols:     12 !default;
+$grid-spacing:  140px !default;
 
 //
 // Menus
@@ -188,7 +235,7 @@ $okaeri-bg: $gray-200 !default;
 // Tooltips
 //
 
-$tooltip-bg: $gray-700 !default;
+$tooltip-bg:    $gray-700 !default;
 $tooltip-color: $white !default;
 
 $tooltip-z: 100 !default;
@@ -197,31 +244,11 @@ $tooltip-z: 100 !default;
 // Forms
 //
 
-$input-border: $ui-secondary !default;
+$input-border:      $ui-secondary !default;
 $placeholder-color: $ui-secondary !default;
 
+//
 // Progress
+//
 
 $progress-bg: $gray-400 !default;
-
-// Badges
-
-$badge-padding: (
-  nth($spacers, 2),
-  nth($spacers, 3),
-  nth($spacers, 4)
-) !default;
-
-//
-// Remixes
-//
-
-// Shadow - no name for this
-$shadow-default: 0 2px 3px rgba(10, 10, 10, .1) !default;
-
-// Onigiri
-$onigiri-size: 2rem;
-$onigiri-sizes: (
-  1: $onigiri-size,
-  2: $onigiri-size * 1.5
-) !default;

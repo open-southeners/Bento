@@ -1,0 +1,18 @@
+
+@mixin keyframes($name) {
+  @keyframes #{$name} { @content; }
+}
+
+@mixin pulse-keyframes($color) {
+  @include keyframes(pulse) {
+    0% {
+      box-shadow: 0 0 0 0 $color;
+    }
+    70% {
+      box-shadow: 0 0 0 10px $color;
+    }
+    100% {
+      box-shadow: 0 0 0 0 $color;
+    }
+  }
+}

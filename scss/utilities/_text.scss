@@ -4,10 +4,11 @@
 // Text utilities
 //
 
-.text {
-  // Text styles
-  &-light { font-weight: 300 !important; }
-  &-bold { font-weight: 500 !important; }
+.t {
+  // Text weights
+  &w-light { font-weight: $font-weight-light !important; }
+  &w-semibold { font-weight: $font-weight-semibold !important; }
+  &w-bold { font-weight: $font-weight-bold !important; }
 
   // Text aligns
   &-left { text-align: left; }
@@ -20,7 +21,6 @@
       color: $value !important;
     }
   }
-
   &-white a {
     color: $white !important;
   }

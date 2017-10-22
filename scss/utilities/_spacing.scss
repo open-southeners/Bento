@@ -69,7 +69,7 @@
     }
   }
 
-  &lr {
+  &y {
     @each $breakpoint in map-keys($breakpoints) {
       $prefix: breakpoint-prefix($breakpoint);
 
@@ -84,7 +84,7 @@
     }
   }
 
-  &bt {
+  &x {
     @each $breakpoint in map-keys($breakpoints) {
       $prefix: breakpoint-prefix($breakpoint);
 
@@ -169,7 +169,7 @@
     }
   }
 
-  &lr {
+  &y {
     @each $breakpoint in map-keys($breakpoints) {
       $prefix: breakpoint-prefix($breakpoint);
 
@@ -184,7 +184,7 @@
     }
   }
 
-  &bt {
+  &x {
     @each $breakpoint in map-keys($breakpoints) {
       $prefix: breakpoint-prefix($breakpoint);
 

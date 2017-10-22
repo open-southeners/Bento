@@ -1,0 +1,4 @@
+
+.has-shadow {
+  @include box-shadow($shadow-default);
+}
