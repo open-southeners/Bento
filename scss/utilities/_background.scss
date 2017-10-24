@@ -2,6 +2,7 @@
 
 @each $color, $value in $ui-colors {
   @include bg-variant(".bg-#{$color}", $value);
+  @include bg-variant(".bg-dark#{$color}", darken($value, 20%));
 }
 
 .bg-white { background-color: $white !important; }

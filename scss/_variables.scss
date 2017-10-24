@@ -53,7 +53,6 @@ $ui-orange:      hsl(17, 100%, 74%) !default;
 $ui-purple:      hsl(260, 60%, 65%) !default;
 $ui-yellow:      hsl(51, 100%, 39%) !default;
 $ui-pink:        hsl(351, 100%, 86%) !default;
-$ui-darkgreen:   hsl(146, 50%, 36%) !default;
 $ui-cyan:        hsl(203, 92%, 76%) !default;
 
 $ui-colors: (
@@ -67,7 +66,6 @@ $ui-colors: (
   purple:     $ui-purple,
   yellow:     $ui-yellow,
   pink:       $ui-pink,
-  darkgreen:  $ui-darkgreen,
   cyan:       $ui-cyan,
   white:      $white
 ) !default;
@@ -125,16 +123,16 @@ $fixed-sizes: (
   1: $fixed-base-size,
   2: ($fixed-base-size * 2),
   3: ($fixed-base-size * 4),
-  4: ($fixed-base-size * 6),
-  5: ($fixed-base-size * 8),
-  6: ($fixed-base-size * 12)
+  4: ($fixed-base-size * 8),
+  5: ($fixed-base-size * 16),
+  6: ($fixed-base-size * 32)
 ) !default;
 
 //
 // Borders
 //
 
-$border-color: $gray-200 !default;
+$border-color: rgba(0, 0, 0, 0.2) !default; // $gray-200
 
 $border-width:  1px !default;
 $border-widths: (
