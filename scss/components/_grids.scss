@@ -8,6 +8,8 @@
   padding-left: ($grid-spacing / 2);
   margin-right: auto;
   margin-left: auto;
+
+  @include make-container-max-widths();
 }
 
 .flow {

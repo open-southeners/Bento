@@ -5,8 +5,8 @@
 // Spacing
 // Sizing
 // Breakpoints
+// Text
 // Body
-// Typography
 // Shadows
 // Grids
 // Menus
@@ -43,21 +43,24 @@ $grayscale: (
   900: $gray-900
 ) !default;
 
-$ui-primary:     hsl(202, 67%, 57%) !default;
-$ui-secondary:   hsl(0, 0%, 60%) !default;
-$ui-red:         hsl(0, 79%, 72%) !default;
-$ui-black:       hsl(0, 0%, 33%) !default;
-$ui-green:       hsl(145, 63%, 49%) !default;
-$ui-brown:       hsl(0, 25%, 65%) !default;
-$ui-orange:      hsl(17, 100%, 74%) !default;
-$ui-purple:      hsl(260, 60%, 65%) !default;
-$ui-yellow:      hsl(51, 100%, 39%) !default;
-$ui-pink:        hsl(351, 100%, 86%) !default;
-$ui-cyan:        hsl(203, 92%, 76%) !default;
+$ui-blue:       hsl(202, 67%, 57%) !default;
+$ui-gray:       hsl(0, 0%, 60%) !default;
+$ui-red:        hsl(0, 79%, 72%) !default;
+$ui-black:      hsl(0, 0%, 33%) !default;
+$ui-green:      hsl(145, 63%, 49%) !default;
+$ui-brown:      hsl(0, 25%, 65%) !default;
+$ui-orange:     hsl(17, 100%, 74%) !default;
+$ui-purple:     hsl(260, 60%, 65%) !default;
+$ui-yellow:     hsl(51, 100%, 39%) !default;
+$ui-pink:       hsl(351, 100%, 86%) !default;
+$ui-cyan:       hsl(203, 92%, 76%) !default;
 
+$ui-colors-darken: 20% !default;
+$ui-colors-bg-darken: 8% !default;
+$ui-colors-transparentize: .2 !default;
 $ui-colors: (
-  primary:      $ui-primary,
-  secondary:    $ui-secondary,
+  blue:       $ui-blue,
+  gray:       $ui-gray,
   red:        $ui-red,
   black:      $ui-black,
   green:      $ui-green,
@@ -66,8 +69,7 @@ $ui-colors: (
   purple:     $ui-purple,
   yellow:     $ui-yellow,
   pink:       $ui-pink,
-  cyan:       $ui-cyan,
-  white:      $white
+  cyan:       $ui-cyan
 ) !default;
 
 //
@@ -89,6 +91,9 @@ $positions: (
   x: (top, bottom),
   y: (right, left)
 ) !default;
+
+$primary-color:   $ui-blue !default;
+$secondary-color: $black !default;
 
 //
 // Spacing
@@ -132,7 +137,7 @@ $fixed-sizes: (
 // Borders
 //
 
-$border-color: rgba(0, 0, 0, 0.2) !default; // $gray-200
+$border-color: rgba(0, 0, 0, .2) !default;
 
 $border-width:  1px !default;
 $border-widths: (
@@ -154,30 +159,20 @@ $breakpoints: (
 ) !default;
 
 //
-// Body
+// Text
 //
 
-$body-bg:       $white !default;
-$body-color:    $gray-900 !default;
+$text-prefix: t !default;
 
-// Component sizes and metrics
-$site-width:        100% !default;
-$body-line-height:  1.8125em !default;
+$text-size:             1rem !default;
+$text-line-height:      .5rem !default;
 
-//
-// Typography
-//
+$text-weight-light:     300 !default;
+$text-weight-semibold:  600 !default;
+$text-weight-bold:      700 !default;
 
-// stylelint-disable value-keyword-case
-$font-family:           -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
-$font-family-headings:  "Source Sans Pro", sans-serif !default;
-// stylelint-enable value-keyword-case
-$font-size:             14px !default;
-$font-weight-light:     300 !default;
-$font-weight-semibold:  600 !default;
-$font-weight-bold:      700 !default;
+$text-highlight-bg: rgba(0, 0, 0, .2) !default;
 
-$text-size: 1rem !default;
 $text-sizes: (
   0: ($text-size / 1.25),
   1: $text-size,
@@ -185,11 +180,34 @@ $text-sizes: (
   3: ($text-size * 1.5)
 ) !default;
 
+$text-line-height-sizes: (
+  0: $text-line-height,
+  1: ($text-line-height * .25),
+  2: ($text-line-height * .5)
+) !default;
+
 //
 // Shadows
 //
 
-$shadow-default: 0 2px 3px rgba(10, 10, 10, .1) !default;
+$shadow-default:  0 2px 3px rgba(10, 10, 10, .1) !default;
+$shadow-focus:    0 0 0 .15 $primary-color !default;
+
+//
+// Body
+//
+
+// stylelint-disable value-keyword-case
+$body-font-family:        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$body-headings-family:    $body-font-family;
+// stylelint-enable value-keyword-case
+
+$body-bg:       $white !default;
+$body-color:    $gray-900 !default;
+
+$body-font-size:    $text-size;
+$body-line-height:  1.5 !default;
+$body-font-weight:  $text-weight-light;
 
 //
 // Tables
@@ -242,8 +260,8 @@ $tooltip-z: 100 !default;
 // Forms
 //
 
-$input-border:      $ui-secondary !default;
-$placeholder-color: $ui-secondary !default;
+$input-border:      $ui-gray !default;
+$placeholder-color: $ui-gray !default;
 
 //
 // Progress

@@ -2,3 +2,7 @@
 .has-shadow {
   @include box-shadow($shadow-default);
 }
+
+.has-focus {
+  @include box-shadow($shadow-focus);
+}

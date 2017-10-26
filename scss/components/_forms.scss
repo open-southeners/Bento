@@ -9,7 +9,7 @@ input {
   border-radius: 2px;
 
   &:focus {
-    border-color: $ui-secondary;
+    border-color: $ui-gray;
     outline: none;
   }
 }
@@ -29,7 +29,7 @@ input {
     top: 0;
     right: 0;
     padding: 7px 6px 6px;
-    color: $ui-secondary;
+    color: $ui-gray;
   }
 
   &.with-icon svg {
@@ -38,7 +38,7 @@ input {
   }
 
   &.with-button button {
-    @extend .secondary;
+    // @extend .secondary;
     position: absolute;
     top: 0;
     right: 0;

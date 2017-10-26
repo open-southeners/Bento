@@ -1,0 +1,14 @@
+// stylelint-disable selector-no-qualifying-type
+
+//
+// Menus
+//
+
+nav {
+  & a {
+    display: inline-block;
+    list-style: none;
+  }
+
+  &.has-active a:not(.active) { color: $white; }
+}

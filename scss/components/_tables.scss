@@ -12,15 +12,12 @@ table {
     border-top: $table-border-width solid $table-border-color;
   }
 
+  // stylelint-disable selector-max-type
   thead th {
-    font-weight: $font-weight-bold;
+    font-weight: $text-weight-bold;
     text-align: left;
     vertical-align: bottom;
     border-bottom: (2 * $table-border-width) solid $table-border-color;
   }
-
-  &.responsive {
-    width: 100%;
-    max-width: 100%;
-  }
+  // stylelint-enable selector-max-type
 }

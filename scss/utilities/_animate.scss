@@ -1,8 +1,10 @@
 
-.animated.pulse {
-  animation: pulse;
-}
+.animated {
+  &.pulse {
+    animation: pulse;
+  }
 
-.animated.pulse:hover {
-  animation: none;
+  &.pulse:hover {
+    animation: none;
+  }
 }

@@ -4,16 +4,29 @@
 // Background colors
 //
 
-@mixin bg-variant($parent, $color) {
+@mixin bg-variant($parent, $color, $active-color: darken($color, $ui-colors-bg-darken)) {
   #{$parent} {
-    background-color: transparentize($color, .2) !important;
-  }
-}
+    @if ($solids) {
+      background-color: $color;
+    } @else {
+      background-color: transparentize($color, $ui-colors-transparentize);
+    }
 
-@mixin bg-solid-variant($parent, $color) {
-  @if $solids {
-    #{$parent} {
-      background-color: $color !important;
+    &.is-hoverable {
+      &:active {
+        background-color: $active-color;
+        background-image: none; // Remove the gradient for the pressed/active state
+      }
+
+      &:hover {
+        background-color: $active-color;
+      }
+    }
+
+    // Disabled comes first so active can properly restyle
+    &.disabled,
+    &:disabled {
+      background-color: $color;
     }
   }
 }
