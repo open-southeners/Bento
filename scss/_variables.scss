@@ -4,13 +4,14 @@
 // Options
 // Spacing
 // Sizing
+// Borders
+// Shadows
 // Breakpoints
+// Grids
 // Text
 // Body
-// Shadows
-// Grids
-// Menus
-// Okaeri
+// Tables
+// Navs
 // Tooltips
 // Forms
 // Progress
@@ -19,28 +20,30 @@
 // Colors
 //
 
-$white:  #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #868e96 !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
-$black:  #000 !default;
+$gray-00: #fff !default;
+$gray-10: #f8f9fa !default;
+$gray-20: #e9ecef !default;
+$gray-30: #dee2e6 !default;
+$gray-40: #ced4da !default;
+$gray-50: #adb5bd !default;
+$gray-60: #868e96 !default;
+$gray-70: #495057 !default;
+$gray-80: #343a40 !default;
+$gray-90: #212529 !default;
+$gray-100:#000 !default;
 
 $grayscale: (
-  100: $gray-100,
-  200: $gray-200,
-  300: $gray-300,
-  400: $gray-400,
-  500: $gray-500,
-  600: $gray-600,
-  700: $gray-700,
-  800: $gray-800,
-  900: $gray-900
+  00:   $gray-00,
+  10:   $gray-10,
+  20:   $gray-20,
+  30:   $gray-30,
+  40:   $gray-40,
+  50:   $gray-50,
+  60:   $gray-60,
+  70:   $gray-70,
+  80:   $gray-80,
+  90:   $gray-90,
+  100:  $gray-100
 ) !default;
 
 $ui-blue:       hsl(202, 67%, 57%) !default;
@@ -93,7 +96,7 @@ $positions: (
 ) !default;
 
 $primary-color:   $ui-blue !default;
-$secondary-color: $black !default;
+$secondary-color: $gray-100 !default;
 
 //
 // Spacing
@@ -147,6 +150,13 @@ $border-widths: (
 ) !default;
 
 //
+// Shadows
+//
+
+$shadow-default:  0 2px 3px rgba(10, 10, 10, .1) !default;
+$shadow-focus:    0 0 0 .15 $primary-color !default;
+
+//
 // Breakpoints
 //
 
@@ -157,6 +167,22 @@ $breakpoints: (
   lg: 992px,
   xl: 1200px
 ) !default;
+
+//
+// Grids
+//
+
+$grid-columns-prefix: cl !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+
+$grid-cols:     12 !default;
+$grid-spacing:  140px !default;
 
 //
 // Text
@@ -187,13 +213,6 @@ $text-line-height-sizes: (
 ) !default;
 
 //
-// Shadows
-//
-
-$shadow-default:  0 2px 3px rgba(10, 10, 10, .1) !default;
-$shadow-focus:    0 0 0 .15 $primary-color !default;
-
-//
 // Body
 //
 
@@ -202,8 +221,8 @@ $body-font-family:        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
 $body-headings-family:    $body-font-family;
 // stylelint-enable value-keyword-case
 
-$body-bg:       $white !default;
-$body-color:    $gray-900 !default;
+$body-bg:       $gray-00 !default;
+$body-color:    $gray-90 !default;
 
 $body-font-size:    $text-size;
 $body-line-height:  1.5 !default;
@@ -222,37 +241,17 @@ $table-border-width: $border-width !default;
 $table-border-color: $border-color !default;
 
 //
-// Grids
-//
-
-$container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px
-) !default;
-
-$grid-cols:     12 !default;
-$grid-spacing:  140px !default;
-
-//
-// Menus
+// Navs
 //
 
 $menu-tabs-hover-bg: rgba(10, 10, 10, .1) !default;
 
 //
-// Okaeri
-//
-
-$okaeri-bg: $gray-200 !default;
-
-//
 // Tooltips
 //
 
-$tooltip-bg:    $gray-700 !default;
-$tooltip-color: $white !default;
+$tooltip-bg:    $gray-70 !default;
+$tooltip-color: $gray-00 !default;
 
 $tooltip-z: 100 !default;
 
@@ -267,4 +266,4 @@ $placeholder-color: $ui-gray !default;
 // Progress
 //
 
-$progress-bg: $gray-400 !default;
+$progress-bg: $gray-40 !default;

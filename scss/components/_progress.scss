@@ -28,7 +28,7 @@ progress[value] {
     top: -7px;
     font-size: 12px;
     // stylelint-disable declaration-no-important
-    color: $white !important;
+    color: $gray-00 !important;
     content: attr(value);
   }
 

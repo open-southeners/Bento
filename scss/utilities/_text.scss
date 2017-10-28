@@ -24,7 +24,7 @@
   @each $color, $value in $ui-colors {
     &-#{$color} { color: $value !important; }
   }
-  &-white { color: $white !important; }
+  &-white { color: $gray-00 !important; }
   &-hglg { background-color: $text-highlight-bg; }
 
   // Sizing

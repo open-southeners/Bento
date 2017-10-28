@@ -17,7 +17,7 @@
   flex-wrap: wrap;
 }
 
-.col {
+.#{$grid-columns-prefix} {
   flex: 0 0 percentage(1 / $grid-cols);
 
   @each $breakpoint in map-keys($breakpoints) {

@@ -3,6 +3,7 @@
 //
 
 table {
+  border-collapse: collapse;
   background-color: $table-bg;
 
   th,
@@ -14,7 +15,7 @@ table {
 
   // stylelint-disable selector-max-type
   thead th {
-    font-weight: $text-weight-bold;
+    font-weight: $text-weight-semibold;
     text-align: left;
     vertical-align: bottom;
     border-bottom: (2 * $table-border-width) solid $table-border-color;

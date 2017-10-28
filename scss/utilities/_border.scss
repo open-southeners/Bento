@@ -1,7 +1,7 @@
 // stylelint-disable declaration-no-important
 
 .b {
-  // Border sizes
+  // Sizes
   @each $pos, $val in $positions {
     @each $size, $length in $border-widths {
 
@@ -24,32 +24,27 @@
           }
         }
       } @else {
-        &-#{$size} {
-          border: $length solid $border-color !important;
-        }
+        &-#{$size} { border: $length solid $border-color !important; }
       }
 
     }
   }
 
-  // Border colors
+  // Colors
   @each $color, $value in $ui-colors {
-    &-#{$color} {
-      border-color: $value !important;
-      // outline-color: $value !important;
-    }
+    &-#{$color} { border-color: $value !important; }
   }
+  &-transparent { border-color: transparent !important; }
 
-  // Border styles
+  // Styles
   &s-dotted { border-style: dotted !important; }
   &s-dashed { border-style: dashed !important; }
 
-  // Border rounded styles
+  // Rounded styles
   &s-rounded { @include border-radius(2px); }
   &s-left-rounded { @include border-radius(2px 0 0 2px); }
   &s-right-rounded { @include border-radius(0 2px 2px 0); }
   &s-top-rounded { @include border-radius(2px 2px 0 0); }
   &s-bottom-rounded { @include border-radius(0 0 2px 2px); }
-
   &s-circle { @include border-radius(50%); }
 }

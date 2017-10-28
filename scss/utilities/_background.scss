@@ -5,7 +5,7 @@
   @include bg-variant(".bg-dark#{$color}", darken($value, $ui-colors-darken));
 }
 
-.bg-white { background-color: $white !important; }
+.bg-white { background-color: $gray-00 !important; }
 .bg-transparent { background-color: transparent !important; }
 
 .is-hoverable {

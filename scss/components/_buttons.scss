@@ -4,6 +4,7 @@
 
 // stylelint-disable selector-no-qualifying-type
 button,
+input[type="button"],
 a[role="button"] {
   display: inline-block;
   text-align: center;

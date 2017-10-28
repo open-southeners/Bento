@@ -5,10 +5,11 @@
 //
 
 nav {
-  & a {
-    display: inline-block;
-    list-style: none;
-  }
+  display: flex;
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
 
-  &.has-active a:not(.active) { color: $white; }
+  & li { list-style: none; }
+  &.has-active a:not(.active) { color: $gray-00; }
 }
