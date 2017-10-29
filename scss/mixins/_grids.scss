@@ -1,0 +1,8 @@
+
+@mixin make-container-max-widths($max-widths: $container-max-widths) {
+  @each $breakpoint, $container-max-width in $max-widths {
+    @include breakpoint-up($breakpoint) {
+      max-width: $container-max-width;
+    }
+  }
+}

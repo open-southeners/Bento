@@ -1,5 +1,14 @@
-.d-none { display: none; }
-.d-flex { display: flex; }
-.d-block { display: block; }
-.d-inline { display: inline; }
-.d-inline-block { display: inline-block; }
+
+.d {
+  @each $breakpoint in map-keys($breakpoints) {
+    $prefix: breakpoint-prefix($breakpoint);
+
+    @include breakpoint-up($breakpoint) {
+      &#{$prefix}-none { display: none; }
+      &#{$prefix}-flex { display: flex; }
+      &#{$prefix}-block { display: block; }
+      &#{$prefix}-inline { display: inline; }
+      &#{$prefix}-inline-block { display: inline-block; }
+    }
+  }
+}

@@ -1,27 +1,50 @@
+// stylelint-disable declaration-no-important
+
 .b {
-  // Border
-  &-1 { border: 1px solid !important; }
-  &l-1 { border-left: 1px solid !important; }
-  &r-1 { border-right: 1px solid !important; }
-  &t-1 { border-top: 1px solid !important; }
-  &b-1 { border-bottom: 1px solid !important; }
+  // Sizes
+  @each $pos, $val in $positions {
+    @each $size, $length in $border-widths {
 
-  // Border-less
-  &-0 { border: none !important; }
-  &l-0 { border-left: none !important; }
-  &r-0 { border-right: none !important; }
-  &t-0 { border-top: none !important; }
-  &b-0 { border-bottom: none !important; }
+      @if ($val) {
+        &#{$pos}-#{$size} {
+          @if (type-of($val) == string) {
+            @if ($length == none) {
+              border-#{$val}: $length !important;
+            } @else {
+              border-#{$val}: $length solid $border-color !important;
+            }
+          } @else if (type-of($val) == list) {
+            @each $key-val in $val {
+              @if ($length == none) {
+                border-#{$key-val}: $length !important;
+              } @else {
+                border-#{$key-val}: $length solid $border-color !important;
+              }
+            }
+          }
+        }
+      } @else {
+        &-#{$size} { border: $length solid $border-color !important; }
+      }
 
-  // Border colors
-  @each $color, $value in $ui-colors {
-    &-#{$color} {
-      border-color: $value !important;
-      outline-color: $value !important;
     }
   }
 
-  // Border styles
-  .b-dotted { border-style: dotted !important; }
-  .b-dashed { border-style: dashed !important; }
+  // Colors
+  @each $color, $value in $ui-colors {
+    &-#{$color} { border-color: $value !important; }
+  }
+  &-transparent { border-color: transparent !important; }
+
+  // Styles
+  &s-dotted { border-style: dotted !important; }
+  &s-dashed { border-style: dashed !important; }
+
+  // Rounded styles
+  &s-rounded { @include border-radius(2px); }
+  &s-left-rounded { @include border-radius(2px 0 0 2px); }
+  &s-right-rounded { @include border-radius(0 2px 2px 0); }
+  &s-top-rounded { @include border-radius(2px 2px 0 0); }
+  &s-bottom-rounded { @include border-radius(0 0 2px 2px); }
+  &s-circle { @include border-radius(50%); }
 }

@@ -1,6 +1,17 @@
+// stylelint-disable declaration-no-important
+
 @each $color, $value in $ui-colors {
-  @include bg-variant('.bg-#{$color}', $value);
+  @include bg-variant(".bg-#{$color}", $value);
+  @include bg-variant(".bg-dark#{$color}", darken($value, $ui-colors-darken));
 }
 
-.bg-white { background-color: $white !important; }
+.bg-white { background-color: $gray-00 !important; }
 .bg-transparent { background-color: transparent !important; }
+
+.is-hoverable {
+  @include transition(background-color .1s ease-in-out);
+
+  &:hover {
+    background-color: rgba(255, 255, 255, .2);
+  }
+}

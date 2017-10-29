@@ -1,0 +1,15 @@
+// stylelint-disable selector-no-qualifying-type
+
+//
+// Menus
+//
+
+nav {
+  display: flex;
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+
+  & li { list-style: none; }
+  &.has-active a:not(.active) { color: $gray-00; }
+}

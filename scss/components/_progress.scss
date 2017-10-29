@@ -1,3 +1,5 @@
+// stylelint-disable selector-no-qualifying-type
+
 //
 // Progress
 //
@@ -5,10 +7,10 @@
 progress[value] {
   position: relative;
   appearance: none;
-  text-align: center;
-  border: none;
   width: 100%;
   height: 12px;
+  text-align: center;
+  border: none;
 
   // No border in IE
   &::-ms-fill {
@@ -22,23 +24,21 @@ progress[value] {
 
   // Progress value
   &.value::after {
-    content: attr(value);
     position: absolute;
-    color: $white !important;
     top: -7px;
     font-size: 12px;
+    // stylelint-disable declaration-no-important
+    color: $gray-00 !important;
+    content: attr(value);
   }
 
-  // Bar colors
+  // Colors
+  &::-webkit-progress-value { background-color: $progress-default-bar-bg; }
+  &::-moz-progress-bar { background-color: $progress-default-bar-bg; }
+
   @each $color, $value in $ui-colors {
     &.#{$color} { color: $value; }
-
-    &.#{$color}::-webkit-progress-value {
-      background-color: $value;
-    }
-
-    &.#{$color}::-moz-progress-bar {
-      background-color: $value;
-    }
+    &.#{$color}::-webkit-progress-value { background-color: $value; }
+    &.#{$color}::-moz-progress-bar { background-color: $value; }
   }
 }

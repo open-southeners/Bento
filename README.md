@@ -2,9 +2,9 @@
 	<img src="https://raw.githubusercontent.com/Social-chan/Bento/master/logo.png" alt="Bento logo">
 	<h3 align="center">Bento UI</h3>
 	<p align="center">
-		Stylish, pure CSS, user-friendly web design framework
+		Bento UI is a lightweight, sandbox and technical CSS framework for rapid prototyping any type of application.
 		<br>
-		<a href="https://bento.social-chan.com"><strong>Visit documentation</strong></a>
+		<a href="https://bento.social-chan.com"><strong>Visit website</strong></a>
 	</p>
 </p>
 
@@ -24,7 +24,7 @@ A quick and small introduction:
 
 ### CDN
 ```
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bento-ui@0.6.0/dist/bento.min.css" integrity="sha256-3LatI5kHPQbZWiKkPPwykRD3jVdV5lcMAnnURxb+s48=">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bento-ui/dist/bento.min.css">
 ```
 
 ### NPM
@@ -40,7 +40,7 @@ bower install bento-ui
 ## To-Do
 We're centering in documentation pages and making more framework components.
 
-**More details on [Projects tab](https://github.com/Social-chan/Bento/projects).**
+**More details on [Social-chan's projects tab](https://github.com/Social-chan/projects).**
 
 ## Copyright and license
 Code released under the [MIT License](https://github.com/Social-chan/Bento/blob/master/LICENSE).

@@ -1,0 +1,10 @@
+
+.animated {
+  &.pulse {
+    animation: pulse;
+  }
+
+  &.pulse:hover {
+    animation: none;
+  }
+}
