@@ -7,7 +7,9 @@ button,
 input[type="button"],
 a[role="button"] {
   display: inline-block;
+  font: inherit;
   text-align: center;
+  text-decoration: none;
   vertical-align: baseline;
   cursor: pointer;
   user-select: none;
@@ -19,8 +21,6 @@ a[role="button"] {
     height: auto;
   }
 
-  &:active {
-    cursor: pointer;
-  }
+  &:active { cursor: pointer; }
 }
 // stylelint-enable selector-no-qualifying-type

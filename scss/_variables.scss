@@ -13,7 +13,7 @@
 // Tables
 // Navs
 // Tooltips
-// Forms
+// Inputs
 // Progress
 
 //
@@ -96,7 +96,7 @@ $positions: (
 ) !default;
 
 $primary-color:   $ui-blue !default;
-$secondary-color: $gray-100 !default;
+$secondary-color: $ui-gray !default;
 
 //
 // Spacing
@@ -244,7 +244,7 @@ $table-border-color: $border-color !default;
 // Navs
 //
 
-$menu-tabs-hover-bg: rgba(10, 10, 10, .1) !default;
+$navs-tabs-hover-bg: rgba(10, 10, 10, .1) !default;
 
 //
 // Tooltips
@@ -256,14 +256,18 @@ $tooltip-color: $gray-00 !default;
 $tooltip-z: 100 !default;
 
 //
-// Forms
+// Inputs
 //
 
-$input-border:      $ui-gray !default;
-$placeholder-color: $ui-gray !default;
+$input-color:                   $secondary-color !default;
+$input-border:                  2px solid $ui-gray !default;
+$input-focused-border-color:    $primary-color !default;
+
+$placeholder-color:             $secondary-color !default;
 
 //
 // Progress
 //
 
-$progress-bg: $gray-40 !default;
+$progress-default-bar-bg: $primary-color !default;
+$progress-bg:             $gray-40 !default;

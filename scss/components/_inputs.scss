@@ -1,0 +1,22 @@
+//
+// Inputs
+//
+
+input {
+  color: $input-color;
+  border: $input-border;
+  outline: none;
+  @include transition(border-color .3s ease-in-out);
+
+  &:focus { border-color: $input-focused-border-color; }
+}
+
+textarea {
+  @extend input;
+  resize: vertical;
+}
+
+// Placeholder custom color
+::placeholder {
+  color: $placeholder-color;
+}

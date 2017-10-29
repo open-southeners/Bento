@@ -32,16 +32,13 @@ progress[value] {
     content: attr(value);
   }
 
-  // Bar colors
+  // Colors
+  &::-webkit-progress-value { background-color: $progress-default-bar-bg; }
+  &::-moz-progress-bar { background-color: $progress-default-bar-bg; }
+
   @each $color, $value in $ui-colors {
     &.#{$color} { color: $value; }
-
-    &.#{$color}::-webkit-progress-value {
-      background-color: $value;
-    }
-
-    &.#{$color}::-moz-progress-bar {
-      background-color: $value;
-    }
+    &.#{$color}::-webkit-progress-value { background-color: $value; }
+    &.#{$color}::-moz-progress-bar { background-color: $value; }
   }
 }

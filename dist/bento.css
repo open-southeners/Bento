@@ -1,4 +1,4 @@
-/*! Bento v0.6.0 | MIT License | bento.social-chan.com */
+/*! Bento v0.7.0 | MIT License | bento.social-chan.com */
 /* normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -227,6 +227,7 @@ svg:not(:root) {
  */
 button,
 input,
+textarea,
 optgroup,
 select,
 textarea {
@@ -245,7 +246,8 @@ textarea {
  * 1. Show the overflow in Edge.
  */
 button,
-input {
+input,
+textarea {
   /* 1 */
   overflow: visible;
 }
@@ -466,6 +468,11 @@ abbr[title] {
   border-bottom: 2px dashed #c7a900;
 }
 
+mark {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
 h1,
 h2,
 h3,
@@ -588,7 +595,7 @@ footer {
   margin-left: 4em;
 }
 
-.responsive {
+.is-responsive {
   width: 100%;
   max-width: 100%;
 }
@@ -3208,10 +3215,6 @@ footer {
   color: #fff !important;
 }
 
-.t-hglg {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
 .t-0 {
   font-size: 0.8rem !important;
 }
@@ -3756,6 +3759,25 @@ footer {
   grid-row: 4;
 }
 
+input, textarea {
+  color: #999999;
+  border: 2px solid #999999;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus {
+  border-color: #48a5db;
+}
+
+textarea {
+  resize: vertical;
+}
+
+::placeholder {
+  color: #999999;
+}
+
 table {
   border-collapse: collapse;
   background-color: transparent;
@@ -3777,9 +3799,12 @@ table thead th {
 
 button,
 input[type="button"],
+textarea[type="button"],
 a[role="button"] {
   display: inline-block;
+  font: inherit;
   text-align: center;
+  text-decoration: none;
   vertical-align: baseline;
   cursor: pointer;
   user-select: none;
@@ -3788,7 +3813,7 @@ a[role="button"] {
 }
 
 button svg,
-input[type="button"] svg,
+input[type="button"] svg, textarea[type="button"] svg,
 a[role="button"] svg {
   width: 1rem;
   height: auto;
@@ -3796,6 +3821,7 @@ a[role="button"] svg {
 
 button:active,
 input[type="button"]:active,
+textarea[type="button"]:active,
 a[role="button"]:active {
   cursor: pointer;
 }
@@ -3823,6 +3849,14 @@ progress[value].value::after {
   font-size: 12px;
   color: #fff !important;
   content: attr(value);
+}
+
+progress[value]::-webkit-progress-value {
+  background-color: #48a5db;
+}
+
+progress[value]::-moz-progress-bar {
+  background-color: #48a5db;
 }
 
 progress[value].blue {

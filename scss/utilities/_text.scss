@@ -25,7 +25,6 @@
     &-#{$color} { color: $value !important; }
   }
   &-white { color: $gray-00 !important; }
-  &-hglg { background-color: $text-highlight-bg; }
 
   // Sizing
   @each $size, $value in $text-sizes {
