@@ -13,6 +13,5 @@ src
 .jekyll-metadata
 
 *.zip
-package-lock.json
 npm-debug.log
 node_modules
