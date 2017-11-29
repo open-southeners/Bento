@@ -13,3 +13,7 @@ nav {
   & li { list-style: none; }
   &.has-active a:not(.active) { color: $gray-00; }
 }
+
+.unstyled a {
+  color: $gray-00 !important;
+}

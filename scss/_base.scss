@@ -1,5 +1,11 @@
 // stylelint-disable selector-no-qualifying-type
 
+:root {
+  @each $color, $value in $ui-colors {
+    --#{$color}: $value;
+  }
+}
+
 // Reset CSS
 @import "reset";
 
