@@ -1,55 +1,58 @@
+// stylelint-disable declaration-no-important
+
 @each $breakpoint in map-keys($breakpoints) {
   $prefix: breakpoint-prefix($breakpoint);
 
   .flex {
-    &#{$prefix}-row { flex-direction: row; }
-    &#{$prefix}-row-reverse { flex-direction: row-reverse; }
-    &#{$prefix}-column { flex-direction: column; }
-    &#{$prefix}-column-reverse { flex-direction: column-reverse; }
+    &#{$prefix}-row { flex-direction: row !important; }
+    &#{$prefix}-row-reverse { flex-direction: row-reverse !important; }
 
-    &#{$prefix}-wrap { flex-wrap: wrap; }
-    &#{$prefix}-nowrap { flex-wrap: nowrap; }
-    &#{$prefix}-wrap-reverse { flex-wrap: wrap-reverse; }
+    &#{$prefix}-column { flex-direction: column !important; }
+    &#{$prefix}-column-reverse { flex-direction: column-reverse !important; }
+
+    &#{$prefix}-wrap { flex-wrap: wrap !important; }
+    &#{$prefix}-nowrap { flex-wrap: nowrap !important; }
+    &#{$prefix}-wrap-reverse { flex-wrap: wrap-reverse !important; }
   }
 
   .justify-content {
-    &#{$prefix}-start { justify-content: flex-start; }
-    &#{$prefix}-end { justify-content: flex-end; }
-    &#{$prefix}-center { justify-content: center; }
-    &#{$prefix}-between { justify-content: space-between; }
-    &#{$prefix}-around { justify-content: space-around; }
-    &#{$prefix}-evenly { justify-content: space-evenly; }
+    &#{$prefix}-start { justify-content: flex-start !important; }
+    &#{$prefix}-end { justify-content: flex-end !important; }
+    &#{$prefix}-center { justify-content: center !important; }
+    &#{$prefix}-between { justify-content: space-between !important; }
+    &#{$prefix}-around { justify-content: space-around !important; }
+    &#{$prefix}-evenly { justify-content: space-evenly !important; }
   }
 
   .align-items {
-    &#{$prefix}-start { align-items: flex-start; }
-    &#{$prefix}-end { align-items: flex-end; }
-    &#{$prefix}-center { align-items: center; }
-    &#{$prefix}-baseline { align-items: baseline; }
-    &#{$prefix}-stretch { align-items: stretch; }
+    &#{$prefix}-start { align-items: flex-start !important; }
+    &#{$prefix}-end { align-items: flex-end !important; }
+    &#{$prefix}-center { align-items: center !important; }
+    &#{$prefix}-baseline { align-items: baseline !important; }
+    &#{$prefix}-stretch { align-items: stretch !important; }
   }
 
   .align-content {
-    &#{$prefix}-start { align-content: flex-start; }
-    &#{$prefix}-end { align-content: flex-end; }
-    &#{$prefix}-center { align-content: center; }
-    &#{$prefix}-between { align-content: space-between; }
-    &#{$prefix}-around { align-content: space-around; }
-    &#{$prefix}-stretch { align-content: stretch; }
+    &#{$prefix}-start { align-content: flex-start !important; }
+    &#{$prefix}-end { align-content: flex-end !important; }
+    &#{$prefix}-center { align-content: center !important; }
+    &#{$prefix}-between { align-content: space-between !important; }
+    &#{$prefix}-around { align-content: space-around !important; }
+    &#{$prefix}-stretch { align-content: stretch !important; }
   }
 
   .align-self {
-    &#{$prefix}-auto { align-self: auto; }
-    &#{$prefix}-start { align-self: flex-start; }
-    &#{$prefix}-end { align-self: flex-end; }
-    &#{$prefix}-center { align-self: center; }
-    &#{$prefix}-baseline { align-self: baseline; }
-    &#{$prefix}-stretch { align-self: stretch; }
+    &#{$prefix}-auto { align-self: auto !important; }
+    &#{$prefix}-start { align-self: flex-start !important; }
+    &#{$prefix}-end { align-self: flex-end !important; }
+    &#{$prefix}-center { align-self: center !important; }
+    &#{$prefix}-baseline { align-self: baseline !important; }
+    &#{$prefix}-stretch { align-self: stretch !important; }
   }
 
   .order {
     @for $i from 1 through $flex-max-order {
-      &-#{$i} { order: $i; }
+      &-#{$i} { order: $i !important; }
     }
   }
 
