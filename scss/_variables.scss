@@ -146,7 +146,9 @@ $border-width:  1px !default;
 $border-widths: (
   0: none,
   1: 1px,
-  2: 2px
+  2: 2px,
+  3: 3px,
+  4: 4px
 ) !default;
 
 //
@@ -185,13 +187,21 @@ $grid-cols:     12 !default;
 $grid-spacing:  140px !default;
 
 //
+// Flex
+//
+
+$flex-basic-prefix: flex !default;
+
+$flex-max-order: $grid-cols !default;
+
+//
 // Text
 //
 
 $text-prefix: t !default;
 
 $text-size:             1rem !default;
-$text-line-height:      .5rem !default;
+$text-line-height:      1rem !default;
 
 $text-weight-light:     300 !default;
 $text-weight-semibold:  600 !default;

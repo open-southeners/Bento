@@ -1,5 +1,11 @@
 // stylelint-disable selector-no-qualifying-type
 
+:root {
+  @each $color, $value in $ui-colors {
+    --#{$color}: $value;
+  }
+}
+
 // Reset CSS
 @import "reset";
 
@@ -147,24 +153,4 @@ footer {
   margin-top: 40px;
   color: $body-color;
   background-color: $primary-color;
-}
-
-.wrapper {
-  margin-left: 4em;
-}
-
-.is-responsive {
-  width: 100%;
-  max-width: 100%;
-}
-
-.clearfix {
-  overflow: auto;
-  zoom: 1;
-
-  &::after {
-    display: table;
-    clear: both;
-    content: "";
-  }
 }
