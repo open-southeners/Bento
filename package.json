@@ -1,6 +1,6 @@
 {
   "name": "bento-ui",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "description": "Stylish, pure CSS, user-friendly web design framework.",
   "style": "dist/bento.css",
   "main": "scss/bento.scss",
